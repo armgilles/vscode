@@ -219,5 +219,79 @@
         "key": "ctrl+d",
         "command": "-list.focusPageDown",
         "when": "listFocus && !inputFocus"
-    }
+    },
+    // improve c/c
+    {
+        "key": "cmd+c",
+        "command": "highlightOnCopy.run",
+        "when": "editorTextFocus && highlightOnCopy.init"
+    },
+    {
+        "key": "cmd+c",
+        "command": "-highlightOnCopy.run",
+        "when": "editorTextFocus && highlightOnCopy.init"
+    },
+    {
+        "key": "cmd+c",
+        "command": "-editor.action.clipboardCopyAction"
+    },
+    // vim afin de pouvoir sortir du file explorer en switchant de focus (ctrl+e mapper à la place de ctrl+w)
+    {
+        "key": "ctrl+e l",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "sideBarFocus"
+    },
+    // vim afin de pouvoir sortir du termial en switchant de focus (ctrl+e mapper à la place de ctrl+w)
+    {  
+       "key": "ctrl+e k",          
+        "command": "workbench.action.focusActiveEditorGroup", 
+        "when": "terminalFocus" 
+    },
+    // Copilot shortcut
+    {
+        "key": "cmd+down",
+        "command": "editor.action.inlineSuggest.showNext",
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "alt+]",
+        "command": "-editor.action.inlineSuggest.showNext",
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "cmd+up",
+        "command": "editor.action.inlineSuggest.showPrevious",
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "alt+[",
+        "command": "-editor.action.inlineSuggest.showPrevious",
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    // FILE TREE
+    {
+        "key": "n",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "command": "renameFile",
+        "key": "r",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "shift+n",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "key": "shift+n",
+        "command": "workbench.action.newWindow",
+        "when": "!explorerViewletFocus"
+    },
+    {
+        "command": "deleteFile",
+        "key": "d",
+       "when": "filesExplorerFocus && !inputFocus"
+    },
 ]

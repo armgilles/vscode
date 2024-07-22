@@ -254,6 +254,28 @@
         "s"
       ]
     },
+    // remaper "<C-w>" pour la gestion des switch windows sans passer par "<C-w>"
+    {
+      "before": ["<C-e>"],
+      "after": ["<C-w>"]
+    },
+    // panes navigation
+    {
+      "before": ["<C-w>", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["<C-w>", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["<C-w>", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["<C-w>", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
   ],
   "vim.visualModeKeyBindings": [
     // Stay in visual mode while indenting
