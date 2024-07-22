@@ -294,4 +294,16 @@
         "key": "d",
        "when": "filesExplorerFocus && !inputFocus"
     },
+    // Terminal navigation à travers les panels.
+    // ne fonctionne pas pour l'onget jupyter & gitlens...
+    {
+        "key": "ctrl+e l",          
+        "command": "workbench.action.nextPanelView", 
+        "when": "panelFocus" 
+    },
+    {
+        "key": "ctrl+e h",          
+        "command": "workbench.action.previousPanelView", 
+        "when": "panelFocus" 
+    }
 ]
