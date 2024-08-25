@@ -38,6 +38,7 @@
     "method"
   ],
   "editor.smoothScrolling": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "settingsSync.ignoredExtensions": [
     "ms-toolsai.jupyter"
   ],
