@@ -50,6 +50,8 @@
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
   "vim.highlightedyank.enable": true,
+  "vim.cursorStylePerMode.insert": "line-thin",
+  "vim.cursorStylePerMode.normal": "block",
   "vim.searchHighlightColor": "#BF616A", // a voir..
   //Vim color
   "vim.statusBarColorControl": false,
