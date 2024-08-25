@@ -1,2 +1,2 @@
 # vscode
-Configuration de VScode for my mac.
+Configuration de VScode for windows Suez.
