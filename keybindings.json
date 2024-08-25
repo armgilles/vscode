@@ -6,33 +6,13 @@
         "when": "textInputFocus && !accessibilityModeEnabled"
     },
     {
-        "key": "ctrl+right",
-        "command": "-cursorWordEndRight",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
-    {
         "key": "alt+left",
         "command": "cursorWordLeft",
         "when": "textInputFocus && !accessibilityModeEnabled"
     },
     {
-        "key": "ctrl+left",
-        "command": "-cursorWordLeft",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
-    {
-        "key": "ctrl+right",
-        "command": "cursorEnd",
-        "when": "textInputFocus"
-    },
-    {
         "key": "end",
         "command": "-cursorEnd",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+left",
-        "command": "cursorHome",
         "when": "textInputFocus"
     },
     {
@@ -222,7 +202,7 @@
     },
     // improve c/c
     {
-        "key": "cmd+c",
+        "key": "ctrl+c",
         "command": "highlightOnCopy.run",
         "when": "editorTextFocus && highlightOnCopy.init"
     },
@@ -242,10 +222,10 @@
         "when": "sideBarFocus"
     },
     // vim afin de pouvoir sortir du termial en switchant de focus (ctrl+e mapper à la place de ctrl+w)
-    {  
-       "key": "ctrl+e k",          
-        "command": "workbench.action.focusActiveEditorGroup", 
-        "when": "terminalFocus" 
+    {
+        "key": "ctrl+e k",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
     },
     // Copilot shortcut
     {
@@ -285,25 +265,40 @@
         "when": "explorerViewletFocus"
     },
     {
-        "key": "shift+n",
-        "command": "workbench.action.newWindow",
-        "when": "!explorerViewletFocus"
-    },
-    {
         "command": "deleteFile",
         "key": "d",
-       "when": "filesExplorerFocus && !inputFocus"
+        "when": "filesExplorerFocus && !inputFocus"
     },
     // Terminal navigation à travers les panels.
     // ne fonctionne pas pour l'onget jupyter & gitlens...
     {
-        "key": "ctrl+e l",          
-        "command": "workbench.action.nextPanelView", 
-        "when": "panelFocus" 
+        "key": "ctrl+e l",
+        "command": "workbench.action.nextPanelView",
+        "when": "panelFocus"
     },
     {
-        "key": "ctrl+e h",          
-        "command": "workbench.action.previousPanelView", 
-        "when": "panelFocus" 
+        "key": "ctrl+e h",
+        "command": "workbench.action.previousPanelView",
+        "when": "panelFocus"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "-breadcrumbs.focusNext",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "-workbench.action.files.openFolderViaWorkspace",
+        "when": "!openFolderWorkspaceSupport && workbenchState == 'workspace'"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "-workbench.action.files.openFile",
+        "when": "true"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "-workbench.action.files.openFileFolder",
+        "when": "isMacNative && openFolderWorkspaceSupport"
     }
 ]

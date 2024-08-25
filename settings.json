@@ -22,10 +22,10 @@
   "[python]": {
     "editor.formatOnType": true
   },
+  "window.zoomLevel": -1,
   "editor.fontSize": 14,
   "editor.fontFamily": "Menlo",
   "git.ignoreLegacyWarning": true,
-  "terminal.integrated.enableMultiLinePasteWarning": false,
   "editor.inlineSuggest.enabled": true,
   "terminal.integrated.defaultProfile.linux": "bash",
   "sonarlint.focusOnNewCode": true,
@@ -202,6 +202,53 @@
         "s"
       ]
     },
+    // test vim here
+    // remaper "<C-w>" pour la gestion des switch windows sans passer par "<C-w>"
+    {
+      "before": [
+        "<C-e>"
+      ],
+      "after": [
+        "<C-w>"
+      ]
+    },
+    // panes navigation
+    {
+      "before": [
+        "<C-w>",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.focusLeftGroup"
+      ]
+    },
+    {
+      "before": [
+        "<C-w>",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.focusBelowGroup"
+      ]
+    },
+    {
+      "before": [
+        "<C-w>",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.focusAboveGroup"
+      ]
+    },
+    {
+      "before": [
+        "<C-w>",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.focusRightGroup"
+      ]
+    },
   ],
   // to disable copy when delete
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -259,41 +306,104 @@
     },
     // remaper "<C-w>" pour la gestion des switch windows sans passer par "<C-w>"
     {
-      "before": ["<C-e>"],
-      "after": ["<C-w>"]
+      "before": [
+        "<C-e>"
+      ],
+      "after": [
+        "<C-w>"
+      ]
     },
     // panes navigation
     {
-      "before": ["<C-w>", "h"],
-      "commands": ["workbench.action.focusLeftGroup"]
+      "before": [
+        "<C-w>",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.focusLeftGroup"
+      ]
     },
     {
-      "before": ["<C-w>", "j"],
-      "commands": ["workbench.action.focusBelowGroup"]
+      "before": [
+        "<C-w>",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.focusBelowGroup"
+      ]
     },
     {
-      "before": ["<C-w>", "k"],
-      "commands": ["workbench.action.focusAboveGroup"]
+      "before": [
+        "<C-w>",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.focusAboveGroup"
+      ]
     },
     {
-      "before": ["<C-w>", "l"],
-      "commands": ["workbench.action.focusRightGroup"]
+      "before": [
+        "<C-w>",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.focusRightGroup"
+      ]
     },
   ],
   "vim.visualModeKeyBindings": [
     // Stay in visual mode while indenting
-    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
-    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    },
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
     // Move selected lines while staying in visual mode
-    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
-    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    {
+      "before": [
+        "J"
+      ],
+      "commands": [
+        "editor.action.moveLinesDownAction"
+      ]
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.moveLinesUpAction"
+      ]
+    },
+    // to pass to visual mode to insert more  easly
+    {
+      "before": [
+        "i",
+        "i"
+      ],
+      "after": [
+        "<Esc>",
+        "i"
+      ]
+    }
   ],
   "vim.leader": "<space>",
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-p>": false,
     "<C-j>": false,
-    "<C-d>": false,
+    // "<C-d>": false,
     "<C-f>": false,
     "<C-w>": false,
     "<C-x>": false,
@@ -324,5 +434,12 @@
   "highlightOnCopy.backgroundColor": "rgba(230, 97, 89, 0.7)",
   // by default the foreground text color it's undefined, meaning the actual color won't be modified
   "highlightOnCopy.foregroundColor": "#fff",
-  "highlightOnCopy.timeout": 200
+  "highlightOnCopy.timeout": 200,
+  "remote.SSH.remotePlatform": {
+    "ag-AI40LeakDetect-vm": "linux",
+    "detectleaks": "linux"
+  },
+  "notebook.defaultFormatter": "charliermarsh.ruff",
+  "ruff.lineLength": 120,
+  "workbench.editorLargeFileConfirmation": 200,
 }

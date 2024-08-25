@@ -1,2 +1,2 @@
 # vscode
-Configuration de VScode
+Configuration de VScode for my mac.
