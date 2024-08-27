@@ -203,9 +203,18 @@
       "commands": ["workbench.action.focusAboveGroup"]
     },
     {
-      "before": ["", "l"],
+      "before": ["<C-w>", "l"],
       "commands": ["workbench.action.focusRightGroup"]
     },
+    // to move screen down one line
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "after": [
+        "<C-e>"
+      ]
+    }
   ],
   // to disable copy when delete
   "vim.visualModeKeyBindingsNonRecursive": [
