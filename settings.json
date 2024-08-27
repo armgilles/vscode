@@ -52,7 +52,11 @@
   "vim.highlightedyank.enable": true,
   "vim.cursorStylePerMode.insert": "line-thin",
   "vim.cursorStylePerMode.normal": "block",
-  "vim.searchHighlightColor": "#BF616A", // a voir..
+  // Flah extension, have to use Cvim, waiting PR on official vim extension
+  "vim.flash.enable": true,
+  "vim.flash.marker.backgroundColor": "#ccff88",
+  "vim.flash.marker.nextMatchBackgroundColor": "#ffb86c",
+  "vim.flash.labels": "hklyuiopnmaqwertzxcvbasdgjf",
   //Vim color
   "vim.statusBarColorControl": false,
   "vim.statusBarColors.normal": [
@@ -249,6 +253,15 @@
         "workbench.action.focusRightGroup"
       ]
     },
+    // to move screen down one line
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "after": [
+        "<C-e>"
+      ]
+    }
   ],
   // to disable copy when delete
   "vim.visualModeKeyBindingsNonRecursive": [
