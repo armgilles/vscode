@@ -1,194 +1,27 @@
 // Placer vos combinaisons de touches dans ce fichier pour remplacer les valeurs par défaut
 [
     {
-        "key": "alt+right",
-        "command": "cursorWordEndRight",
-        "when": "textInputFocus && !accessibilityModeEnabled"
+        "key": "cmd+e",
+        "command": "github.copilot.nextPanelSolution"
     },
     {
-        "key": "ctrl+right",
-        "command": "-cursorWordEndRight",
-        "when": "textInputFocus && !accessibilityModeEnabled"
+        "key": "cmd+r",
+        "command": "github.copilot.previousPanelSolution"
     },
-    {
-        "key": "alt+left",
-        "command": "cursorWordLeft",
-        "when": "textInputFocus && !accessibilityModeEnabled"
+    {   
+        // Pour selectionner l'intérieur de balise Cf Bracket Select extension 
+        "key": "alt+shift+a",
+        "command": "bracket-select.select",
     },
-    {
-        "key": "ctrl+left",
-        "command": "-cursorWordLeft",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
-    {
-        "key": "ctrl+right",
-        "command": "cursorEnd",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "end",
-        "command": "-cursorEnd",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+left",
-        "command": "cursorHome",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "home",
-        "command": "-cursorHome",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "shift+up",
-        "command": "cursorUpSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+shift+up",
-        "command": "-cursorUpSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "shift+down",
-        "command": "cursorDownSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+shift+down",
-        "command": "-cursorDownSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+down",
-        "command": "cursorBottom",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+end",
-        "command": "-cursorBottom",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+up",
-        "command": "cursorTop",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+home",
-        "command": "-cursorTop",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+oem_8",
-        "command": "workbench.action.zoomIn"
-    },
-    {
-        "key": "ctrl+numpad_add",
-        "command": "-workbench.action.zoomIn"
-    },
-    {
-        "key": "ctrl+oem_plus",
-        "command": "workbench.action.zoomOut"
-    },
-    {
-        "key": "ctrl+numpad_subtract",
-        "command": "-workbench.action.zoomOut"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "workbench.action.terminal.clear"
-    },
-    {
-        "key": "ctrl+alt+right",
-        "command": "workbench.action.nextEditor"
-    },
-    {
-        "key": "ctrl+pagedown",
-        "command": "-workbench.action.nextEditor"
-    },
-    {
-        "key": "ctrl+alt+left",
-        "command": "workbench.action.previousEditor"
-    },
-    {
-        "key": "ctrl+pageup",
-        "command": "-workbench.action.previousEditor"
-    },
-    {
-        "key": "shift+alt+right",
-        "command": "cursorWordEndRightSelect",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
-    {
-        "key": "ctrl+shift+right",
-        "command": "-cursorWordEndRightSelect",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
-    {
-        "key": "shift+alt+left",
-        "command": "cursorWordEndLeftSelect"
-    },
-    {
-        "key": "ctrl+shift+right",
-        "command": "cursorEndSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "shift+end",
-        "command": "-cursorEndSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+shift+left",
-        "command": "cursorHomeSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "shift+home",
-        "command": "-cursorHomeSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+shift+up",
-        "command": "cursorTopSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+shift+home",
-        "command": "-cursorTopSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+shift+down",
-        "command": "cursorBottomSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+shift+end",
-        "command": "-cursorBottomSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "shift+alt+left",
-        "command": "cursorWordLeftSelect",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
-    {
-        "key": "ctrl+shift+left",
-        "command": "-cursorWordLeftSelect",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
-    {
+    {   
         // with Go to Next/Previous Member extension
         "key": "alt+shift+up",
-        "command": "gotoNextPreviousMember.previousMember"
+        "command": "gotoNextPreviousMember.previousMember",
     },
     {
         // with Go to Next/Previous Member extension
         "key": "alt+shift+down",
-        "command": "gotoNextPreviousMember.nextMember"
+        "command": "gotoNextPreviousMember.nextMember",
     },
     {
         "key": "alt+up",
@@ -211,16 +44,10 @@
         },
     },
     {
-        // Pour selectionner l'intérieur de balise Cf Bracket Select extension 
-        "key": "alt+shift+a",
-        "command": "bracket-select.select",
+        "key": "shift+alt+down",
+        "command": "-editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
     },
-    {
-        "key": "ctrl+d",
-        "command": "-list.focusPageDown",
-        "when": "listFocus && !inputFocus"
-    },
-    // improve c/c
     {
         "key": "cmd+c",
         "command": "highlightOnCopy.run",
@@ -235,6 +62,26 @@
         "key": "cmd+c",
         "command": "-editor.action.clipboardCopyAction"
     },
+    // vim
+    // To reselect the lines after each indent/outdent (don't use it now)
+    // {
+    //     "key": "shift+,",
+    //     "command": "editor.action.outdentLines",
+    //     "when": "vim.mode == 'VisualLine'",
+    //     "args": {
+    //         "to": "lastIndent",
+    //         "select": true
+    //     }
+    // },
+    // {
+    //     "key": "shift+.",
+    //     "command": "editor.action.indentLines",
+    //     "when": "vim.mode == 'VisualLine'",
+    //     "args": {
+    //         "to": "lastIndent",
+    //         "select": true
+    //     }
+    // },
     // vim afin de pouvoir sortir du file explorer en switchant de focus (ctrl+e mapper à la place de ctrl+w)
     {
         "key": "ctrl+e l",
@@ -245,7 +92,7 @@
     {  
        "key": "ctrl+e k",          
         "command": "workbench.action.focusActiveEditorGroup", 
-        "when": "terminalFocus" 
+        "when": "panelFocus" 
     },
     // Copilot shortcut
     {
@@ -292,7 +139,7 @@
     {
         "command": "deleteFile",
         "key": "d",
-       "when": "filesExplorerFocus && !inputFocus"
+        "when": "filesExplorerFocus && !inputFocus"
     },
     // Terminal navigation à travers les panels.
     // ne fonctionne pas pour l'onget jupyter & gitlens...
