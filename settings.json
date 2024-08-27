@@ -174,16 +174,16 @@
         "x"
       ]
     },
-    // {
-    //   "before": [
-    //     "s"
-    //   ],
-    //   "after": [
-    //     "\"",
-    //     "_",
-    //     "s"
-    //   ]
-    // },
+    {
+      "before": [
+        "s"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "s"
+      ]
+    },
     // remaper "<C-w>" pour la gestion des switch windows sans passer par "<C-w>"
     {
       "before": ["<C-e>"],
