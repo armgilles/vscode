@@ -10,39 +10,26 @@
     "statusBar.debuggingBackground": "#8FBCBB",
     "statusBar.foreground": "#434C5E",
     "statusBar.debuggingForeground": "#434C5E",
-    // to higtlight current line border
-    "editor.lineHighlightBorder": "#d45ccab0",
+    "editor.lineHighlightBorder": "#d45ccab0"
   },
-  "editor.renderLineHighlight": "all",
-  "notebook.output.textLineLimit": 1100,
+  "editor.renderLineHighlight": "all", 
+  "notebook.output.textLineLimit": 800,
+  "python.linting.cwd": "",
   "python.analysis.completeFunctionParens": true,
   "autoDocstring.startOnNewLine": true,
   "autoDocstring.docstringFormat": "numpy",
   "editor.cursorStyle": "block",
+  "diffEditor.ignoreTrimWhitespace": false,
   "[python]": {
     "editor.formatOnType": true
   },
   "editor.fontSize": 14,
-  "editor.fontFamily": "Menlo",
-  "git.ignoreLegacyWarning": true,
-  "terminal.integrated.enableMultiLinePasteWarning": false,
   "editor.inlineSuggest.enabled": true,
-  "terminal.integrated.defaultProfile.linux": "bash",
-  "sonarlint.focusOnNewCode": true,
-  "update.mode": "manual",
-  "editor.cursorSurroundingLines": 15,
-  // with Go to Next/Previous Member extension
-  "gotoNextPreviousMember.symbolKinds": [
-    "function",
-    "class",
-    "method"
-  ],
+  "window.zoomLevel": -1,
+  "editor.lineNumbers": "relative",
   "editor.smoothScrolling": true,
   "editor.cursorSmoothCaretAnimation": "on",
-  "settingsSync.ignoredExtensions": [
-    "ms-toolsai.jupyter"
-  ],
-  "editor.defaultFormatter": "charliermarsh.ruff",
+  "editor.cursorSurroundingLines": 15,
   //VIM
   "vim.easymotion": true,
   "vim.incsearch": true,
@@ -50,18 +37,24 @@
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
   "vim.highlightedyank.enable": true,
+  "vim.searchMatchColor": "#BF616A",
+  "vim.findMatchBackground": "#BF616A",
   "vim.cursorStylePerMode.insert": "line-thin",
   "vim.cursorStylePerMode.normal": "block",
-  "vim.searchHighlightColor": "#BF616A", // a voir..
+  // Flah extension, have to use Cvim, waiting PR on official vim extension
+  "vim.flash.enable": true,
+  "vim.flash.marker.backgroundColor": "#ccff88",
+  "vim.flash.marker.nextMatchBackgroundColor": "#ffb86c",
+  "vim.flash.labels": "hklyuiopnmaqwertzxcvbasdgjf",
   //Vim color
-  "vim.statusBarColorControl": false,
+  "vim.statusBarColorControl": true,
   "vim.statusBarColors.normal": [
     "#8FBCBB",
     "#434C5E"
   ],
   "vim.statusBarColors.insert": "#BF616A",
-  "vim.statusBarColors.visual": "#B48EAD",
-  "vim.statusBarColors.visualline": "#B48EAD",
+  "vim.statusBarColors.visual": "#6fa8dc",
+  "vim.statusBarColors.visualline": "#6fa8dc",
   "vim.statusBarColors.visualblock": "#A3BE8C",
   "vim.statusBarColors.replace": "#D08770",
   "vim.statusBarColors.commandlineinprogress": "#007ACC",
@@ -107,17 +100,6 @@
         "lineBreakInsert"
       ],
       "silent": true
-    },
-    {
-      "before": [
-        "<C-n>"
-      ],
-      "after": [],
-      "commands": [
-        {
-          "command": ":nohl"
-        }
-      ]
     },
     // to disable copy when delete
     {
@@ -192,15 +174,37 @@
         "x"
       ]
     },
+    // {
+    //   "before": [
+    //     "s"
+    //   ],
+    //   "after": [
+    //     "\"",
+    //     "_",
+    //     "s"
+    //   ]
+    // },
+    // remaper "<C-w>" pour la gestion des switch windows sans passer par "<C-w>"
     {
-      "before": [
-        "s"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "s"
-      ]
+      "before": ["<C-e>"],
+      "after": ["<C-w>"]
+    },
+    // panes navigation
+    {
+      "before": ["<C-w>", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["<C-w>", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["<C-w>", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
     },
   ],
   // to disable copy when delete
@@ -257,28 +261,6 @@
         "s"
       ]
     },
-    // remaper "<C-w>" pour la gestion des switch windows sans passer par "<C-w>"
-    {
-      "before": ["<C-e>"],
-      "after": ["<C-w>"]
-    },
-    // panes navigation
-    {
-      "before": ["<C-w>", "h"],
-      "commands": ["workbench.action.focusLeftGroup"]
-    },
-    {
-      "before": ["<C-w>", "j"],
-      "commands": ["workbench.action.focusBelowGroup"]
-    },
-    {
-      "before": ["<C-w>", "k"],
-      "commands": ["workbench.action.focusAboveGroup"]
-    },
-    {
-      "before": ["<C-w>", "l"],
-      "commands": ["workbench.action.focusRightGroup"]
-    },
   ],
   "vim.visualModeKeyBindings": [
     // Stay in visual mode while indenting
@@ -290,39 +272,24 @@
   ],
   "vim.leader": "<space>",
   "vim.handleKeys": {
-    "<C-a>": false,
-    "<C-p>": false,
-    "<C-j>": false,
-    "<C-d>": false,
-    "<C-f>": false,
+    // "<C-a>": false,
     "<C-w>": false,
-    "<C-x>": false,
   },
-  // To improve performance
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
   "editor.indentSize": "tabSize",
-  "jupyter.widgetScriptSources": [
-    "jsdelivr.com",
-    "unpkg.com"
-  ],
-  "editor.lineNumbers": "relative",
-  "comments.useRelativeTime": false,
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "editor.autoClosingOvertype": "never",
-  "editor.autoClosingDelete": "never",
-  "editor.autoClosingQuotes": "never",
-  "editor.autoClosingBrackets": "never",
-  "vim.showMarksInGutter": true,
-  "notebook.lineNumbers": "on",
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "charliermarsh.ruff",
   "editor.rename.enablePreview": false,
   "editor.parameterHints.enabled": false,
+  "notebook.lineNumbers": "on",
   "highlightOnCopy.backgroundColor": "rgba(230, 97, 89, 0.7)",
-  // by default the foreground text color it's undefined, meaning the actual color won't be modified
   "highlightOnCopy.foregroundColor": "#fff",
-  "highlightOnCopy.timeout": 200
+  "highlightOnCopy.timeout": 200,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "notebook.defaultFormatter": "charliermarsh.ruff",
+  "github.copilot.enable": {
+    "markdown": true
+  }, 
 }
