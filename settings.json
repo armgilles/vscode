@@ -5,9 +5,9 @@
   // From https://stackoverflow.com/a/70758108
   "workbench.colorCustomizations": {
     "terminal.ansiYellow": "#8400ffe1",
-    "statusBar.background": "#8FBCBB",
-    "statusBar.noFolderBackground": "#8FBCBB",
-    "statusBar.debuggingBackground": "#8FBCBB",
+    "statusBar.background": "#6fa8dc",
+    "statusBar.noFolderBackground": "#6fa8dc",
+    "statusBar.debuggingBackground": "#6fa8dc",
     "statusBar.foreground": "#434C5E",
     "statusBar.debuggingForeground": "#434C5E",
     "editor.lineHighlightBorder": "#d45ccab0"
@@ -86,20 +86,23 @@
     },
     {
       "before": [
-        "<C-n>"
-      ],
-      "commands": [
-        ":nohl"
-      ]
-    },
-    {
-      "before": [
         "K"
       ],
       "commands": [
         "lineBreakInsert"
       ],
       "silent": true
+    },
+    {
+      "before": [
+        "<C-n>"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": ":nohl"
+        }
+      ]
     },
     // to disable copy when delete
     {
