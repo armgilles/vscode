@@ -172,4 +172,9 @@
         "key": "ctrl+n",
         "command": "-workbench.action.files.newUntitledFile"
     },
+    {
+        "key": "ctrl+e",
+        "command": "-editor.action.toggleScreenReaderAccessibilityMode",
+        "when": "accessibilityHelpIsShown"
+    }
 ]
