@@ -5,9 +5,9 @@
   // From https://stackoverflow.com/a/70758108
   "workbench.colorCustomizations": {
     "terminal.ansiYellow": "#8400ffe1",
-    "statusBar.background": "#6fa8dc",
-    "statusBar.noFolderBackground": "#6fa8dc",
-    "statusBar.debuggingBackground": "#6fa8dc",
+    "statusBar.background": "#8FBCBB",
+    "statusBar.noFolderBackground": "#8FBCBB",
+    "statusBar.debuggingBackground": "#8FBCBB",
     "statusBar.foreground": "#434C5E",
     "statusBar.debuggingForeground": "#434C5E",
     "editor.lineHighlightBorder": "#d45ccab0"
@@ -30,6 +30,8 @@
   "editor.smoothScrolling": true,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorSurroundingLines": 15,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs":"active",
   //VIM
   "vim.easymotion": true,
   "vim.incsearch": true,
@@ -217,7 +219,61 @@
       "after": [
         "<C-e>"
       ]
-    }
+    },
+    // Vscode Harpoon
+    {
+      "before": ["alt", "a"],
+      "commands": ["vscode-harpoon.addEditor"]
+    },
+    {
+      "before": ["alt", "r"],
+      "commands": ["vscode-harpoon.editEditors"]
+    },
+    // Wait version 1.6
+    // {
+    //   "before": ["alt", "n"],
+    //   "commands": ["vscode-harpoon.navigateNextEditor"]
+    // },
+    // {
+    //   "before": ["alt", "p"],
+    //   "commands": ["`vscode-harpoon.navigatePreviousEditor"]
+    // },
+    {
+      "before": ["alt", "l"],
+      "commands": ["vscode-harpoon.gotoPreviousHarpoonEditor"]
+    },
+    {
+      "before": ["alt", "t"],
+      "commands": ["vscode-harpoon.editorQuickPick"]
+    },
+    {
+      "before": ["alt", "v"],
+      "commands": ["vscode-harpoon.isQuickPick"]
+    },
+    {
+      "before": ["alt", "1"],
+      "commands": ["vscode-harpoon.gotoEditor1"]
+    },
+    {
+      "before": ["alt", "2"],
+      "commands": ["vscode-harpoon.gotoEditor2"]
+    },
+    {
+      "before": ["alt", "3"],
+      "commands": ["vscode-harpoon.gotoEditor3"]
+    },
+    {
+      "before": ["alt", "4"],
+      "commands": ["vscode-harpoon.gotoEditor4"]
+    },
+    {
+      "before": ["alt", "5"],
+      "commands": ["vscode-harpoon.gotoEditor5"]
+    },
+    {
+      "before": ["alt", "6"],
+      "commands": ["vscode-harpoon.gotoEditor6"]
+    },
   ],
   // to disable copy when delete
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -304,4 +360,6 @@
   "github.copilot.enable": {
     "markdown": true
   }, 
+  // Vscode Harpoon
+  "workbench.editor.revealIfOpen": true
 }
