@@ -361,5 +361,11 @@
     "markdown": true
   }, 
   // Vscode Harpoon
-  "workbench.editor.revealIfOpen": true
+  "workbench.editor.revealIfOpen": true,
+  //
+  "files.autoSave": "onFocusChange",
+  "editor.autoClosingOvertype": "never",
+  "editor.autoClosingDelete": "never",
+  "editor.autoClosingQuotes": "never",
+  "editor.autoClosingBrackets": "never"
 }
