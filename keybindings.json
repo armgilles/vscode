@@ -59,31 +59,6 @@
         "when": "editorTextFocus && highlightOnCopy.init"
     },
     {
-        "key": "cmd+c",
-        "command": "-editor.action.clipboardCopyAction"
-    },
-    // vim
-    // To reselect the lines after each indent/outdent (don't use it now)
-    // {
-    //     "key": "shift+,",
-    //     "command": "editor.action.outdentLines",
-    //     "when": "vim.mode == 'VisualLine'",
-    //     "args": {
-    //         "to": "lastIndent",
-    //         "select": true
-    //     }
-    // },
-    // {
-    //     "key": "shift+.",
-    //     "command": "editor.action.indentLines",
-    //     "when": "vim.mode == 'VisualLine'",
-    //     "args": {
-    //         "to": "lastIndent",
-    //         "select": true
-    //     }
-    // },
-    // vim afin de pouvoir sortir du file explorer en switchant de focus (ctrl+e mapper à la place de ctrl+w)
-    {
         "key": "ctrl+e l",
         "command": "workbench.action.focusFirstEditorGroup",
         "when": "sideBarFocus"
@@ -132,7 +107,7 @@
         "when": "explorerViewletFocus"
     },
     {
-        "key": "shift+n",
+        "key": "ctrl+shift+n",
         "command": "workbench.action.newWindow",
         "when": "!explorerViewletFocus"
     },
@@ -251,5 +226,11 @@
         "key": "ctrl+enter",
         "command": "-notebook.cell.execute",
         "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || !notebookCellExecuting && notebookCellType == 'code' && notebookCellListFocused || inlineChatFocused && notebookCellChatFocused && notebookKernelCount > 0 || !notebookCellExecuting && notebookCellType == 'code' && notebookCellListFocused || inlineChatFocused && notebookCellChatFocused && notebookKernelSourceCount > 0 || inlineChatFocused && notebookCellChatFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code'"
-    }
+    },
+    // To c/c on notebook output cell.
+    // Conflict with Highlight on Copy extension ?
+    {
+        "key": "cmd+c",
+        "command": "-execCopy"
+    },
 ]
