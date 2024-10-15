@@ -233,4 +233,15 @@
         "key": "cmd+c",
         "command": "-execCopy"
     },
+    // To run test on current cursor fonction 
+    {
+        "key": "cmd+r t",
+        "command": "testing.runAtCursor",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+; c",
+        "command": "-testing.runAtCursor",
+        "when": "editorTextFocus"
+    }
 ]
