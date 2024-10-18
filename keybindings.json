@@ -244,13 +244,13 @@
         "command": "-testing.runAtCursor",
         "when": "editorTextFocus"
     },
-    // Open chat copilot in sidebar
-    {
-        "key": "shift+cmd+i",
-        "command": "workbench.action.chat.open"
-    },
-    {
-        "key": "ctrl+cmd+i",
-        "command": "-workbench.action.chat.open"
-    }
+        // Open chat copilot in sidebar
+        {
+            "key": "shift+cmd+i",
+            "command": "workbench.action.chat.open"
+        },
+        {
+            "key": "ctrl+cmd+i",
+            "command": "-workbench.action.chat.open"
+        }
 ]
