@@ -262,4 +262,84 @@
         "key": "ctrl+i",
         "command": "workbench.action.navigateForwardInEditLocations"
     },
+        // hovering definition or message
+    // gh to get definition hover
+    // cmd+k to get focus on hover
+    // hjkl / gg / shift+g to naviguate
+    // esc to exit focus on hover and back to code
+    {
+        "key": "h",
+        "command": "editor.action.scrollLeftHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "left",
+        "command": "-editor.action.scrollLeftHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "j",
+        "command": "editor.action.scrollDownHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "down",
+        "command": "-editor.action.scrollDownHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "l",
+        "command": "editor.action.scrollRightHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "right",
+        "command": "-editor.action.scrollRightHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "k",
+        "command": "editor.action.scrollUpHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "up",
+        "command": "-editor.action.scrollUpHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "cmd+up",
+        "command": "-editor.action.goToTopHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "shift+g",
+        "command": "editor.action.goToBottomHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "cmd+down",
+        "command": "-editor.action.goToBottomHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "g g",
+        "command": "editor.action.goToTopHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "home",
+        "command": "-editor.action.goToTopHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "cmd+k",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+k cmd+i",
+        "command": "-editor.action.showHover",
+        "when": "editorTextFocus"
+    }
 ]
