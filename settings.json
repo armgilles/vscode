@@ -351,7 +351,6 @@
   "editor.defaultFormatter": "charliermarsh.ruff",
   "editor.rename.enablePreview": false,
   "editor.parameterHints.enabled": false,
-  "notebook.lineNumbers": "on",
   "highlightOnCopy.backgroundColor": "rgba(230, 97, 89, 0.7)",
   "highlightOnCopy.foregroundColor": "#fff",
   "highlightOnCopy.timeout": 200,
@@ -367,5 +366,7 @@
   "editor.autoClosingOvertype": "never",
   "editor.autoClosingDelete": "never",
   "editor.autoClosingQuotes": "never",
-  "editor.autoClosingBrackets": "never"
+  "editor.autoClosingBrackets": "never",
+  "workbench.editor.enablePreview": false,
+  "terminal.external.osxExec": "warp.app",
 }
