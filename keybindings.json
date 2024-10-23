@@ -244,13 +244,22 @@
         "command": "-testing.runAtCursor",
         "when": "editorTextFocus"
     },
-        // Open chat copilot in sidebar
-        {
-            "key": "shift+cmd+i",
-            "command": "workbench.action.chat.open"
-        },
-        {
-            "key": "ctrl+cmd+i",
-            "command": "-workbench.action.chat.open"
-        }
+    // Open chat copilot in sidebar
+    {
+        "key": "shift+cmd+i",
+        "command": "workbench.action.chat.open"
+    },
+    {
+        "key": "ctrl+cmd+i",
+        "command": "-workbench.action.chat.open"
+    },
+    // Vim navigation into Notebook cell with ctrl+o & ctrl+i
+    {
+        "key": "ctrl+o",
+        "command": "workbench.action.navigateBackInEditLocations"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "workbench.action.navigateForwardInEditLocations"
+    },
 ]
