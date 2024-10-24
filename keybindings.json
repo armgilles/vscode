@@ -152,61 +152,7 @@
         "command": "-editor.action.toggleScreenReaderAccessibilityMode",
         "when": "accessibilityHelpIsShown"
     },
-    // Vscode Harpoon
-    {
-        "key": "alt+a",
-        "command": "vscode-harpoon.addEditor"
-    },
-    {
-        "key": "alt+r",
-        "command": "vscode-harpoon.editEditors"
-    },
-    {
-        "key": "alt+l",
-        "command": "vscode-harpoon.gotoPreviousHarpoonEditor"
-    },
-    {
-        "key": "alt+t",
-        "command": "vscode-harpoon.editorQuickPick"
-    },
-    {
-        "key": "alt+v",
-        "command": "list.focusDown",
-        "when": "vscode-harpoon.isQuickPick"
-    },
-    {
-        "key": "alt+1",
-        "command": "vscode-harpoon.gotoEditor1"
-    },
-    {
-        "key": "alt+2",
-        "command": "vscode-harpoon.gotoEditor2"
-    },
-    {
-        "key": "alt+3",
-        "command": "vscode-harpoon.gotoEditor3"
-    },
-    {
-        "key": "alt+4",
-        "command": "vscode-harpoon.gotoEditor4"
-    },
-    {
-        "key": "alt+5",
-        "command": "vscode-harpoon.gotoEditor5"
-    },
-    {
-        "key": "alt+6",
-        "command": "vscode-harpoon.gotoEditor6"
-    },
-    // Vscode Harpoon wait version 1.6
-    // Issue https://github.com/tobias-z/vscode-harpoon/issues/40
-    //     "key": "alt+p",
-    //     "commands": "navigatePreviousEditor"
-    // },
-    // {
-    //     "key": "alt+n",
-    //     "commands": "vscode-harpoon.navigateNextEditor"
-    // },
+    // Side bar source control
     {
         "key": "shift+cmd+g g",
         "command": "workbench.view.scm",
@@ -341,5 +287,47 @@
         "key": "cmd+k cmd+i",
         "command": "-editor.action.showHover",
         "when": "editorTextFocus"
-    }
+    },
+    // Vscode bookmark extension
+    {
+        "key": "alt+a",
+        "command": "bookmarks.toggle"
+    },
+    {
+        "key": "alt+r",
+        "command": "bookmarks.clear"
+    },
+    {
+        "key": "alt+cmd+e",
+        "command": "bookmarks.clearFromAllFiles"
+    },
+    {
+        "key": "alt+t",
+        "command": "bookmarks.listFromAllFiles"
+    },
+    {
+        "key": "alt+v",
+        "command": "bookmarks.toggleLabeled"
+    },
+        // Next & Previous bookmarks ext on notebook too
+    {
+        "key": "alt+cmd+l",
+        "command": "bookmarks.jumpToNext",
+        "when": "editorTextFocus || notebookCellListFocused && !inlineChatFocused && notebookCellType == 'markup' || notebookCellListFocused && notebookMissingKernelExtension && !inlineChatFocused && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !inlineChatFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0 || notebookCellListFocused && !inlineChatFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelSourceCount > 0"
+    },
+    {
+        "key": "alt+cmd+l",
+        "command": "-bookmarks.jumpToNext",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+j",
+        "command": "bookmarks.jumpToPrevious",
+        "when": "editorTextFocus || notebookCellListFocused && !inlineChatFocused && notebookCellType == 'markup' || notebookCellListFocused && notebookMissingKernelExtension && !inlineChatFocused && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !inlineChatFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0 || notebookCellListFocused && !inlineChatFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelSourceCount > 0"
+    },
+    {
+        "key": "alt+cmd+j",
+        "command": "-bookmarks.jumpToPrevious",
+        "when": "editorTextFocus"
+    },
 ]
