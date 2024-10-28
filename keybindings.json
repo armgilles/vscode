@@ -318,52 +318,6 @@
         "key": "ctrl+shift+=",
         "command": "-workbench.action.zoomIn"
     },
-    // Vscode Harpoon
-    {
-        "key": "alt+a",
-        "command": "vscode-harpoon.addEditor"
-    },
-    {
-        "key": "alt+r",
-        "command": "vscode-harpoon.editEditors"
-    },
-    {
-        "key": "alt+l",
-        "command": "vscode-harpoon.gotoPreviousHarpoonEditor"
-    },
-    {
-        "key": "alt+t",
-        "command": "vscode-harpoon.editorQuickPick"
-    },
-    {
-        "key": "alt+v",
-        "command": "list.focusDown",
-        "when": "vscode-harpoon.isQuickPick"
-    },
-    {
-        "key": "alt+1",
-        "command": "vscode-harpoon.gotoEditor1"
-    },
-    {
-        "key": "alt+2",
-        "command": "vscode-harpoon.gotoEditor2"
-    },
-    {
-        "key": "alt+3",
-        "command": "vscode-harpoon.gotoEditor3"
-    },
-    {
-        "key": "alt+4",
-        "command": "vscode-harpoon.gotoEditor4"
-    },
-    {
-        "key": "alt+5",
-        "command": "vscode-harpoon.gotoEditor5"
-    },
-    {
-        "key": "alt+6",
-        "command": "vscode-harpoon.gotoEditor6"
-    },
     {
         "key": "alt+l",
         "command": "-toggleFindInSelection",
@@ -374,13 +328,150 @@
         "command": "-toggleSearchEditorContextLines",
         "when": "inSearchEditor"
     },
-    // Vscode Harpoon wait version 1.6
-    // Issue https://github.com/tobias-z/vscode-harpoon/issues/40
-    //     "key": "alt+p",
-    //     "commands": "navigatePreviousEditor"
-    // },
-    // {
-    //     "key": "alt+n",
-    //     "commands": "vscode-harpoon.navigateNextEditor"
-    // },
+    // To run test on current cursor fonction 
+    {
+        "key": "ctrl+r t",
+        "command": "testing.runAtCursor",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+; c",
+        "command": "-testing.runAtCursor",
+        "when": "editorTextFocus"
+    },
+    // Open chat copilot in sidebar
+    {
+        "key": "ctrl+shift+i",
+        "command": "workbench.action.chat.open"
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "-workbench.action.chat.open"
+    },
+    // Vim navigation into Notebook cell with ctrl+o & ctrl+i
+    {
+        "key": "ctrl+o",
+        "command": "workbench.action.navigateBackInEditLocations"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "workbench.action.navigateForwardInEditLocations"
+    },
+    // Vscode bookmark extension
+    {
+        "key": "alt+a",
+        "command": "bookmarks.toggle"
+    },
+    {
+        "key": "alt+r",
+        "command": "bookmarks.clear"
+    },
+    {
+        "key": "alt+ctrl+e",
+        "command": "bookmarks.clearFromAllFiles"
+    },
+    {
+        "key": "alt+t",
+        "command": "bookmarks.listFromAllFiles"
+    },
+    {
+        "key": "alt+v",
+        "command": "bookmarks.toggleLabeled"
+    },
+    // Next & Previous bookmarks ext on notebook too
+    {
+        "key": "alt+ctrl+l",
+        "command": "bookmarks.jumpToNext",
+        "when": "editorTextFocus || notebookCellListFocused && !inlineChatFocused && notebookCellType == 'markup' || notebookCellListFocused && notebookMissingKernelExtension && !inlineChatFocused && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !inlineChatFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0 || notebookCellListFocused && !inlineChatFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelSourceCount > 0"
+    },
+    {
+        "key": "alt+ctrl+l",
+        "command": "-bookmarks.jumpToNext",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+ctrl+j",
+        "command": "bookmarks.jumpToPrevious",
+        "when": "editorTextFocus || notebookCellListFocused && !inlineChatFocused && notebookCellType == 'markup' || notebookCellListFocused && notebookMissingKernelExtension && !inlineChatFocused && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !inlineChatFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0 || notebookCellListFocused && !inlineChatFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelSourceCount > 0"
+    },
+    {
+        "key": "alt+ctrl+j",
+        "command": "-bookmarks.jumpToPrevious",
+        "when": "editorTextFocus"
+    },
+    // hovering definition or message
+    // gh to get definition hover
+    // cmd+k to get focus on hover
+    // hjkl / gg / shift+g to naviguate
+    // esc to exit focus on hover and back to code
+    {
+        "key": "h",
+        "command": "editor.action.scrollLeftHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "left",
+        "command": "-editor.action.scrollLeftHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "j",
+        "command": "editor.action.scrollDownHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "down",
+        "command": "-editor.action.scrollDownHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "l",
+        "command": "editor.action.scrollRightHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "right",
+        "command": "-editor.action.scrollRightHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "k",
+        "command": "editor.action.scrollUpHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "up",
+        "command": "-editor.action.scrollUpHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "g g",
+        "command": "editor.action.goToTopHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "ctrl+up",
+        "command": "-editor.action.goToTopHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "shift+g",
+        "command": "editor.action.goToBottomHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "ctrl+down",
+        "command": "-editor.action.goToBottomHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+k ctrl+i",
+        "command": "-editor.action.showHover",
+        "when": "editorTextFocus"
+    },
 ]
