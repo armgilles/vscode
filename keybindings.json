@@ -474,4 +474,17 @@
         "command": "-editor.action.showHover",
         "when": "editorTextFocus"
     },
+    // Nobebook utility (restart kernel, reveal last failed cell, reveal running cell)
+    {
+        "key": "alt+cmd+y",
+        "command": "jupyter.restartkernel"
+    },
+    {
+        "key": "alt+cmd+u",
+        "command": "notebook.revealLastFailedCell"
+    },
+    {
+        "key": "alt+cmd+i",
+        "command": "notebook.revealRunningCell"
+    },
 ]
