@@ -69,6 +69,20 @@
         "command": "workbench.action.focusActiveEditorGroup", 
         "when": "panelFocus" 
     },
+    // vim et gestion dans notebook particulière
+    // Permets d'aller d'un notebook non focus sur une cell
+    // vers le terminal ou la sidebar. Ne marche pas si 
+    // split vertical ou horizontal :(
+    {  
+       "key": "ctrl+e j",          
+        "command": "workbench.action.terminal.focus", 
+        "when": "listFocus && !inputFocus" 
+    },
+    {  
+        "key": "ctrl+e h",          
+         "command": "workbench.action.focusSideBar", 
+         "when": "listFocus && !inputFocus" 
+     },
     // Copilot shortcut
     {
         "key": "cmd+down",
