@@ -312,4 +312,5 @@
   "editor.autoClosingBrackets": "never",
   "workbench.editor.enablePreview": false,
   "terminal.external.osxExec": "warp.app",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
 }

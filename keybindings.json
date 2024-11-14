@@ -152,7 +152,6 @@
         "command": "-editor.action.toggleScreenReaderAccessibilityMode",
         "when": "accessibilityHelpIsShown"
     },
-    // Side bar source control
     {
         "key": "shift+cmd+g g",
         "command": "workbench.view.scm",
@@ -173,13 +172,20 @@
         "command": "-notebook.cell.execute",
         "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || !notebookCellExecuting && notebookCellType == 'code' && notebookCellListFocused || inlineChatFocused && notebookCellChatFocused && notebookKernelCount > 0 || !notebookCellExecuting && notebookCellType == 'code' && notebookCellListFocused || inlineChatFocused && notebookCellChatFocused && notebookKernelSourceCount > 0 || inlineChatFocused && notebookCellChatFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code'"
     },
-    // To c/c on notebook output cell.
-    // Conflict with Highlight on Copy extension ?
     {
         "key": "cmd+c",
         "command": "-execCopy"
     },
-    // To run test on current cursor fonction 
+    {
+        "key": "shift+cmd+b",
+        "command": "workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
     {
         "key": "cmd+r t",
         "command": "testing.runAtCursor",
@@ -208,7 +214,7 @@
         "key": "ctrl+i",
         "command": "workbench.action.navigateForwardInEditLocations"
     },
-        // hovering definition or message
+    // hovering definition or message
     // gh to get definition hover
     // cmd+k to get focus on hover
     // hjkl / gg / shift+g to naviguate
@@ -329,5 +335,18 @@
         "key": "alt+cmd+j",
         "command": "-bookmarks.jumpToPrevious",
         "when": "editorTextFocus"
+    },
+    // Nobebook utility (restart kernel, reveal last failed cell, reveal running cell)
+    {
+        "key": "alt+cmd+y",
+        "command": "jupyter.restartkernel"
+    },
+    {
+        "key": "alt+cmd+u",
+        "command": "notebook.revealLastFailedCell"
+    },
+    {
+        "key": "alt+cmd+i",
+        "command": "notebook.revealRunningCell"
     },
 ]
