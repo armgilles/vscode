@@ -476,15 +476,15 @@
     },
     // Nobebook utility (restart kernel, reveal last failed cell, reveal running cell)
     {
-        "key": "alt+cmd+y",
+        "key": "alt+ctrl+y",
         "command": "jupyter.restartkernel"
     },
     {
-        "key": "alt+cmd+u",
+        "key": "alt+ctrl+u",
         "command": "notebook.revealLastFailedCell"
     },
     {
-        "key": "alt+cmd+i",
+        "key": "alt+ctrl+i",
         "command": "notebook.revealRunningCell"
     },
 ]
