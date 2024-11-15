@@ -501,4 +501,10 @@
         "key": "alt+ctrl+i",
         "command": "notebook.revealRunningCell"
     },
+    // Enable to close findsearch in notebook
+    {
+        "key": "escape",
+        "command": "notebook.hideFind",
+        "when": "notebookFindWidgetFocused"
+    }
 ]
