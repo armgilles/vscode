@@ -1,316 +1,344 @@
 {
   "workbench.colorTheme": "Default Dark+",
-  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.inheritEnv":
+ false,
   "jupyter.askForKernelRestart": false,
-  // From https://stackoverflow.com/a/70758108
-  "workbench.colorCustomizations": {
-    "terminal.ansiYellow": "#8400ffe1",
-    "statusBar.background": "#8FBCBB",
-    "statusBar.noFolderBackground": "#8FBCBB",
-    "statusBar.debuggingBackground": "#8FBCBB",
-    "statusBar.foreground": "#434C5E",
-    "statusBar.debuggingForeground": "#434C5E",
-    "editor.lineHighlightBorder": "#d45ccab0"
-  },
+ // From https://stackoverflow.com/a/70758108
+ "workbench.colorCustomizations": {
+   "terminal.ansiYellow": "#8400ffe1",
+   "statusBar.background": "#8FBCBB",
+   "statusBar.noFolderBackground": "#8FBCBB",
+   "statusBar.debuggingBackground": "#8FBCBB",
+   "statusBar.foreground": "#434C5E",
+   "statusBar.debuggingForeground": "#434C5E",
+   "editor.lineHighlightBorder": "#d45ccab0"
+ },
   "editor.renderLineHighlight": "all", 
-  "notebook.output.textLineLimit": 800,
+ "notebook.output.textLineLimit": 800,
   "python.linting.cwd": "",
-  "python.analysis.completeFunctionParens": true,
-  "autoDocstring.startOnNewLine": true,
+ "python.analysis.completeFunctionParens": true,
+  "autoDocstring.startOnNewLine":
+ true,
   "autoDocstring.docstringFormat": "numpy",
-  "editor.cursorStyle": "block",
+  "editor.cursorStyle":
+ "block",
   "diffEditor.ignoreTrimWhitespace": false,
   "[python]": {
-    "editor.formatOnType": true
+ "editor.formatOnType": true
   },
   "editor.fontSize": 14,
-  "editor.inlineSuggest.enabled": true,
+ "editor.inlineSuggest.enabled": true,
   "window.zoomLevel": -1,
-  "editor.lineNumbers": "relative",
+ "editor.lineNumbers": "relative",
   "editor.smoothScrolling": true,
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.cursorSurroundingLines": 15,
+ "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorSurroundingLines":
+ 15,
   "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs":"active",
-  //VIM
-  "vim.easymotion": true,
+ "editor.guides.bracketPairs":"active",
+ //VIM
+ "vim.easymotion": true,
   "vim.incsearch": true,
-  "vim.useSystemClipboard": true,
+  "vim.useSystemClipboard":
+ true,
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
-  "vim.highlightedyank.enable": true,
+ "vim.highlightedyank.enable": true,
   "vim.searchMatchColor": "#BF616A",
-  "vim.findMatchBackground": "#BF616A",
-  "vim.cursorStylePerMode.insert": "line-thin",
+ "vim.findMatchBackground": "#BF616A",
+  "vim.cursorStylePerMode.insert":
+ "line-thin",
   "vim.cursorStylePerMode.normal": "block",
-  // Flah extension, have to use Cvim, waiting PR on official vim extension
-  "vim.flash.enable": true,
+ // Flah extension, have to use Cvim, waiting PR on official vim extension
+ "vim.flash.enable": true,
   "vim.flash.marker.backgroundColor": "#ccff88",
-  "vim.flash.marker.nextMatchBackgroundColor": "#ffb86c",
-  "vim.flash.labels": "hklyuiopnmaqwertzxcvbasdgjf",
-  //Vim color
-  "vim.statusBarColorControl": true,
+ "vim.flash.marker.nextMatchBackgroundColor": "#ffb86c",
+  "vim.flash.labels":
+ "hklyuiopnmaqwertzxcvbasdgjf",
+ //Vim color
+ "vim.statusBarColorControl": true,
   "vim.statusBarColors.normal": [
-    "#8FBCBB",
-    "#434C5E"
+  "#8FBCBB",
+ "#434C5E"
   ],
   "vim.statusBarColors.insert": "#BF616A",
-  "vim.statusBarColors.visual": "#6fa8dc",
-  "vim.statusBarColors.visualline": "#6fa8dc",
+ "vim.statusBarColors.visual": "#6fa8dc",
+  "vim.statusBarColors.visualline":
+ "#6fa8dc",
   "vim.statusBarColors.visualblock": "#A3BE8C",
-  "vim.statusBarColors.replace": "#D08770",
-  "vim.statusBarColors.commandlineinprogress": "#007ACC",
-  "vim.statusBarColors.searchinprogressmode": "#007ACC",
-  "vim.statusBarColors.easymotionmode": "#007ACC",
-  "vim.statusBarColors.easymotioninputmode": "#007ACC",
-  "vim.statusBarColors.surroundinputmode": "#007ACC",
-  "vim.insertModeKeyBindings": [
-    {
-      "before": [
-        "j",
-        "j"
-      ],
-      "after": [
-        "<Esc>"
-      ]
-    }
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "<leader>",
-        "d"
-      ],
-      "after": [
-        "d",
-        "d"
-      ]
-    },
-    {
-      "before": [
-        "K"
-      ],
-      "commands": [
-        "lineBreakInsert"
-      ],
-      "silent": true
-    },
-    {
-      "before": [
-        "<C-n>"
-      ],
-      "after": [],
-      "commands": [
-        {
-          "command": ":nohl"
-        }
-      ]
-    },
-    // to disable copy when delete
-    {
-      "before": [
-        "d"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d"
-      ]
-    },
-    {
-      "before": [
-        "D"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "D"
-      ]
-    },
-    {
-      "before": [
-        "d",
-        "d"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d",
-        "d"
-      ]
-    },
-    {
-      "before": [
-        "<BS>"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d"
-      ]
-    },
-    {
-      "before": [
-        "c"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "c"
-      ]
-    },
-    {
-      "before": [
-        "C"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "C"
-      ]
-    },
-    {
-      "before": [
-        "x"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "x"
-      ]
-    },
-    {
-      "before": [
-        "s"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "s"
-      ]
-    },
-    // remaper "<C-w>" pour la gestion des switch windows sans passer par "<C-w>"
-    {
-      "before": ["<C-e>"],
-      "after": ["<C-w>"]
-    },
-    // panes navigation
-    {
-      "before": ["<C-w>", "h"],
-      "commands": ["workbench.action.focusLeftGroup"]
-    },
-    {
-      "before": ["<C-w>", "j"],
-      "commands": ["workbench.action.focusBelowGroup"]
-    },
-    {
-      "before": ["<C-w>", "k"],
-      "commands": ["workbench.action.focusAboveGroup"]
-    },
-    {
-      "before": ["<C-w>", "l"],
-      "commands": ["workbench.action.focusRightGroup"]
-    },
-    // to move screen down one line
-    {
-      "before": [
-        "<C-h>"
-      ],
-      "after": [
-        "<C-e>"
-      ]
-    },
-  ],
-  // to disable copy when delete
-  "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "d"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d"
-      ]
-    },
-    {
-      "before": [
-        "D"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "D"
-      ]
-    },
-    {
-      "before": [
-        "d",
-        "d"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d",
-        "d"
-      ]
-    },
-    {
-      "before": [
-        "<BS>"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d"
-      ]
-    },
-    {
-      "before": [
-        "s"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "s"
-      ]
-    },
-  ],
-  "vim.visualModeKeyBindings": [
-    // Stay in visual mode while indenting
-    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
-    { "before": [">"], "commands": ["editor.action.indentLines"] },
-    // Move selected lines while staying in visual mode
-    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
-    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
-  ],
-  "vim.leader": "<space>",
-  "vim.handleKeys": {
-    // "<C-a>": false,
-    "<C-w>": false,
-  },
-  "extensions.experimental.affinity": {
-    "vscodevim.vim": 1
-  },
-  "editor.indentSize": "tabSize",
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "charliermarsh.ruff",
-  "editor.rename.enablePreview": false,
-  "editor.parameterHints.enabled": false,
-  "highlightOnCopy.backgroundColor": "rgba(230, 97, 89, 0.7)",
-  "highlightOnCopy.foregroundColor": "#fff",
-  "highlightOnCopy.timeout": 200,
-  "github.copilot.editor.enableAutoCompletions": true,
-  "notebook.defaultFormatter": "charliermarsh.ruff",
-  "github.copilot.enable": {
-    "markdown": true
-  }, 
-  "files.autoSave": "onFocusChange",
-  "editor.autoClosingOvertype": "never",
-  "editor.autoClosingDelete": "never",
-  "editor.autoClosingQuotes": "never",
-  "editor.autoClosingBrackets": "never",
-  "workbench.editor.enablePreview": false,
-  "terminal.external.osxExec": "warp.app",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
-}
+ "vim.statusBarColors.replace": "#D08770",
+ "vim.statusBarColors.commandlineinprogress": "#007ACC",
+ "vim.statusBarColors.searchinprogressmode": "#007ACC",
+ "vim.statusBarColors.easymotionmode": "#007ACC",
+ "vim.statusBarColors.easymotioninputmode": "#007ACC",
+ "vim.statusBarColors.surroundinputmode": "#007ACC",
+ // Gestion de la jumplist de vim
+ // https://github.com/VSCodeVim/Vim/issues/8317#issuecomment-1592953138
+ // On a le choix entre : 
+ // - "workbench.action.navigateBack" et "workbench.action.navigateForward" pour tout la navigation et modif.
+ // - "workbench.action.navigateBackInEditLocations" et "workbench.action.navigateForwardInEditLocations" pour l'édition seulement
+ // - "workbench.action.navigateBackInNavigationLocations" et "workbench.action.navigateForwardInNavigationLocations" pour la navigation seulement
+ // À noter que l'on peut joueur avec le setting "workbench.editor.navigationScope" pour changer le scope de la navigation
+   "vim.normalModeKeyBindings": [
+     {
+       "before": ["<C-o>"],
+       "commands": ["workbench.action.navigateBackInEditLocations"]
+     },
+     {
+       "before": ["<C-i>"],
+       "commands": ["workbench.action.navigateForwardInEditLocations"]
+     }
+   ],
+   "vim.insertModeKeyBindings": [
+     {
+       "before": [
+         "j",
+         "j"
+       ],
+       "after": [
+         "<Esc>"
+       ]
+     }
+   ],
+   "vim.normalModeKeyBindingsNonRecursive": [
+     {
+       "before": [
+         "<leader>",
+         "d"
+       ],
+       "after": [
+         "d",
+         "d"
+       ]
+     },
+     {
+       "before": [
+         "K"
+       ],
+       "commands": [
+         "lineBreakInsert"
+       ],
+       "silent": true
+     },
+     {
+       "before": [
+         "<C-n>"
+       ],
+       "after": [],
+       "commands": [
+         {
+           "command": ":nohl"
+         }
+       ]
+     },
+     // to disable copy when delete
+     {
+       "before": [
+         "d"
+       ],
+       "after": [
+         "\"",
+         "_",
+         "d"
+       ]
+     },
+     {
+       "before": [
+         "D"
+       ],
+       "after": [
+         "\"",
+         "_",
+         "D"
+       ]
+     },
+     {
+       "before": [
+         "d",
+         "d"
+       ],
+       "after": [
+         "\"",
+         "_",
+         "d",
+         "d"
+       ]
+     },
+     {
+       "before": [
+         "<BS>"
+       ],
+       "after": [
+         "\"",
+         "_",
+         "d"
+       ]
+     },
+     {
+       "before": [
+         "c"
+       ],
+       "after": [
+         "\"",
+         "_",
+         "c"
+       ]
+     },
+     {
+       "before": [
+         "C"
+       ],
+       "after": [
+         "\"",
+         "_",
+         "C"
+       ]
+     },
+     {
+       "before": [
+         "x"
+       ],
+       "after": [
+         "\"",
+         "_",
+         "x"
+       ]
+     },
+     {
+       "before": [
+         "s"
+       ],
+       "after": [
+         "\"",
+         "_",
+         "s"
+       ]
+     },
+     // remaper "<C-w>" pour la gestion des switch windows sans passer par "<C-w>"
+     {
+       "before": ["<C-e>"],
+       "after": ["<C-w>"]
+     },
+     // panes navigation
+     {
+       "before": ["<C-w>", "h"],
+       "commands": ["workbench.action.focusLeftGroup"]
+     },
+     {
+       "before": ["<C-w>", "j"],
+       "commands": ["workbench.action.focusBelowGroup"]
+     },
+     {
+       "before": ["<C-w>", "k"],
+       "commands": ["workbench.action.focusAboveGroup"]
+     },
+     {
+       "before": ["<C-w>", "l"],
+       "commands": ["workbench.action.focusRightGroup"]
+     },
+     // to move screen down one line
+     {
+       "before": [
+         "<C-h>"
+       ],
+       "after": [
+         "<C-e>"
+       ]
+     },
+   ],
+   // to disable copy when delete
+   "vim.visualModeKeyBindingsNonRecursive": [
+     {
+       "before": [
+         "d"
+       ],
+       "after": [
+         "\"",
+         "_",
+         "d"
+       ]
+     },
+     {
+       "before": [
+         "D"
+       ],
+       "after": [
+         "\"",
+         "_",
+         "D"
+       ]
+     },
+     {
+       "before": [
+         "d",
+         "d"
+       ],
+       "after": [
+         "\"",
+         "_",
+         "d",
+         "d"
+       ]
+     },
+     {
+       "before": [
+         "<BS>"
+       ],
+       "after": [
+         "\"",
+         "_",
+         "d"
+       ]
+     },
+     {
+       "before": [
+         "s"
+       ],
+       "after": [
+         "\"",
+         "_",
+         "s"
+       ]
+     },
+   ],
+   "vim.visualModeKeyBindings": [
+     // Stay in visual mode while indenting
+     { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+     { "before": [">"], "commands": ["editor.action.indentLines"] },
+     // Move selected lines while staying in visual mode
+     { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+     { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+   ],
+   "vim.leader": "<space>",
+   "vim.handleKeys": {
+     // "<C-a>": false,
+     "<C-w>": false,
+   },
+   "extensions.experimental.affinity": {
+     "vscodevim.vim": 1
+   },
+   "editor.indentSize": "tabSize",
+   "editor.formatOnSave": true,
+   "editor.defaultFormatter": "charliermarsh.ruff",
+   "editor.rename.enablePreview": false,
+   "editor.parameterHints.enabled": false,
+   "highlightOnCopy.backgroundColor": "rgba(230, 97, 89, 0.7)",
+   "highlightOnCopy.foregroundColor": "#fff",
+   "highlightOnCopy.timeout": 200,
+   "github.copilot.editor.enableAutoCompletions": true,
+   "notebook.defaultFormatter": "charliermarsh.ruff",
+   "github.copilot.enable": {
+     "markdown": true
+   }, 
+   "files.autoSave": "onFocusChange",
+   "editor.autoClosingOvertype": "never",
+   "editor.autoClosingDelete": "never",
+   "editor.autoClosingQuotes": "never",
+   "editor.autoClosingBrackets": "never",
+   "workbench.editor.enablePreview": false,
+   "terminal.external.osxExec": "warp.app",
+   "terminal.integrated.enableMultiLinePasteWarning": false,
+   "gitlens.plusFeatures.enabled": false,
+   "terminal.integrated.fontFamily": "MesloLGS NF", // fixing bad encoding in terminal
+   "workbench.editor.navigationScope": "editorGroup" // to navigate with ctrl+o and ctrl+i
+ }
