@@ -234,7 +234,7 @@
     },
     // Copilot shortcut
     {
-        "key": "cmd+down",
+        "key": "ctrl+down",
         "command": "editor.action.inlineSuggest.showNext",
         "when": "inlineSuggestionVisible && !editorReadonly"
     },
@@ -244,7 +244,7 @@
         "when": "inlineSuggestionVisible && !editorReadonly"
     },
     {
-        "key": "cmd+up",
+        "key": "ctrl+up",
         "command": "editor.action.inlineSuggest.showPrevious",
         "when": "inlineSuggestionVisible && !editorReadonly"
     },
@@ -340,7 +340,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+; c",
+        "key": "ctrl+; c",
         "command": "-testing.runAtCursor",
         "when": "editorTextFocus"
     },
