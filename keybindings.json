@@ -517,15 +517,12 @@
     },
     // To unfocus in message box and navigate into modif files in source control
     {
-        "key": "cmd+shift+g g",
+        "key": "ctrl+shift+g g",
         "command": "extension.multiCommand.execute", // using the multi-command macro extension
         "args": {
             "sequence": [
-                "workbench.scm.focus",
-                "list.focusFirst",
-                // "list.focusDown",
-                // "list.focusDown",
-                // "list.focusDown",
+                "workbench.scm.action.focusNextResourceGroup",
+                "list.focusDown"
             ]
         },
     },
