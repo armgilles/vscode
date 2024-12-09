@@ -206,15 +206,6 @@
         "command": "highlightOnCopy.run",
         "when": "editorTextFocus && highlightOnCopy.init"
     },
-    {
-        "key": "cmd+c",
-        "command": "-highlightOnCopy.run",
-        "when": "editorTextFocus && highlightOnCopy.init"
-    },
-    {
-        "key": "cmd+c",
-        "command": "-editor.action.clipboardCopyAction"
-    },
     // vim afin de pouvoir sortir du file explorer en switchant de focus (ctrl+e mapper à la place de ctrl+w)
     {
         "key": "ctrl+e l",
