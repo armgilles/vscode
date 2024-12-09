@@ -75,6 +75,31 @@
   "vim.statusBarColors.easymotionmode": "#007ACC",
   "vim.statusBarColors.easymotioninputmode": "#007ACC",
   "vim.statusBarColors.surroundinputmode": "#007ACC",
+  // Gestion de la jumplist de vim
+  // https://github.com/VSCodeVim/Vim/issues/8317#issuecomment-1592953138
+  // On a le choix entre : 
+  // - "workbench.action.navigateBack" et "workbench.action.navigateForward" pour tout la navigation et modif.
+  // - "workbench.action.navigateBackInEditLocations" et "workbench.action.navigateForwardInEditLocations" pour l'édition seulement
+  // - "workbench.action.navigateBackInNavigationLocations" et "workbench.action.navigateForwardInNavigationLocations" pour la navigation seulement
+  // À noter que l'on peut joueur avec le setting "workbench.editor.navigationScope" pour changer le scope de la navigation
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "<C-o>"
+      ],
+      "commands": [
+        "workbench.action.navigateBackInEditLocations"
+      ]
+    },
+    {
+      "before": [
+        "<C-i>"
+      ],
+      "commands": [
+        "workbench.action.navigateForwardInEditLocations"
+      ]
+    }
+  ],
   "vim.insertModeKeyBindings": [
     {
       "before": [
@@ -449,5 +474,7 @@
   "ruff.lineLength": 120,
   "workbench.editorLargeFileConfirmation": 200,
   "files.autoSave": "onFocusChange",
-  "terminal.integrated.enableMultiLinePasteWarning": false
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.fontFamily": "MesloLGS NF", // Fixing bad encoding in terminal
+  "workbench.editor.navigationScope": "editorGroup" // to navigate with ctrl+o and ctrl+i
 }

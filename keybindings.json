@@ -362,14 +362,18 @@
         "key": "ctrl+alt+i",
         "command": "-workbench.action.chat.open"
     },
-    // Vim navigation into Notebook cell with ctrl+o & ctrl+i
+    // Vim navigation into Notebook cell with ctrl+o & ctrl+i and try to don't
+    // overide vim navigation mais que sur l'edition de code
+    // En lien avec les commandes vim_ctrl+o et vim_ctrl+i dans setting.json
     {
         "key": "ctrl+o",
-        "command": "workbench.action.navigateBackInEditLocations"
+        "command": "workbench.action.navigateBackInEditLocations",
+        "when": "notebookEditorFocused"
     },
     {
         "key": "ctrl+i",
-        "command": "workbench.action.navigateForwardInEditLocations"
+        "command": "workbench.action.navigateForwardInEditLocations",
+        "when": "notebookEditorFocused"
     },
     // Vscode bookmark extension
     {
@@ -506,5 +510,23 @@
         "key": "escape",
         "command": "notebook.hideFind",
         "when": "notebookFindWidgetFocused"
-    }
+    },
+    {
+        "key": "ctrl+shift+g t",
+        "command": "workbench.view.extension.test"
+    },
+    // To unfocus in message box and navigate into modif files in source control
+    {
+        "key": "cmd+shift+g g",
+        "command": "extension.multiCommand.execute", // using the multi-command macro extension
+        "args": {
+            "sequence": [
+                "workbench.scm.focus",
+                "list.focusFirst",
+                // "list.focusDown",
+                // "list.focusDown",
+                // "list.focusDown",
+            ]
+        },
+    },
 ]
