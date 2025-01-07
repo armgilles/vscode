@@ -42,7 +42,7 @@
   "settingsSync.ignoredExtensions": [
     "ms-toolsai.jupyter"
   ],
-  "editor.defaultFormatter": "charliermarsh.ruff",
+  "editor.defaultFormatter": "ms-python.black-formatter",
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
   //VIM
@@ -438,6 +438,7 @@
     "<C-f>": false,
     "<C-w>": false,
     "<C-x>": false,
+    "<C-b>": false, // use to hide / display primary side bar
   },
   // To improve performance
   "extensions.experimental.affinity": {
@@ -476,5 +477,6 @@
   "files.autoSave": "onFocusChange",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.fontFamily": "MesloLGS NF", // Fixing bad encoding in terminal
-  "workbench.editor.navigationScope": "editorGroup" // to navigate with ctrl+o and ctrl+i
+  "workbench.editor.navigationScope": "editorGroup",
+  "workbench.editor.enablePreview": false // to navigate with ctrl+o and ctrl+i
 }
