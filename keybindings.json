@@ -516,5 +516,10 @@
                 "list.focusDown"
             ]
         }
+    },
+    // Pour pouvoir checkout un fichier sélectionné dans le source control
+    {
+        "key": "ctrl+backspace",
+        "command": "git.clean"
     }
 ]
