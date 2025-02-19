@@ -6,9 +6,9 @@
  // From https://stackoverflow.com/a/70758108
  "workbench.colorCustomizations": {
    "terminal.ansiYellow": "#8400ffe1",
-   "statusBar.background": "#8FBCBB",
-   "statusBar.noFolderBackground": "#8FBCBB",
-   "statusBar.debuggingBackground": "#8FBCBB",
+   "statusBar.background": "#6fa8dc",
+   "statusBar.noFolderBackground": "#6fa8dc",
+   "statusBar.debuggingBackground": "#6fa8dc",
    "statusBar.foreground": "#434C5E",
    "statusBar.debuggingForeground": "#434C5E",
    "editor.lineHighlightBorder": "#d45ccab0"
@@ -54,7 +54,7 @@
   "vim.flash.marker.backgroundColor": "#ccff88",
  "vim.flash.marker.nextMatchBackgroundColor": "#ffb86c",
   "vim.flash.labels":
- "hklyuiopnmaqwertzxcvbasdgjf",
+ "jhklyuiopnmaqwertzxcvbasdgf",
  //Vim color
  "vim.statusBarColorControl": true,
   "vim.statusBarColors.normal": [
@@ -82,11 +82,11 @@
    "vim.normalModeKeyBindings": [
      {
        "before": ["<C-o>"],
-       "commands": ["workbench.action.navigateBackInEditLocations"]
+       "commands": ["workbench.action.navigateBack"]
      },
      {
        "before": ["<C-i>"],
-       "commands": ["workbench.action.navigateForwardInEditLocations"]
+       "commands": ["workbench.action.navigateForward"]
      }
    ],
    "vim.insertModeKeyBindings": [
@@ -244,7 +244,7 @@
        "after": [
          "<C-e>"
        ]
-     },
+     }
    ],
    // to disable copy when delete
    "vim.visualModeKeyBindingsNonRecursive": [
@@ -299,7 +299,7 @@
          "_",
          "s"
        ]
-     },
+     }
    ],
    "vim.visualModeKeyBindings": [
      // Stay in visual mode while indenting
@@ -307,12 +307,12 @@
      { "before": [">"], "commands": ["editor.action.indentLines"] },
      // Move selected lines while staying in visual mode
      { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
-     { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+     { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] }
    ],
    "vim.leader": "<space>",
    "vim.handleKeys": {
      // "<C-a>": false,
-     "<C-w>": false,
+     "<C-w>": false
    },
    "extensions.experimental.affinity": {
      "vscodevim.vim": 1
@@ -337,8 +337,13 @@
    "editor.autoClosingBrackets": "never",
    "workbench.editor.enablePreview": false,
    "terminal.external.osxExec": "warp.app",
-   "terminal.integrated.enableMultiLinePasteWarning": false,
+   "terminal.integrated.enableMultiLinePasteWarning": "never",
    "gitlens.plusFeatures.enabled": false,
    "terminal.integrated.fontFamily": "MesloLGS NF", // fixing bad encoding in terminal
-   "workbench.editor.navigationScope": "editorGroup" // to navigate with ctrl+o and ctrl+i
+   // Notebook navigation settings
+   "workbench.editor.navigationScope": "editorGroup",
+   "terminal.integrated.gpuAcceleration": "off",
+   "editor.screenReaderAnnounceInlineSuggestion": false, // fix terminal theme icone
+   "editor.accessibilitySupport": "off",
+   "vim.replaceWithRegister": true
  }
