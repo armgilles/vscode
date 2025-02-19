@@ -11,17 +11,17 @@
     {   
         // Pour selectionner l'intérieur de balise Cf Bracket Select extension 
         "key": "alt+shift+a",
-        "command": "bracket-select.select",
+        "command": "bracket-select.select"
     },
     {   
         // with Go to Next/Previous Member extension
         "key": "alt+shift+up",
-        "command": "gotoNextPreviousMember.previousMember",
+        "command": "gotoNextPreviousMember.previousMember"
     },
     {
         // with Go to Next/Previous Member extension
         "key": "alt+shift+down",
-        "command": "gotoNextPreviousMember.nextMember",
+        "command": "gotoNextPreviousMember.nextMember"
     },
     {
         "key": "alt+up",
@@ -41,7 +41,7 @@
             "to": "nextBlankLine",
             "by": "wrappedLine",
             "select": false
-        },
+        }
     },
     {
         "key": "shift+alt+down",
@@ -214,12 +214,12 @@
     // En lien avec les commandes vim_ctrl+o et vim_ctrl+i dans setting.json
     {
         "key": "ctrl+o",
-        "command": "workbench.action.navigateBackInEditLocations",
+        "command": "workbench.action.navigateBack",
         "when": "notebookEditorFocused"
     },
     {
         "key": "ctrl+i",
-        "command": "workbench.action.navigateForwardInEditLocations",
+        "command": "workbench.action.navigateForward",
         "when": "notebookEditorFocused"
     },
     // hovering definition or message
@@ -377,8 +377,13 @@
             "list.focusFirst",
             "list.focusDown",
             "list.focusDown",
-            "list.focusDown",
+            "list.focusDown"
           ]
-        },
+        }
     },
+    // Pour pouvoir checkout un fichier sélectionné dans le source control
+    {
+        "key": "cmd+backspace",
+        "command": "git.clean"
+    }
 ]
