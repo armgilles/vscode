@@ -188,12 +188,12 @@
             "to": "nextBlankLine",
             "by": "wrappedLine",
             "select": false
-        },
+        }
     },
     {
         // Pour selectionner l'intérieur de balise Cf Bracket Select extension 
         "key": "alt+shift+a",
-        "command": "bracket-select.select",
+        "command": "bracket-select.select"
     },
     {
         "key": "ctrl+d",
@@ -515,6 +515,6 @@
                 "workbench.scm.action.focusNextResourceGroup",
                 "list.focusDown"
             ]
-        },
-    },
+        }
+    }
 ]
