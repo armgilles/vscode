@@ -58,7 +58,7 @@
   "vim.flash.enable": true,
   "vim.flash.marker.backgroundColor": "#ccff88",
   "vim.flash.marker.nextMatchBackgroundColor": "#ffb86c",
-  "vim.flash.labels": "jhklyuiopnmaqwertzxcvbasdgf,;",
+  "vim.flash.labels": "jhklyuiopnmaqwertzxcvbasdgf,;p",
   //Vim color
   "vim.statusBarColorControl": false,
   "vim.statusBarColors.normal": [
@@ -88,7 +88,7 @@
       "<C-o>"
   ],
   "commands": [
-      "workbench.action.navigateBackInEditLocations"
+      "workbench.action.navigateBack"
   ]
   },
   {
@@ -96,7 +96,7 @@
       "<C-i>"
   ],
   "commands": [
-      "workbench.action.navigateForwardInEditLocations"
+      "workbench.action.navigateForward"
   ]
   }
   ],
