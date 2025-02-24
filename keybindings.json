@@ -520,6 +520,37 @@
     // Pour pouvoir checkout un fichier sélectionné dans le source control
     {
         "key": "ctrl+backspace",
-        "command": "git.clean"
+        "command": "git.clean",
+        "when": "activeViewlet == 'wokbench.view.scm"
+    },
+    // Cmd+y pour couper la ligne entière
+    {
+        "key": "ctrl+y",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "after": [
+                "y",
+                "y",
+                "\\",
+                "+",
+                "d",
+                "d"
+            ]
+        }
+    },
+    // Cmd+Y pour couper du curseur jusqu'à la fin de la ligne
+    {
+        "key": "shift+ctrl+y",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "after": [
+                "y",
+                "$",
+                "d",
+                "$"
+            ]
+        }
     }
 ]
