@@ -42,13 +42,14 @@
   "vim.useSystemClipboard":
  true,
   "vim.useCtrlKeys": true,
-  "vim.hlsearch": true,
+  "vim.hlsearch": false,
  "vim.highlightedyank.enable": true,
-  "vim.searchMatchColor": "#BF616A",
+  // "vim.searchMatchColor": "#BF616A",
  "vim.findMatchBackground": "#BF616A",
   "vim.cursorStylePerMode.insert":
  "line-thin",
   "vim.cursorStylePerMode.normal": "block",
+  "vim.cursorStylePerMode.visual": "underline",
  // Flah extension, have to use Cvim, waiting PR on official vim extension
  "vim.flash.enable": true,
   "vim.flash.marker.backgroundColor": "#ccff88",
@@ -111,14 +112,18 @@
          "d"
        ]
      },
+     // Permets de faire un retour à la ligne sans passer par le mode insert
      {
        "before": [
          "K"
        ],
-       "commands": [
-         "lineBreakInsert"
-       ],
+       "after": ["$", "a", "<CR>", "<Esc>"],
        "silent": true
+     },
+     // Permets de fusionner la ligne actuelle et celle du dessous sans ajouter d'espace
+     {
+       "before": ["J"],
+       "after": ["g", "J"]
      },
      {
        "before": [
@@ -214,6 +219,16 @@
          "s"
        ]
      },
+     // Permet d'utiliser Y commt y$
+     {
+       "before": [
+         "Y"
+       ],
+       "after": [
+         "y",
+         "$"
+       ]
+     },
      // remaper "<C-w>" pour la gestion des switch windows sans passer par "<C-w>"
      {
        "before": ["<C-e>"],
@@ -299,6 +314,22 @@
          "_",
          "s"
        ]
+     },
+     // Permet d'utiliser Y commt y$
+     {
+       "before": [
+         "Y"
+       ],
+       "after": [
+         "y",
+         "$"
+       ]
+     },
+     // Permets de sélectionner du cursor au bout de la ligne sans que le cursor
+     // soit à la ligne suivante. Todo: des fois avec un caractère de moins (cf "h")
+     {
+       "before": ["$"],
+       "after": ["g", "_", "$", "h"]
      }
    ],
    "vim.visualModeKeyBindings": [
@@ -308,6 +339,17 @@
      // Move selected lines while staying in visual mode
      { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
      { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] }
+   ],
+   // Configurer les touches en mode "operator-pending",  actif lorsque vous
+   // avez tapé un opérateur (comme d, y, c) et que Vim attend une motion ou un
+   // objet texte
+   "vim.operatorPendingModeKeyBindings": [
+      // Permets de supprimer tout les espaces " " du cursor jusqu'à un autre
+      // caractère (lettre, nombre, symbole, etc...)
+     {
+       "before": ["l"],
+       "after": ["/", "\\", "S", "<CR>"]
+     }
    ],
    "vim.leader": "<space>",
    "vim.handleKeys": {
@@ -345,5 +387,6 @@
    "terminal.integrated.gpuAcceleration": "off",
    "editor.screenReaderAnnounceInlineSuggestion": false, // fix terminal theme icone
    "editor.accessibilitySupport": "off",
-   "vim.replaceWithRegister": true
+  "vim.replaceWithRegister": true,
+  "github.copilot.selectedCompletionModel": "gpt-4o-copilot"
  }
