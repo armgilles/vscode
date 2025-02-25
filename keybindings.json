@@ -404,5 +404,16 @@
         "args": {
             "after": ["y", "$", "d", "$"]
         }
+    },
+    // Permets de pouvoir repeat "." l'action de cmd+v
+    // par exemple ciw & cmd+v pour coller
+    // puis "." pour répéter le collage
+    {
+        "key": "cmd+v",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Insert'",
+        "args": {
+            "after": ["<C-r>", "*"]
+       }
     }
 ]
