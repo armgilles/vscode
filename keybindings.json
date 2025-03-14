@@ -415,5 +415,15 @@
         "args": {
             "after": ["<C-r>", "*"]
        }
+    },
+    {
+        "key": "cmd+r d",
+        "command": "testing.debugAtCursor",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+; cmd+c",
+        "command": "-testing.debugAtCursor",
+        "when": "editorTextFocus"
     }
 ]
