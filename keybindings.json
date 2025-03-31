@@ -8,12 +8,12 @@
         "key": "cmd+r",
         "command": "github.copilot.previousPanelSolution"
     },
-    {   
+    {
         // Pour selectionner l'intérieur de balise Cf Bracket Select extension 
         "key": "alt+shift+a",
         "command": "bracket-select.select"
     },
-    {   
+    {
         // with Go to Next/Previous Member extension
         "key": "alt+shift+up",
         "command": "gotoNextPreviousMember.previousMember"
@@ -64,25 +64,25 @@
         "when": "sideBarFocus"
     },
     // vim afin de pouvoir sortir du termial en switchant de focus (ctrl+e mapper à la place de ctrl+w)
-    {  
-       "key": "ctrl+e k",          
-        "command": "workbench.action.focusActiveEditorGroup", 
-        "when": "panelFocus" 
+    {
+        "key": "ctrl+e k",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "panelFocus"
     },
     // vim et gestion dans notebook particulière
     // Permets d'aller d'un notebook non focus sur une cell
     // vers le terminal ou la sidebar. Ne marche pas si 
     // split vertical ou horizontal :(
-    {  
-       "key": "ctrl+e j",          
-        "command": "workbench.action.terminal.focus", 
-        "when": "listFocus && !inputFocus" 
+    {
+        "key": "ctrl+e j",
+        "command": "workbench.action.terminal.focus",
+        "when": "listFocus && !inputFocus"
     },
-    {  
-        "key": "ctrl+e h",          
-         "command": "workbench.action.focusSideBar", 
-         "when": "listFocus && !inputFocus" 
-     },
+    {
+        "key": "ctrl+e h",
+        "command": "workbench.action.focusSideBar",
+        "when": "listFocus && !inputFocus"
+    },
     // Copilot shortcut
     {
         "key": "cmd+down",
@@ -133,14 +133,14 @@
     // Terminal navigation à travers les panels.
     // ne fonctionne pas pour l'onget jupyter & gitlens...
     {
-        "key": "ctrl+e l",          
-        "command": "workbench.action.nextPanelView", 
-        "when": "panelFocus" 
+        "key": "ctrl+e l",
+        "command": "workbench.action.nextPanelView",
+        "when": "panelFocus"
     },
     {
-        "key": "ctrl+e h",          
-        "command": "workbench.action.previousPanelView", 
-        "when": "panelFocus" 
+        "key": "ctrl+e h",
+        "command": "workbench.action.previousPanelView",
+        "when": "panelFocus"
     },
     {
         "key": "ctrl+o",
@@ -323,7 +323,7 @@
         "key": "alt+v",
         "command": "bookmarks.toggleLabeled"
     },
-        // Next & Previous bookmarks ext on notebook too
+    // Next & Previous bookmarks ext on notebook too
     {
         "key": "alt+cmd+l",
         "command": "bookmarks.jumpToNext",
@@ -370,15 +370,15 @@
     // To unfocus in message box and navigate into modif files in source control
     {
         "key": "cmd+shift+g g",
-        "command": "extension.multiCommand.execute",  // using the multi-command macro extension
+        "command": "extension.multiCommand.execute", // using the multi-command macro extension
         "args": {
-          "sequence": [
-            "workbench.scm.focus",
-            "list.focusFirst",
-            "list.focusDown",
-            "list.focusDown",
-            "list.focusDown"
-          ]
+            "sequence": [
+                "workbench.scm.focus",
+                "list.focusFirst",
+                "list.focusDown",
+                "list.focusDown",
+                "list.focusDown"
+            ]
         }
     },
     // Pour pouvoir checkout un fichier sélectionné dans le source control
@@ -393,7 +393,14 @@
         "command": "vim.remap",
         "when": "editorTextFocus && vim.mode == 'Normal'",
         "args": {
-            "after": ["y", "y", "\\", "+", "d", "d"]
+            "after": [
+                "y",
+                "y",
+                "\\",
+                "+",
+                "d",
+                "d"
+            ]
         }
     },
     // Cmd+Y pour couper du curseur jusqu'à la fin de la ligne
@@ -402,7 +409,12 @@
         "command": "vim.remap",
         "when": "editorTextFocus && vim.mode == 'Normal'",
         "args": {
-            "after": ["y", "$", "d", "$"]
+            "after": [
+                "y",
+                "$",
+                "d",
+                "$"
+            ]
         }
     },
     // Permets de pouvoir repeat "." l'action de cmd+v
@@ -413,8 +425,11 @@
         "command": "vim.remap",
         "when": "editorTextFocus && vim.mode == 'Insert'",
         "args": {
-            "after": ["<C-r>", "*"]
-       }
+            "after": [
+                "<C-r>",
+                "*"
+            ]
+        }
     },
     {
         "key": "cmd+r d",
@@ -425,5 +440,14 @@
         "key": "cmd+; cmd+c",
         "command": "-testing.debugAtCursor",
         "when": "editorTextFocus"
+    },
+    // Decrease / increase current view size
+    {
+        "key": "ctrl+t numpad_subtract",
+        "command": "workbench.action.decreaseViewSize"
+    },
+    {
+        "key": "ctrl+t numpad_add",
+        "command": "workbench.action.increaseViewSize"
     }
 ]
