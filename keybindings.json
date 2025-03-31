@@ -552,5 +552,16 @@
                 "$"
             ]
         }
+    },
+    // To debug test on cursor
+    {
+        "key": "cmd+r d",
+        "command": "testing.debugAtCursor",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+; cmd+c",
+        "command": "-testing.debugAtCursor",
+        "when": "editorTextFocus"
     }
 ]
