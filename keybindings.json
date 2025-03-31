@@ -523,7 +523,7 @@
         "command": "git.clean",
         "when": "activeViewlet == 'wokbench.view.scm"
     },
-    // Cmd+y pour couper la ligne entière
+    // Ctrl+y pour couper la ligne entière
     {
         "key": "ctrl+y",
         "command": "vim.remap",
@@ -539,7 +539,7 @@
             ]
         }
     },
-    // Cmd+Y pour couper du curseur jusqu'à la fin de la ligne
+    // Ctrl+Y pour couper du curseur jusqu'à la fin de la ligne
     {
         "key": "shift+ctrl+y",
         "command": "vim.remap",
@@ -555,13 +555,22 @@
     },
     // To debug test on cursor
     {
-        "key": "cmd+r d",
+        "key": "ctrl+r d",
         "command": "testing.debugAtCursor",
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+; cmd+c",
+        "key": "ctrl+; ctrl+c",
         "command": "-testing.debugAtCursor",
         "when": "editorTextFocus"
+    },
+    // Decrease / increase current view size
+    {
+        "key": "ctrl+t numpad_subtract",
+        "command": "workbench.action.decreaseViewSize"
+    },
+    {
+        "key": "ctrl+t numpad_add",
+        "command": "workbench.action.increaseViewSize"
     }
 ]
