@@ -48,7 +48,7 @@
   "vim.flash.enable": true,
   "vim.flash.marker.backgroundColor": "#ccff88",
   "vim.flash.marker.nextMatchBackgroundColor": "#ffb86c",
-  "vim.flash.labels": "jfdkslap-ureihgvmc,wox.tybnqz",
+  "vim.flash.labels": "jfdkslapureihgvmc,wox.tybnqz",
   //Vim color
   "vim.statusBarColorControl": true,
   "vim.statusBarColors.normal": [
@@ -293,6 +293,72 @@
       "after": [
         "<C-e>"
       ]
+    },
+    // Remap de gr -> gxx
+    {
+      "before": [
+        "g",
+        "i",
+        "w"
+      ],
+      "after": [
+        "g",
+        "r",
+        "i",
+        "w"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "i",
+        "p"
+      ],
+      "after": [
+        "g",
+        "r",
+        "i",
+        "p"
+      ]
+    },
+    // Problème avec cette motion suivant ou on la lance
+    // Si entre des "alors la position du cursor est OK.
+    // Si on la lance en début de ligne, le cursor se met plus loin qu'il faudrais.
+    {
+      "before": [
+        "g",
+        "i",
+        "\""
+      ],
+      // "after": [
+      //   "g",
+      //   "r",
+      //   "i",
+      //   "\""
+      // ]
+      "after": [
+        "\"",
+        "_",
+        "c",
+        "i",
+        "\"",
+        "ESC",
+        "p",
+        "ESC"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "a",
+        "w"
+      ],
+      "after": [
+        "g",
+        "r",
+        "a",
+        "w"
+      ]
     }
   ],
   // to disable copy when delete
@@ -374,8 +440,14 @@
     },
     // Permets d'avoir couper lorsque en mode visual et d'utiliser "y"
     {
-      "before": ["y"],
-      "after": ["\"", "+", "d"]
+      "before": [
+        "y"
+      ],
+      "after": [
+        "\"",
+        "+",
+        "d"
+      ]
     }
   ],
   "vim.visualModeKeyBindings": [
@@ -432,7 +504,7 @@
       ]
     }
   ],
-  "vim.leader": "<space>",
+  "vim.leader": "",
   "vim.handleKeys": {
     // "<C-a>": false,
     "<C-w>": false
@@ -469,5 +541,17 @@
   "editor.screenReaderAnnounceInlineSuggestion": false, // fix terminal theme icone
   "editor.accessibilitySupport": "off",
   "vim.replaceWithRegister": true,
-  "github.copilot.selectedCompletionModel": "gpt-4o-copilot"
+  "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
+  "git.autofetch": true,
+  // To desable the open testing window
+  // "testing.openTesting": "neverOpen",
+  "testing.automaticallyOpenTestResults": "neverOpen",
+  "@azure.argTenant": "",
+  "notebook.cellToolbarLocation": {
+    "default": "hidden"
+  },
+  "gitlens.home.preview.enabled": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }
