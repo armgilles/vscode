@@ -577,7 +577,7 @@
     // objet texte
     "vim.operatorPendingModeKeyBindings": [
         // Permets de supprimer tout les espaces " " du cursor jusqu'à un autre
-        // caractère (lettre, nombre, symbole, etc...)
+        // caractère (lettre, nombre, symbole, etc...) vers la droite
         {
             "before": [
                 "l"
@@ -588,7 +588,7 @@
                 "S",
                 "<CR>"
             ]
-        },
+        }
     ],
     "vim.leader": "<space>",
     "vim.handleKeys": {
