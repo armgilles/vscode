@@ -59,7 +59,7 @@
     "vim.flash.enable": true,
     "vim.flash.marker.backgroundColor": "#ccff88",
     "vim.flash.marker.nextMatchBackgroundColor": "#ffb86c",
-    "vim.flash.labels": "jfdkslap-ureihgvmc,wox.tybnqz",
+    "vim.flash.labels": "jfdkslapureihgvmc,wox.tybnqz",
     //Vim color
     "vim.statusBarColorControl": false,
     "vim.statusBarColors.normal": [
@@ -303,6 +303,72 @@
             ],
             "after": [
                 "<C-e>"
+            ]
+        },
+        // Remap de gr -> gxx
+        {
+            "before": [
+                "g",
+                "i",
+                "w"
+            ],
+            "after": [
+                "g",
+                "r",
+                "i",
+                "w"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "i",
+                "p"
+            ],
+            "after": [
+                "g",
+                "r",
+                "i",
+                "p"
+            ]
+        },
+        // Problème avec cette motion suivant ou on la lance
+        // Si entre des "alors la position du cursor est OK.
+        // Si on la lance en début de ligne, le cursor se met plus loin qu'il faudrais.
+        {
+            "before": [
+                "g",
+                "i",
+                "\""
+            ],
+            // "after": [
+            //   "g",
+            //   "r",
+            //   "i",
+            //   "\""
+            // ]
+            "after": [
+                "\"",
+                "_",
+                "c",
+                "i",
+                "\"",
+                "ESC",
+                "p",
+                "ESC"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "a",
+                "w"
+            ],
+            "after": [
+                "g",
+                "r",
+                "a",
+                "w"
             ]
         }
     ],
@@ -590,7 +656,7 @@
             ]
         },
     ],
-    "vim.leader": "<space>",
+    "vim.leader": "",
     "vim.handleKeys": {
         "<C-a>": false,
         "<C-p>": false,
@@ -613,9 +679,6 @@
     ],
     "editor.lineNumbers": "relative",
     "comments.useRelativeTime": false,
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
     "editor.autoClosingOvertype": "never",
     "editor.autoClosingDelete": "never",
     "editor.autoClosingQuotes": "never",
@@ -641,13 +704,16 @@
     "workbench.editor.navigationScope": "editorGroup",
     "workbench.editor.enablePreview": false, // to navigate with ctrl+o and ctrl+i
     "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
-    // // github copilot stuff on suez proxy
-    // "github.copilot.advanced": {
-    //     // "authProvider": "github",
-    //     "debug.useNodeFetcher": true,
-    // },
-    // // "http.proxySupport": "on",
-    // // "http.proxy": "http://<company-url>:<port>",
-    // "http.proxyStrictSSL": false,
-    // "http.experimental.systemCertificatesV2": true,
+    "git.autofetch": true,
+    // To desable the open testing window
+    // "testing.openTesting": "neverOpen",
+    "testing.automaticallyOpenTestResults": "neverOpen",
+    "@azure.argTenant": "",
+    "notebook.cellToolbarLocation": {
+        "default": "hidden"
+    },
+    "gitlens.home.preview.enabled": false,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
