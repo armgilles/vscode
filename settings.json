@@ -359,7 +359,126 @@
         "a",
         "w"
       ]
-    }
+    },
+    {
+      "before": [
+        "g",
+        "i",
+        "p"
+      ],
+      "after": [
+        "g",
+        "r",
+        "i",
+        "p"
+      ]
+    },
+    // []
+    {
+      "before": [
+        "g",
+        "i",
+        "["
+      ],
+      "after": [
+        "g",
+        "r",
+        "i",
+        "["
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "i",
+        "]"
+      ],
+      "after": [
+        "g",
+        "r",
+        "i",
+        "]"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "a",
+        "["
+      ],
+      "after": [
+        "g",
+        "r",
+        "a",
+        "["
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "a",
+        "]"
+      ],
+      "after": [
+        "g",
+        "r",
+        "a",
+        "]"
+      ]
+    },
+    // ()
+    {
+      "before": [
+        "g",
+        "i",
+        "("
+      ],
+      "after": [
+        "g",
+        "r",
+        "i",
+        "("
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "i",
+        ")"
+      ],
+      "after": [
+        "g",
+        "r",
+        "i",
+        ")"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "a",
+        "("
+      ],
+      "after": [
+        "g",
+        "r",
+        "a",
+        "("
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "a",
+        ")"
+      ],
+      "after": [
+        "g",
+        "r",
+        "a",
+        ")"
+      ]
+    },
   ],
   // to disable copy when delete
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -520,7 +639,6 @@
   "highlightOnCopy.backgroundColor": "rgba(230, 97, 89, 0.7)",
   "highlightOnCopy.foregroundColor": "#fff",
   "highlightOnCopy.timeout": 200,
-  "github.copilot.editor.enableAutoCompletions": true,
   "notebook.defaultFormatter": "charliermarsh.ruff",
   "github.copilot.enable": {
     "markdown": true
@@ -553,5 +671,6 @@
   "gitlens.home.preview.enabled": false,
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  },
+  "explorer.confirmPasteNative": false
 }
