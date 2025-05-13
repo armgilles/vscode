@@ -1,719 +1,719 @@
 {
-    "workbench.colorTheme": "Default Dark+",
-    "terminal.integrated.inheritEnv": false,
-    "jupyter.askForKernelRestart": false,
-    // From https://stackoverflow.com/a/70758108
-    "workbench.colorCustomizations": {
-        "terminal.ansiYellow": "#8400ffe1",
-        "statusBar.background": "#8FBCBB",
-        "statusBar.noFolderBackground": "#8FBCBB",
-        "statusBar.debuggingBackground": "#8FBCBB",
-        "statusBar.foreground": "#434C5E",
-        "statusBar.debuggingForeground": "#434C5E",
-        // to higtlight current line border
-        "editor.lineHighlightBorder": "#d45ccab0"
+  "workbench.colorTheme": "Default Dark+",
+  "terminal.integrated.inheritEnv": false,
+  "jupyter.askForKernelRestart": false,
+  // From https://stackoverflow.com/a/70758108
+  "workbench.colorCustomizations": {
+    "terminal.ansiYellow": "#8400ffe1",
+    "statusBar.background": "#8FBCBB",
+    "statusBar.noFolderBackground": "#8FBCBB",
+    "statusBar.debuggingBackground": "#8FBCBB",
+    "statusBar.foreground": "#434C5E",
+    "statusBar.debuggingForeground": "#434C5E",
+    // to higtlight current line border
+    "editor.lineHighlightBorder": "#d45ccab0"
+  },
+  "editor.renderLineHighlight": "all",
+  "notebook.output.textLineLimit": 1100,
+  "python.analysis.completeFunctionParens": true,
+  "autoDocstring.startOnNewLine": true,
+  "autoDocstring.docstringFormat": "numpy",
+  "editor.cursorStyle": "block",
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "window.zoomLevel": -1,
+  "editor.fontSize": 14,
+  "editor.fontFamily": "Menlo",
+  "git.ignoreLegacyWarning": true,
+  "editor.inlineSuggest.enabled": true,
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "sonarlint.focusOnNewCode": true,
+  "update.mode": "manual",
+  "editor.cursorSurroundingLines": 15,
+  // with Go to Next/Previous Member extension
+  "gotoNextPreviousMember.symbolKinds": [
+    "function",
+    "class",
+    "method"
+  ],
+  "editor.smoothScrolling": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "settingsSync.ignoredExtensions": [
+    "ms-toolsai.jupyter"
+  ],
+  "editor.defaultFormatter": "ms-python.black-formatter",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  //VIM
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": false,
+  "vim.highlightedyank.enable": true,
+  "vim.cursorStylePerMode.insert": "line-thin",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.cursorStylePerMode.visual": "underline",
+  // Flah extension, have to use Cvim, waiting PR on official vim extension
+  "vim.flash.enable": true,
+  "vim.flash.marker.backgroundColor": "#ccff88",
+  "vim.flash.marker.nextMatchBackgroundColor": "#ffb86c",
+  "vim.flash.labels": "jfdkslapureihgvmc,wox.tybnqz",
+  //Vim color
+  "vim.statusBarColorControl": false,
+  "vim.statusBarColors.normal": [
+    "#8FBCBB",
+    "#434C5E"
+  ],
+  "vim.statusBarColors.insert": "#BF616A",
+  "vim.statusBarColors.visual": "#B48EAD",
+  "vim.statusBarColors.visualline": "#B48EAD",
+  "vim.statusBarColors.visualblock": "#A3BE8C",
+  "vim.statusBarColors.replace": "#D08770",
+  "vim.statusBarColors.commandlineinprogress": "#007ACC",
+  "vim.statusBarColors.searchinprogressmode": "#007ACC",
+  "vim.statusBarColors.easymotionmode": "#007ACC",
+  "vim.statusBarColors.easymotioninputmode": "#007ACC",
+  "vim.statusBarColors.surroundinputmode": "#007ACC",
+  // Gestion de la jumplist de vim
+  // https://github.com/VSCodeVim/Vim/issues/8317#issuecomment-1592953138
+  // On a le choix entre : 
+  // - "workbench.action.navigateBack" et "workbench.action.navigateForward" pour tout la navigation et modif.
+  // - "workbench.action.navigateBackInEditLocations" et "workbench.action.navigateForwardInEditLocations" pour l'édition seulement
+  // - "workbench.action.navigateBackInNavigationLocations" et "workbench.action.navigateForwardInNavigationLocations" pour la navigation seulement
+  // À noter que l'on peut joueur avec le setting "workbench.editor.navigationScope" pour changer le scope de la navigation
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "<C-o>"
+      ],
+      "commands": [
+        "workbench.action.navigateBack"
+      ]
     },
-    "editor.renderLineHighlight": "all",
-    "notebook.output.textLineLimit": 1100,
-    "python.analysis.completeFunctionParens": true,
-    "autoDocstring.startOnNewLine": true,
-    "autoDocstring.docstringFormat": "numpy",
-    "editor.cursorStyle": "block",
-    "[python]": {
-        "editor.formatOnType": true
-    },
-    "window.zoomLevel": -1,
-    "editor.fontSize": 14,
-    "editor.fontFamily": "Menlo",
-    "git.ignoreLegacyWarning": true,
-    "editor.inlineSuggest.enabled": true,
-    "terminal.integrated.defaultProfile.linux": "bash",
-    "sonarlint.focusOnNewCode": true,
-    "update.mode": "manual",
-    "editor.cursorSurroundingLines": 15,
-    // with Go to Next/Previous Member extension
-    "gotoNextPreviousMember.symbolKinds": [
-        "function",
-        "class",
-        "method"
-    ],
-    "editor.smoothScrolling": true,
-    "editor.cursorSmoothCaretAnimation": "on",
-    "settingsSync.ignoredExtensions": [
-        "ms-toolsai.jupyter"
-    ],
-    "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs": "active",
-    //VIM
-    "vim.easymotion": true,
-    "vim.incsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": false,
-    "vim.highlightedyank.enable": true,
-    "vim.cursorStylePerMode.insert": "line-thin",
-    "vim.cursorStylePerMode.normal": "block",
-    "vim.cursorStylePerMode.visual": "underline",
-    // Flah extension, have to use Cvim, waiting PR on official vim extension
-    "vim.flash.enable": true,
-    "vim.flash.marker.backgroundColor": "#ccff88",
-    "vim.flash.marker.nextMatchBackgroundColor": "#ffb86c",
-    "vim.flash.labels": "jfdkslapureihgvmc,wox.tybnqz",
-    //Vim color
-    "vim.statusBarColorControl": false,
-    "vim.statusBarColors.normal": [
-        "#8FBCBB",
-        "#434C5E"
-    ],
-    "vim.statusBarColors.insert": "#BF616A",
-    "vim.statusBarColors.visual": "#B48EAD",
-    "vim.statusBarColors.visualline": "#B48EAD",
-    "vim.statusBarColors.visualblock": "#A3BE8C",
-    "vim.statusBarColors.replace": "#D08770",
-    "vim.statusBarColors.commandlineinprogress": "#007ACC",
-    "vim.statusBarColors.searchinprogressmode": "#007ACC",
-    "vim.statusBarColors.easymotionmode": "#007ACC",
-    "vim.statusBarColors.easymotioninputmode": "#007ACC",
-    "vim.statusBarColors.surroundinputmode": "#007ACC",
-    // Gestion de la jumplist de vim
-    // https://github.com/VSCodeVim/Vim/issues/8317#issuecomment-1592953138
-    // On a le choix entre : 
-    // - "workbench.action.navigateBack" et "workbench.action.navigateForward" pour tout la navigation et modif.
-    // - "workbench.action.navigateBackInEditLocations" et "workbench.action.navigateForwardInEditLocations" pour l'édition seulement
-    // - "workbench.action.navigateBackInNavigationLocations" et "workbench.action.navigateForwardInNavigationLocations" pour la navigation seulement
-    // À noter que l'on peut joueur avec le setting "workbench.editor.navigationScope" pour changer le scope de la navigation
-    "vim.normalModeKeyBindings": [
-        {
-            "before": [
-                "<C-o>"
-            ],
-            "commands": [
-                "workbench.action.navigateBack"
-            ]
-        },
-        {
-            "before": [
-                "<C-i>"
-            ],
-            "commands": [
-                "workbench.action.navigateForward"
-            ]
-        }
-    ],
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<leader>",
-                "d"
-            ],
-            "after": [
-                "d",
-                "d"
-            ]
-        },
-        // Permets de faire un retour a la ligne sans passer par le mode insert
-        {
-            "before": [
-                "K"
-            ],
-            "after": [
-                "$",
-                "a",
-                "<CR>",
-                "<Esc>"
-            ],
-            "silent": true
-        },
-        // Permets de fusionner la ligne actuelle et celle du dessous sans ajouter d'espace
-        {
-            "before": [
-                "J"
-            ],
-            "after": [
-                "g",
-                "J"
-            ]
-        },
-        {
-            "before": [
-                "<C-n>"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": ":nohl"
-                }
-            ]
-        },
-        // to disable copy when delete
-        {
-            "before": [
-                "d"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "d"
-            ]
-        },
-        {
-            "before": [
-                "D"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "D"
-            ]
-        },
-        {
-            "before": [
-                "d",
-                "d"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "d",
-                "d"
-            ]
-        },
-        {
-            "before": [
-                "<BS>"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "d"
-            ]
-        },
-        {
-            "before": [
-                "c"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "c"
-            ]
-        },
-        {
-            "before": [
-                "C"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "C"
-            ]
-        },
-        {
-            "before": [
-                "x"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "x"
-            ]
-        },
-        {
-            "before": [
-                "s"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "s"
-            ]
-        },
-        // Permet d'utiliser Y commt y$
-        {
-            "before": [
-                "Y"
-            ],
-            "after": [
-                "y",
-                "$"
-            ]
-        },
-        // remaper "<C-w>" pour la gestion des switch windows sans passer par "<C-w>"
-        {
-            "before": [
-                "<C-e>"
-            ],
-            "after": [
-                "<C-w>"
-            ]
-        },
-        // panes navigation
-        {
-            "before": [
-                "<C-w>",
-                "h"
-            ],
-            "commands": [
-                "workbench.action.focusLeftGroup"
-            ]
-        },
-        {
-            "before": [
-                "<C-w>",
-                "j"
-            ],
-            "commands": [
-                "workbench.action.focusBelowGroup"
-            ]
-        },
-        {
-            "before": [
-                "<C-w>",
-                "k"
-            ],
-            "commands": [
-                "workbench.action.focusAboveGroup"
-            ]
-        },
-        {
-            "before": [
-                "<C-w>",
-                "l"
-            ],
-            "commands": [
-                "workbench.action.focusRightGroup"
-            ]
-        },
-        // to move screen down one line
-        {
-            "before": [
-                "<C-h>"
-            ],
-            "after": [
-                "<C-e>"
-            ]
-        },
-        // Remap de gr -> gxx
-        {
-            "before": [
-                "g",
-                "i",
-                "w"
-            ],
-            "after": [
-                "g",
-                "r",
-                "i",
-                "w"
-            ]
-        },
-        {
-            "before": [
-                "g",
-                "i",
-                "p"
-            ],
-            "after": [
-                "g",
-                "r",
-                "i",
-                "p"
-            ]
-        },
-        // Problème avec cette motion suivant ou on la lance
-        // Si entre des "alors la position du cursor est OK.
-        // Si on la lance en début de ligne, le cursor se met plus loin qu'il faudrais.
-        {
-            "before": [
-                "g",
-                "i",
-                "\""
-            ],
-            // "after": [
-            //   "g",
-            //   "r",
-            //   "i",
-            //   "\""
-            // ]
-            "after": [
-                "\"",
-                "_",
-                "c",
-                "i",
-                "\"",
-                "ESC",
-                "p",
-                "ESC"
-            ]
-        },
-        {
-            "before": [
-                "g",
-                "a",
-                "w"
-            ],
-            "after": [
-                "g",
-                "r",
-                "a",
-                "w"
-            ]
-        }
-    ],
-    // to disable copy when delete
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "d"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "d"
-            ]
-        },
-        {
-            "before": [
-                "D"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "D"
-            ]
-        },
-        {
-            "before": [
-                "d",
-                "d"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "d",
-                "d"
-            ]
-        },
-        {
-            "before": [
-                "<BS>"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "d"
-            ]
-        },
-        {
-            "before": [
-                "s"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "s"
-            ]
-        },
-        // Permet d'utiliser Y commt y$
-        {
-            "before": [
-                "Y"
-            ],
-            "after": [
-                "y",
-                "$"
-            ]
-        },
-        // Permets de sélectionner du cursor au bout de la ligne sans que le cursor
-        // soit à la ligne suivante. Todo: des fois avec un caractère de moins (cf "h")
-        {
-            "before": [
-                "$"
-            ],
-            "after": [
-                "g",
-                "_",
-                "$",
-                "h"
-            ]
-        },
-        // remaper "<C-w>" pour la gestion des switch windows sans passer par "<C-w>"
-        {
-            "before": [
-                "<C-e>"
-            ],
-            "after": [
-                "<C-w>"
-            ]
-        },
-        // panes navigation
-        {
-            "before": [
-                "<C-w>",
-                "h"
-            ],
-            "commands": [
-                "workbench.action.focusLeftGroup"
-            ]
-        },
-        {
-            "before": [
-                "<C-w>",
-                "j"
-            ],
-            "commands": [
-                "workbench.action.focusBelowGroup"
-            ]
-        },
-        {
-            "before": [
-                "<C-w>",
-                "k"
-            ],
-            "commands": [
-                "workbench.action.focusAboveGroup"
-            ]
-        },
-        {
-            "before": [
-                "<C-w>",
-                "l"
-            ],
-            "commands": [
-                "workbench.action.focusRightGroup"
-            ]
-        },
-        // to move screen down one line
-        {
-            "before": [
-                "<C-h>"
-            ],
-            "after": [
-                "<C-e>"
-            ]
-        },
-        {
-            "before": [
-                "d"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "d"
-            ]
-        },
-        {
-            "before": [
-                "D"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "D"
-            ]
-        },
-        {
-            "before": [
-                "d",
-                "d"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "d",
-                "d"
-            ]
-        },
-        {
-            "before": [
-                "<BS>"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "d"
-            ]
-        },
-        {
-            "before": [
-                "s"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "s"
-            ]
-        },
-        // Permet d'utiliser Y commt y$
-        {
-            "before": [
-                "Y"
-            ],
-            "after": [
-                "y",
-                "$"
-            ]
-        },
-        // Permets de sélectionner du cursor au bout de la ligne sans que le cursor
-        // soit à la ligne suivante. Todo: des fois avec un caractère de moins (cf "h")
-        {
-            "before": [
-                "$"
-            ],
-            "after": [
-                "g",
-                "_",
-                "$",
-                "h"
-            ]
-        },
-        // Permets d'avoir couper lorsque en mode visual et d'utiliser "y"
-        {
-            "before": [
-                "y"
-            ],
-            "after": [
-                "\"",
-                "+",
-                "d"
-            ]
-        }
-    ],
-    "vim.visualModeKeyBindings": [
-        // Stay in visual mode while indenting
-        {
-            "before": [
-                "<"
-            ],
-            "commands": [
-                "editor.action.outdentLines"
-            ]
-        },
-        {
-            "before": [
-                ">"
-            ],
-            "commands": [
-                "editor.action.indentLines"
-            ]
-        },
-        // Move selected lines while staying in visual mode
-        {
-            "before": [
-                "J"
-            ],
-            "commands": [
-                "editor.action.moveLinesDownAction"
-            ]
-        },
-        {
-            "before": [
-                "K"
-            ],
-            "commands": [
-                "editor.action.moveLinesUpAction"
-            ]
-        },
-        // to pass to visual mode to insert more  easly
-        {
-            "before": [
-                "i",
-                "i"
-            ],
-            "after": [
-                "<Esc>",
-                "i"
-            ]
-        }
-    ],
-    // Configurer les touches en mode "operator-pending",  actif lorsque vous
-    // avez tapé un opérateur (comme d, y, c) et que Vim attend une motion ou un
-    // objet texte
-    "vim.operatorPendingModeKeyBindings": [
-        // Permets de supprimer tout les espaces " " du cursor jusqu'à un autre
-        // caractère (lettre, nombre, symbole, etc...) vers la droite
-        {
-            "before": [
-                "l"
-            ],
-            "after": [
-                "/",
-                "\\",
-                "S",
-                "<CR>"
-            ]
-        }
-    ],
-    "vim.leader": "",
-    "vim.handleKeys": {
-        "<C-a>": false,
-        "<C-p>": false,
-        "<C-j>": false,
-        // "<C-d>": false,
-        "<C-f>": false,
-        "<C-w>": false,
-        "<C-x>": false,
-        "<C-b>": false, // use to hide / display primary side bar
-        "<C-y>": false // To use ctrl+y for cut
-    },
-    // To improve performance
-    "extensions.experimental.affinity": {
-        "vscodevim.vim": 1
-    },
-    "editor.indentSize": "tabSize",
-    "jupyter.widgetScriptSources": [
-        "jsdelivr.com",
-        "unpkg.com"
-    ],
-    "editor.lineNumbers": "relative",
-    "comments.useRelativeTime": false,
-    "editor.autoClosingOvertype": "never",
-    "editor.autoClosingDelete": "never",
-    "editor.autoClosingQuotes": "never",
-    "editor.autoClosingBrackets": "never",
-    "vim.showMarksInGutter": true,
-    "notebook.lineNumbers": "on",
-    "editor.formatOnSave": true,
-    "editor.rename.enablePreview": false,
-    "editor.parameterHints.enabled": false,
-    "highlightOnCopy.backgroundColor": "rgba(230, 97, 89, 0.7)",
-    // by default the foreground text color it's undefined, meaning the actual color won't be modified
-    "highlightOnCopy.foregroundColor": "#fff",
-    "highlightOnCopy.timeout": 200,
-    "remote.SSH.remotePlatform": {
-        "ag-AI40LeakDetect-vm": "linux"
-    },
-    "notebook.defaultFormatter": "charliermarsh.ruff",
-    "ruff.lineLength": 120,
-    "workbench.editorLargeFileConfirmation": 200,
-    "files.autoSave": "onFocusChange",
-    "terminal.integrated.enableMultiLinePasteWarning": "never",
-    "terminal.integrated.fontFamily": "MesloLGS NF", // Fixing bad encoding in terminal
-    "workbench.editor.navigationScope": "editorGroup",
-    "workbench.editor.enablePreview": false, // to navigate with ctrl+o and ctrl+i
-    "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
-    "git.autofetch": true,
-    // To desable the open testing window
-    // "testing.openTesting": "neverOpen",
-    "testing.automaticallyOpenTestResults": "neverOpen",
-    "@azure.argTenant": "",
-    "notebook.cellToolbarLocation": {
-        "default": "hidden"
-    },
-    "gitlens.home.preview.enabled": false,
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
+    {
+      "before": [
+        "<C-i>"
+      ],
+      "commands": [
+        "workbench.action.navigateForward"
+      ]
     }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "d",
+        "d"
+      ]
+    },
+    // Permets de faire un retour a la ligne sans passer par le mode insert
+    {
+      "before": [
+        "K"
+      ],
+      "after": [
+        "$",
+        "a",
+        "<CR>",
+        "<Esc>"
+      ],
+      "silent": true
+    },
+    // Permets de fusionner la ligne actuelle et celle du dessous sans ajouter d'espace
+    {
+      "before": [
+        "J"
+      ],
+      "after": [
+        "g",
+        "J"
+      ]
+    },
+    {
+      "before": [
+        "<C-n>"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": ":nohl"
+        }
+      ]
+    },
+    // to disable copy when delete
+    {
+      "before": [
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "D"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "D"
+      ]
+    },
+    {
+      "before": [
+        "d",
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "<BS>"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "c"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "c"
+      ]
+    },
+    {
+      "before": [
+        "C"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "C"
+      ]
+    },
+    {
+      "before": [
+        "x"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "x"
+      ]
+    },
+    {
+      "before": [
+        "s"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "s"
+      ]
+    },
+    // Permet d'utiliser Y commt y$
+    {
+      "before": [
+        "Y"
+      ],
+      "after": [
+        "y",
+        "$"
+      ]
+    },
+    // remaper "<C-w>" pour la gestion des switch windows sans passer par "<C-w>"
+    {
+      "before": [
+        "<C-e>"
+      ],
+      "after": [
+        "<C-w>"
+      ]
+    },
+    // panes navigation
+    {
+      "before": [
+        "<C-w>",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.focusLeftGroup"
+      ]
+    },
+    {
+      "before": [
+        "<C-w>",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.focusBelowGroup"
+      ]
+    },
+    {
+      "before": [
+        "<C-w>",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.focusAboveGroup"
+      ]
+    },
+    {
+      "before": [
+        "<C-w>",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.focusRightGroup"
+      ]
+    },
+    // to move screen down one line
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "after": [
+        "<C-e>"
+      ]
+    },
+    // Remap de gr -> gxx
+    {
+      "before": [
+        "g",
+        "i",
+        "w"
+      ],
+      "after": [
+        "g",
+        "r",
+        "i",
+        "w"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "i",
+        "p"
+      ],
+      "after": [
+        "g",
+        "r",
+        "i",
+        "p"
+      ]
+    },
+    // Problème avec cette motion suivant ou on la lance
+    // Si entre des "alors la position du cursor est OK.
+    // Si on la lance en début de ligne, le cursor se met plus loin qu'il faudrais.
+    {
+      "before": [
+        "g",
+        "i",
+        "\""
+      ],
+      // "after": [
+      //   "g",
+      //   "r",
+      //   "i",
+      //   "\""
+      // ]
+      "after": [
+        "\"",
+        "_",
+        "c",
+        "i",
+        "\"",
+        "ESC",
+        "p",
+        "ESC"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "a",
+        "w"
+      ],
+      "after": [
+        "g",
+        "r",
+        "a",
+        "w"
+      ]
+    }
+  ],
+  // to disable copy when delete
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "D"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "D"
+      ]
+    },
+    {
+      "before": [
+        "d",
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "<BS>"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "s"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "s"
+      ]
+    },
+    // Permet d'utiliser Y commt y$
+    {
+      "before": [
+        "Y"
+      ],
+      "after": [
+        "y",
+        "$"
+      ]
+    },
+    // Permets de sélectionner du cursor au bout de la ligne sans que le cursor
+    // soit à la ligne suivante. Todo: des fois avec un caractère de moins (cf "h")
+    {
+      "before": [
+        "$"
+      ],
+      "after": [
+        "g",
+        "_",
+        "$",
+        "h"
+      ]
+    },
+    // remaper "<C-w>" pour la gestion des switch windows sans passer par "<C-w>"
+    {
+      "before": [
+        "<C-e>"
+      ],
+      "after": [
+        "<C-w>"
+      ]
+    },
+    // panes navigation
+    {
+      "before": [
+        "<C-w>",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.focusLeftGroup"
+      ]
+    },
+    {
+      "before": [
+        "<C-w>",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.focusBelowGroup"
+      ]
+    },
+    {
+      "before": [
+        "<C-w>",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.focusAboveGroup"
+      ]
+    },
+    {
+      "before": [
+        "<C-w>",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.focusRightGroup"
+      ]
+    },
+    // to move screen down one line
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "after": [
+        "<C-e>"
+      ]
+    },
+    {
+      "before": [
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "D"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "D"
+      ]
+    },
+    {
+      "before": [
+        "d",
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "<BS>"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "s"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "s"
+      ]
+    },
+    // Permet d'utiliser Y commt y$
+    {
+      "before": [
+        "Y"
+      ],
+      "after": [
+        "y",
+        "$"
+      ]
+    },
+    // Permets de sélectionner du cursor au bout de la ligne sans que le cursor
+    // soit à la ligne suivante. Todo: des fois avec un caractère de moins (cf "h")
+    {
+      "before": [
+        "$"
+      ],
+      "after": [
+        "g",
+        "_",
+        "$",
+        "h"
+      ]
+    },
+    // Permets d'avoir couper lorsque en mode visual et d'utiliser "y"
+    {
+      "before": [
+        "y"
+      ],
+      "after": [
+        "\"",
+        "+",
+        "d"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    // Stay in visual mode while indenting
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    },
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    // Move selected lines while staying in visual mode
+    {
+      "before": [
+        "J"
+      ],
+      "commands": [
+        "editor.action.moveLinesDownAction"
+      ]
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.moveLinesUpAction"
+      ]
+    },
+    // to pass to visual mode to insert more  easly
+    {
+      "before": [
+        "i",
+        "i"
+      ],
+      "after": [
+        "<Esc>",
+        "i"
+      ]
+    }
+  ],
+  // Configurer les touches en mode "operator-pending",  actif lorsque vous
+  // avez tapé un opérateur (comme d, y, c) et que Vim attend une motion ou un
+  // objet texte
+  "vim.operatorPendingModeKeyBindings": [
+    // Permets de supprimer tout les espaces " " du cursor jusqu'à un autre
+    // caractère (lettre, nombre, symbole, etc...) vers la droite
+    {
+      "before": [
+        "l"
+      ],
+      "after": [
+        "/",
+        "\\",
+        "S",
+        "<CR>"
+      ]
+    }
+  ],
+  "vim.leader": "",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-p>": false,
+    "<C-j>": false,
+    // "<C-d>": false,
+    "<C-f>": false,
+    "<C-w>": false,
+    "<C-x>": false,
+    "<C-b>": false, // use to hide / display primary side bar
+    "<C-y>": false // To use ctrl+y for cut
+  },
+  // To improve performance
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "editor.indentSize": "tabSize",
+  "jupyter.widgetScriptSources": [
+    "jsdelivr.com",
+    "unpkg.com"
+  ],
+  "editor.lineNumbers": "relative",
+  "comments.useRelativeTime": false,
+  "editor.autoClosingOvertype": "never",
+  "editor.autoClosingDelete": "never",
+  "editor.autoClosingQuotes": "never",
+  "editor.autoClosingBrackets": "never",
+  "vim.showMarksInGutter": true,
+  "notebook.lineNumbers": "on",
+  "editor.formatOnSave": true,
+  "editor.rename.enablePreview": false,
+  "editor.parameterHints.enabled": false,
+  "highlightOnCopy.backgroundColor": "rgba(230, 97, 89, 0.7)",
+  // by default the foreground text color it's undefined, meaning the actual color won't be modified
+  "highlightOnCopy.foregroundColor": "#fff",
+  "highlightOnCopy.timeout": 200,
+  "remote.SSH.remotePlatform": {
+    "ag-AI40LeakDetect-vm": "linux"
+  },
+  "notebook.defaultFormatter": "charliermarsh.ruff",
+  "ruff.lineLength": 120,
+  "workbench.editorLargeFileConfirmation": 200,
+  "files.autoSave": "onFocusChange",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.fontFamily": "MesloLGS NF", // Fixing bad encoding in terminal
+  "workbench.editor.navigationScope": "editorGroup",
+  "workbench.editor.enablePreview": false, // to navigate with ctrl+o and ctrl+i
+  "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
+  "git.autofetch": true,
+  // To desable the open testing window
+  // "testing.openTesting": "neverOpen",
+  "testing.automaticallyOpenTestResults": "neverOpen",
+  "@azure.argTenant": "",
+  "notebook.cellToolbarLocation": {
+    "default": "hidden"
+  },
+  "gitlens.home.preview.enabled": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }
