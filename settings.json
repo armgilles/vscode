@@ -361,14 +361,14 @@
     {
       "before": [
         "g",
-        "a",
-        "w"
+        "i",
+        "p"
       ],
       "after": [
         "g",
         "r",
-        "a",
-        "w"
+        "i",
+        "p"
       ]
     }
   ],
@@ -715,5 +715,6 @@
   "gitlens.home.preview.enabled": false,
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  },
+  "vim.replaceWithRegister": true
 }
