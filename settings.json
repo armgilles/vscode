@@ -84,22 +84,23 @@
   // - "workbench.action.navigateBackInNavigationLocations" et "workbench.action.navigateForwardInNavigationLocations" pour la navigation seulement
   // À noter que l'on peut joueur avec le setting "workbench.editor.navigationScope" pour changer le scope de la navigation
   "vim.normalModeKeyBindings": [
-    {
-      "before": [
-        "<C-o>"
-      ],
-      "commands": [
-        "workbench.action.navigateBack"
-      ]
-    },
-    {
-      "before": [
-        "<C-i>"
-      ],
-      "commands": [
-        "workbench.action.navigateForward"
-      ]
-    }
+    // Edit : Now use classic keybinding in keybindings.json
+    // {
+    //   "before": [
+    //     "<C-o>"
+    //   ],
+    //   "commands": [
+    //     "workbench.action.navigateBack"
+    //   ]
+    // },
+    // {
+    //   "before": [
+    //     "<C-i>"
+    //   ],
+    //   "commands": [
+    //     "workbench.action.navigateForward"
+    //   ]
+    // }
   ],
   "vim.insertModeKeyBindings": [
     {
