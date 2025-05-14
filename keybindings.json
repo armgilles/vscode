@@ -212,16 +212,17 @@
     // Vim navigation into Notebook cell with ctrl+o & ctrl+i and try to don't
     // overide vim navigation mais que sur l'edition de code
     // En lien avec les commandes vim_ctrl+o et vim_ctrl+i dans setting.json
-    {
-        "key": "ctrl+o",
-        "command": "workbench.action.navigateBack",
-        "when": "notebookEditorFocused"
-    },
-    {
-        "key": "ctrl+i",
-        "command": "workbench.action.navigateForward",
-        "when": "notebookEditorFocused"
-    },
+    // Edit : Now use classic keybinding in keybindings.json
+    // {
+    //     "key": "ctrl+o",
+    //     "command": "workbench.action.navigateBack",
+    //     "when": "notebookEditorFocused"
+    // },
+    // {
+    //     "key": "ctrl+i",
+    //     "command": "workbench.action.navigateForward",
+    //     "when": "notebookEditorFocused"
+    // },
     // hovering definition or message
     // gh to get definition hover
     // cmd+k to get focus on hover
@@ -466,5 +467,26 @@
     {
         "key": "cmd+k shift+cmd+right",
         "command": "-workbench.action.moveEditorRightInGroup"
+    },
+    // Using ctrl+o & ctrl+i to as vim jump list but in vanilla vscode
+    {
+        "key": "ctrl+i",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "-workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "-workbench.action.navigateBack",
+        "when": "canNavigateBack"
     }
 ]
