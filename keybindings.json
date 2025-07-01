@@ -576,7 +576,7 @@
     },
     // To move tabs position to left & right
     {
-        "key": "alt+cmd+down",
+        "key": "ctrl+alt+down",
         "command": "workbench.action.moveEditorLeftInGroup"
     },
     {
@@ -584,7 +584,7 @@
         "command": "-workbench.action.moveEditorLeftInGroup"
     },
     {
-        "key": "alt+cmd+up",
+        "key": "ctrl+alt+up",
         "command": "workbench.action.moveEditorRightInGroup"
     },
     {
