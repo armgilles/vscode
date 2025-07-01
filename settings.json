@@ -44,11 +44,6 @@
   "vim.cursorStylePerMode.insert": "line-thin",
   "vim.cursorStylePerMode.normal": "block",
   "vim.cursorStylePerMode.visual": "underline",
-  // Flah extension, have to use Cvim, waiting PR on official vim extension
-  "vim.flash.enable": true,
-  "vim.flash.marker.backgroundColor": "#ccff88",
-  "vim.flash.marker.nextMatchBackgroundColor": "#ffb86c",
-  "vim.flash.labels": "jfdkslapureihgvmc,wox.tybnqz",
   //Vim color
   "vim.statusBarColorControl": true,
   "vim.statusBarColors.normal": [
@@ -480,6 +475,30 @@
         ")"
       ]
     },
+    {
+      "before": [
+        "f"
+      ],
+      "commands": [
+        "flash-vscode.start"
+      ]
+    },
+    {
+      "before": [
+        "F"
+      ],
+      "commands": [
+        "flash-vscode.startSelection"
+      ]
+    },
+    {
+      "before": [
+        "<BS>"
+      ],
+      "commands": [
+        "flash-vscode.backspace"
+      ]
+    }
   ],
   // to disable copy when delete
   "vim.visualModeKeyBindingsNonRecursive": [
