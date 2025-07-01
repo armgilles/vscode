@@ -56,10 +56,11 @@
   "vim.cursorStylePerMode.normal": "block",
   "vim.cursorStylePerMode.visual": "underline",
   // Flah extension, have to use Cvim, waiting PR on official vim extension
-  "vim.flash.enable": true,
-  "vim.flash.marker.backgroundColor": "#ccff88",
-  "vim.flash.marker.nextMatchBackgroundColor": "#ffb86c",
-  "vim.flash.labels": "jfdkslapureihgvmc,wox.tybnqz",
+  "vim.flash.enable": false, // TODO Test new flash
+  // "vim.flash.marker.backgroundColor": "#ccff88",
+  // "vim.flash.marker.nextMatchBackgroundColor": "#ffb86c",
+  // "vim.flash.labels": "jfdkslapureihgvmc,wox.tybnqz",
+  "flash-vscode.labelKeys": "jfdkslapureihgvmc,wox.tybnqz",
   //Vim color
   "vim.statusBarColorControl": false,
   "vim.statusBarColors.normal": [
@@ -86,20 +87,20 @@
   "vim.normalModeKeyBindings": [
     // Edit : Now use classic keybinding in keybindings.json
     // {
-    //   "before": [
-    //     "<C-o>"
-    //   ],
-    //   "commands": [
-    //     "workbench.action.navigateBack"
-    //   ]
+    //     "before": [
+    //         "<C-o>"
+    //     ],
+    //     "commands": [
+    //         "workbench.action.navigateBack"
+    //     ]
     // },
     // {
-    //   "before": [
-    //     "<C-i>"
-    //   ],
-    //   "commands": [
-    //     "workbench.action.navigateForward"
-    //   ]
+    //     "before": [
+    //         "<C-i>"
+    //     ],
+    //     "commands": [
+    //         "workbench.action.navigateForward"
+    //     ]
     // }
   ],
   "vim.insertModeKeyBindings": [
@@ -491,6 +492,30 @@
         ")"
       ]
     },
+    {
+      "before": [
+        "f"
+      ],
+      "commands": [
+        "flash-vscode.start"
+      ]
+    },
+    {
+      "before": [
+        "F"
+      ],
+      "commands": [
+        "flash-vscode.startSelection"
+      ]
+    },
+    {
+      "before": [
+        "<BS>"
+      ],
+      "commands": [
+        "flash-vscode.backspace"
+      ]
+    }
   ],
   // to disable copy when delete
   "vim.visualModeKeyBindingsNonRecursive": [
