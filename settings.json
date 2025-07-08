@@ -44,6 +44,7 @@
   "vim.cursorStylePerMode.insert": "line-thin",
   "vim.cursorStylePerMode.normal": "block",
   "vim.cursorStylePerMode.visual": "underline",
+  "flash-vscode.labelKeys": "jfdkslapureihgvmc,wox.tybnqz",
   //Vim color
   "vim.statusBarColorControl": true,
   "vim.statusBarColors.normal": [
@@ -236,51 +237,52 @@
       ]
     },
     // remaper "<C-w>" pour la gestion des switch windows sans passer par "<C-w>"
-    {
-      "before": [
-        "<C-e>"
-      ],
-      "after": [
-        "<C-w>"
-      ]
-    },
-    // panes navigation
-    {
-      "before": [
-        "<C-w>",
-        "h"
-      ],
-      "commands": [
-        "workbench.action.focusLeftGroup"
-      ]
-    },
-    {
-      "before": [
-        "<C-w>",
-        "j"
-      ],
-      "commands": [
-        "workbench.action.focusBelowGroup"
-      ]
-    },
-    {
-      "before": [
-        "<C-w>",
-        "k"
-      ],
-      "commands": [
-        "workbench.action.focusAboveGroup"
-      ]
-    },
-    {
-      "before": [
-        "<C-w>",
-        "l"
-      ],
-      "commands": [
-        "workbench.action.focusRightGroup"
-      ]
-    },
+    // {
+    //   "before": [
+    //     "<C-e>"
+    //   ],
+    //   "after": [
+    //     "<C-w>"
+    //   ]
+    // },
+    // On keybindings.json now
+    // // panes navigation
+    // {
+    //   "before": [
+    //     "<C-w>",
+    //     "h"
+    //   ],
+    //   "commands": [
+    //     "workbench.action.focusLeftGroup"
+    //   ]
+    // },
+    // {
+    //   "before": [
+    //     "<C-w>",
+    //     "j"
+    //   ],
+    //   "commands": [
+    //     "workbench.action.focusBelowGroup"
+    //   ]
+    // },
+    // {
+    //   "before": [
+    //     "<C-w>",
+    //     "k"
+    //   ],
+    //   "commands": [
+    //     "workbench.action.focusAboveGroup"
+    //   ]
+    // },
+    // {
+    //   "before": [
+    //     "<C-w>",
+    //     "l"
+    //   ],
+    //   "commands": [
+    //     "workbench.action.focusRightGroup"
+    //   ]
+    // },
     // to move screen down one line
     {
       "before": [
@@ -646,7 +648,8 @@
   "vim.leader": "",
   "vim.handleKeys": {
     // "<C-a>": false,
-    "<C-w>": false
+    "<C-w>": false,
+    // "<C-e>": false, // to have nav panel on keybindings.json
   },
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
@@ -691,6 +694,5 @@
   "gitlens.home.preview.enabled": false,
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "explorer.confirmPasteNative": false
+  }
 }

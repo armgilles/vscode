@@ -58,31 +58,6 @@
         "command": "-highlightOnCopy.run",
         "when": "editorTextFocus && highlightOnCopy.init"
     },
-    {
-        "key": "ctrl+e l",
-        "command": "workbench.action.focusFirstEditorGroup",
-        "when": "sideBarFocus"
-    },
-    // vim afin de pouvoir sortir du termial en switchant de focus (ctrl+e mapper à la place de ctrl+w)
-    {
-        "key": "ctrl+e k",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "panelFocus"
-    },
-    // vim et gestion dans notebook particulière
-    // Permets d'aller d'un notebook non focus sur une cell
-    // vers le terminal ou la sidebar. Ne marche pas si 
-    // split vertical ou horizontal :(
-    {
-        "key": "ctrl+e j",
-        "command": "workbench.action.terminal.focus",
-        "when": "listFocus && !inputFocus"
-    },
-    {
-        "key": "ctrl+e h",
-        "command": "workbench.action.focusSideBar",
-        "when": "listFocus && !inputFocus"
-    },
     // Copilot shortcut
     {
         "key": "cmd+down",
@@ -131,16 +106,16 @@
         "when": "filesExplorerFocus && !inputFocus"
     },
     // Terminal navigation à travers les panels.
-    // ne fonctionne pas pour l'onget jupyter & gitlens...
+    // fonctionne pour terminal, output, debug, etc.
     {
         "key": "ctrl+e l",
         "command": "workbench.action.nextPanelView",
-        "when": "panelFocus"
+        "when": "panelFocus || outputFocus"
     },
     {
         "key": "ctrl+e h",
         "command": "workbench.action.previousPanelView",
-        "when": "panelFocus"
+        "when": "panelFocus || outputFocus"
     },
     {
         "key": "ctrl+o",
@@ -488,5 +463,80 @@
         "key": "ctrl+-",
         "command": "-workbench.action.navigateBack",
         "when": "canNavigateBack"
+    },
+    // panes navigation like Vim
+    // specific to notebook, terminal, sidebar
+    {
+        "key": "ctrl+e l",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "sideBarFocus"
+    },
+    // vim afin de pouvoir sortir du termial en switchant de focus (ctrl+e mapper à la place de ctrl+w)
+    {
+        "key": "ctrl+e k",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "panelFocus"
+    },
+    // vim et gestion dans notebook particulière
+    // Permets d'aller d'un notebook non focus sur une cell
+    // vers le terminal ou la sidebar. Ne marche pas si 
+    // split vertical ou horizontal :(
+    {
+        "key": "ctrl+e j",
+        "command": "workbench.action.terminal.focus",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+e h",
+        "command": "workbench.action.focusSideBar",
+        "when": "listFocus && !inputFocus"
+    },
+    // Pour focus la sidebar 
+    {
+        "key": "ctrl+e h",
+        "command": "workbench.action.focusSideBar",
+        "when": "editorTextFocus"
+    },
+    // classic editor
+    {
+        "key": "ctrl+e h",
+        "command": "workbench.action.focusLeftGroup",
+        // "command": "workbench.action.navigateLeft",
+        "when": "editorTextFocus && activeEditorGroupIndex > 1"
+        // "when": "editorTextFocus || chatFocus"
+    },
+    {
+        "key": "ctrl+e j",
+        // "command": "workbench.action.focusBelowGroup",
+        "command": "workbench.action.navigateDown", // permets de descendre sur le panel
+        "when": "editorTextFocus || chatFocus"
+    },
+    {
+        "key": "ctrl+e k",
+        "command": "workbench.action.focusAboveGroup",
+        // "command": "worbench.action.navigateUp",
+        "when": "editorTextFocus || chatFocus"
+    },
+    {
+        "key": "ctrl+e l",
+        "command": "workbench.action.focusRightGroup",
+        // "command": "workbench.action.navigateRight",
+        "when": "editorTextFocus || chatFocus"
+    },
+    {
+        "key": "ctrl+e v",
+        "command": "workbench.action.splitEditor"
+    },
+    {
+        "key": "cmd+\\",
+        "command": "-workbench.action.splitEditor"
+    },
+    {
+        "key": "ctrl+e s",
+        "command": "workbench.action.splitEditorDown"
+    },
+    {
+        "key": "cmd+k cmd+\\",
+        "command": "-workbench.action.splitEditorDown"
     }
 ]
