@@ -611,5 +611,36 @@
         "key": "ctrl+-",
         "command": "-workbench.action.navigateBack",
         "when": "canNavigateBack"
-    }
+    },
+    // To avoid up & down in notebook with J / K when I using flash-vscode extension
+    {
+        "key": "j",
+        "command": "notebook.focusNextEditor",
+        "when": "editorTextFocus && inputFocus && notebookEditorFocused && vim.mode == 'Normal' && notebookEditorCursorAtBoundary != 'none' && notebookEditorCursorAtBoundary != 'top' && !flash-vscode.active"
+    },
+    {
+        "key": "j",
+        "command": "-notebook.focusNextEditor",
+        "when": "editorTextFocus && inputFocus && notebookEditorFocused && vim.mode == 'Normal' && notebookEditorCursorAtBoundary != 'none' && notebookEditorCursorAtBoundary != 'top'"
+    },
+    {
+        "key": "k",
+        "command": "notebook.focusPreviousEditor",
+        "when": "editorTextFocus && inputFocus && notebookEditorFocused && vim.mode == 'Normal' && notebookEditorCursorAtBoundary != 'bottom' && notebookEditorCursorAtBoundary != 'none' && !flash-vscode.active"
+    },
+    {
+        "key": "k",
+        "command": "-notebook.focusPreviousEditor",
+        "when": "editorTextFocus && inputFocus && notebookEditorFocused && vim.mode == 'Normal' && notebookEditorCursorAtBoundary != 'bottom' && notebookEditorCursorAtBoundary != 'none'"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "list.focusPageDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "pagedown",
+        "command": "-list.focusPageDown",
+        "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+    },
 ]
