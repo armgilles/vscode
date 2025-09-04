@@ -559,5 +559,48 @@
         "key": "k",
         "command": "-notebook.focusPreviousEditor",
         "when": "editorTextFocus && inputFocus && notebookEditorFocused && vim.mode == 'Normal' && notebookEditorCursorAtBoundary != 'bottom' && notebookEditorCursorAtBoundary != 'none'"
+    },
+    // Gestion de git editors
+    {
+        "key": "alt+i",
+        "command": "editor.action.dirtydiff.next",
+        "when": "editorTextFocus && !textCompareEditorActive"
+    },
+    {
+        "key": "alt+f3",
+        "command": "-editor.action.dirtydiff.next",
+        "when": "editorTextFocus && !textCompareEditorActive"
+    },
+    {
+        "key": "alt+o",
+        "command": "editor.action.dirtydiff.previous",
+        "when": "editorTextFocus && !textCompareEditorActive"
+    },
+    {
+        "key": "shift+alt+f3",
+        "command": "-editor.action.dirtydiff.previous",
+        "when": "editorTextFocus && !textCompareEditorActive"
+    },
+    // Discard selected ranges in git
+    {
+        "key": "alt+backspace",
+        "command": "git.revertSelectedRanges",
+        "when": "editorTextFocus && !operationInProgress && resourceScheme == 'file' && !notebookEditorFocused"
+    },
+    {
+        "key": "cmd+k cmd+r",
+        "command": "-git.revertSelectedRanges",
+        "when": "editorTextFocus && !operationInProgress && resourceScheme == 'file'"
+    },
+    // Stage selected ranges in git 
+    {
+        "key": "alt+enter",
+        "command": "git.stageSelectedRanges",
+        "when": "editorTextFocus && !operationInProgress && resourceScheme == 'file' && !notebookEditorFocused"
+    },
+    {
+        "key": "cmd+k alt+cmd+s",
+        "command": "-git.stageSelectedRanges",
+        "when": "editorTextFocus && !operationInProgress && resourceScheme == 'file'"
     }
 ]
