@@ -643,4 +643,47 @@
         "command": "-list.focusPageDown",
         "when": "listFocus && !inputFocus && !treestickyScrollFocused"
     },
+    // Gestion de git editors
+    {
+        "key": "alt+i",
+        "command": "editor.action.dirtydiff.next",
+        "when": "editorTextFocus && !textCompareEditorActive"
+    },
+    {
+        "key": "alt+f3",
+        "command": "-editor.action.dirtydiff.next",
+        "when": "editorTextFocus && !textCompareEditorActive"
+    },
+    {
+        "key": "alt+o",
+        "command": "editor.action.dirtydiff.previous",
+        "when": "editorTextFocus && !textCompareEditorActive"
+    },
+    {
+        "key": "shift+alt+f3",
+        "command": "-editor.action.dirtydiff.previous",
+        "when": "editorTextFocus && !textCompareEditorActive"
+    },
+    // Discard selected ranges in git
+    {
+        "key": "alt+backspace",
+        "command": "git.revertSelectedRanges",
+        "when": "editorTextFocus && !operationInProgress && !notebookEditorFocused"
+    },
+    {
+        "key": "ctrl+k ctrl+r",
+        "command": "-git.revertSelectedRanges",
+        "when": "editorTextFocus && !operationInProgress"
+    },
+    // Stage selected ranges in git
+    {
+        "key": "alt+enter",
+        "command": "git.stageSelectedRanges",
+        "when": "editorTextFocus && !operationInProgress && !notebookEditorFocused"
+    },
+    {
+        "key": "ctrl+k ctrl+alt+s",
+        "command": "-git.stageSelectedRanges",
+        "when": "editorTextFocus && !operationInProgress"
+    }
 ]
