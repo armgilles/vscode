@@ -585,22 +585,22 @@
     {
         "key": "alt+backspace",
         "command": "git.revertSelectedRanges",
-        "when": "editorTextFocus && !operationInProgress && resourceScheme == 'file' && !notebookEditorFocused"
+        "when": "editorTextFocus && !operationInProgress  && !notebookEditorFocused"
     },
     {
         "key": "cmd+k cmd+r",
         "command": "-git.revertSelectedRanges",
-        "when": "editorTextFocus && !operationInProgress && resourceScheme == 'file'"
+        "when": "editorTextFocus && !operationInProgress "
     },
     // Stage selected ranges in git 
     {
         "key": "alt+enter",
         "command": "git.stageSelectedRanges",
-        "when": "editorTextFocus && !operationInProgress && resourceScheme == 'file' && !notebookEditorFocused"
+        "when": "editorTextFocus && !operationInProgress  && !notebookEditorFocused"
     },
     {
         "key": "cmd+k alt+cmd+s",
         "command": "-git.stageSelectedRanges",
-        "when": "editorTextFocus && !operationInProgress && resourceScheme == 'file'"
+        "when": "editorTextFocus && !operationInProgress "
     }
 ]
