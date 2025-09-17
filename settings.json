@@ -500,6 +500,24 @@
       "commands": [
         "flash-vscode.backspace"
       ]
+    },
+    // using cl instead of *cgn (replace word) then "." or "n" to replace multiple
+    // using #* to stay on the curent work and still use n & N is the right way
+    // So use cl then "." or "n" to move to the next occurence and choose again "." or "n"
+    {
+      "before": [
+        "c",
+        "l"
+      ],
+      "after": [
+        "#",
+        "*",
+        "\"",
+        "_",
+        "c",
+        "g",
+        "n",
+      ]
     }
   ],
   // to disable copy when delete
