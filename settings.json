@@ -71,7 +71,7 @@
     "(",
     "[",
     "{"
-  ]
+  ],
   // Gestion de la jumplist de vim
   // https://github.com/VSCodeVim/Vim/issues/8317#issuecomment-1592953138
   // On a le choix entre : 
