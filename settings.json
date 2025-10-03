@@ -61,6 +61,17 @@
   "vim.statusBarColors.easymotionmode": "#007ACC",
   "vim.statusBarColors.easymotioninputmode": "#007ACC",
   "vim.statusBarColors.surroundinputmode": "#007ACC",
+  // To use target vim with cia, daa etc...
+  "vim.argumentObjectClosingDelimiters": [
+    ")",
+    "]",
+    "}"
+  ],
+  "vim.argumentObjectOpeningDelimiters": [
+    "(",
+    "[",
+    "{"
+  ]
   // Gestion de la jumplist de vim
   // https://github.com/VSCodeVim/Vim/issues/8317#issuecomment-1592953138
   // On a le choix entre : 
@@ -475,6 +486,33 @@
         "r",
         "a",
         ")"
+      ]
+    },
+    // "
+    {
+      "before": [
+        "g",
+        "i",
+        "\""
+      ],
+      "after": [
+        "g",
+        "r",
+        "i",
+        "\""
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "a",
+        "\""
+      ],
+      "after": [
+        "g",
+        "r",
+        "a",
+        "\""
       ]
     },
     {
