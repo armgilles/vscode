@@ -232,6 +232,28 @@
         "command": "workbench.action.focusSideBar",
         "when": "listFocus && !inputFocus"
     },
+    // Gestion de navigation sur les noteobook hors selection cells
+    // to navigate to left / right / up and down in editor (with split for ex)
+    {
+        "key": "ctrl+e l",
+        "command": "workbench.action.focusRightGroup",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+e h",
+        "command": "workbench.action.focusLeftGroup",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+e j",
+        "command": "workbench.action.navigateDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+e k",
+        "command": "workbench.action.navigateUp",
+        "when": "listFocus && !inputFocus"
+    },
     // Copilot shortcut
     {
         "key": "ctrl+down",
