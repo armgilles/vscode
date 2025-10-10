@@ -544,6 +544,27 @@
         "g",
         "n"
       ]
+    },
+    // Permet d'avoir cp / dp (change paragraph / delete paragraph) 
+    {
+      "before": [
+        "d",
+        "p"
+      ],
+      "after": [
+        "d",
+        "}"
+      ]
+    },
+    {
+      "before": [
+        "c",
+        "p"
+      ],
+      "after": [
+        "c",
+        "}"
+      ]
     }
   ],
   // to disable copy when delete
