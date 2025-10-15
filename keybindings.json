@@ -40,11 +40,11 @@
         "command": "-cursorDownSelect",
         "when": "textInputFocus"
     },
-    {
-        "key": "ctrl+down",
-        "command": "cursorBottom",
-        "when": "textInputFocus"
-    },
+    // {
+    //     "key": "ctrl+down",
+    //     "command": "cursorBottom",
+    //     "when": "textInputFocus"
+    // },
     {
         "key": "ctrl+end",
         "command": "-cursorBottom",
@@ -210,13 +210,13 @@
     {
         "key": "ctrl+e l",
         "command": "workbench.action.focusFirstEditorGroup",
-        "when": "sideBarFocus"
+        "when": "sideBarFocus || filesExplorerFocus"
     },
     // vim afin de pouvoir sortir du termial en switchant de focus (ctrl+e mapper à la place de ctrl+w)
     {
         "key": "ctrl+e k",
         "command": "workbench.action.focusActiveEditorGroup",
-        "when": "terminalFocus"
+        "when": "panelFocus"
     },
     // vim et gestion dans notebook particulière
     // Permets d'aller d'un notebook non focus sur une cell
@@ -230,18 +230,60 @@
     {
         "key": "ctrl+e h",
         "command": "workbench.action.focusSideBar",
-        "when": "listFocus && !inputFocus"
+        "when": "editorTextFocus"
+    },
+    // classic editor
+    {
+        "key": "ctrl+e h",
+        "command": "workbench.action.focusLeftGroup",
+        // "command": "workbench.action.navigateLeft",
+        "when": "editorTextFocus && activeEditorGroupIndex > 1"
+        // "when": "editorTextFocus || chatFocus"
+    },
+    {
+        "key": "ctrl+e j",
+        // "command": "workbench.action.focusBelowGroup",
+        "command": "workbench.action.navigateDown", // permets de descendre sur le panel
+        "when": "editorTextFocus || chatFocus"
+    },
+    {
+        "key": "ctrl+e k",
+        "command": "workbench.action.focusAboveGroup",
+        // "command": "worbench.action.navigateUp",
+        "when": "editorTextFocus || chatFocus"
+    },
+    {
+        "key": "ctrl+e l",
+        "command": "workbench.action.focusRightGroup",
+        // "command": "workbench.action.navigateRight",
+        "when": "editorTextFocus || chatFocus"
+    },
+    {
+        "key": "ctrl+e v",
+        "command": "workbench.action.splitEditor"
+    },
+    {
+        "key": "cmd+\\",
+        "command": "-workbench.action.splitEditor"
+    },
+    {
+        "key": "ctrl+e s",
+        "command": "workbench.action.splitEditorDown"
+    },
+    {
+        "key": "cmd+k cmd+\\",
+        "command": "-workbench.action.splitEditorDown"
     },
     // Gestion de navigation sur les noteobook hors selection cells
     // to navigate to left / right / up and down in editor (with split for ex)
     {
         "key": "ctrl+e l",
         "command": "workbench.action.focusRightGroup",
-        "when": "listFocus && !inputFocus"
+        "when": "listFocus && !inputFocus && !sideBarFocus"
     },
     {
         "key": "ctrl+e h",
-        "command": "workbench.action.focusLeftGroup",
+        "command": "workbench.action.focusSideBar",
         "when": "listFocus && !inputFocus"
     },
     {
@@ -301,12 +343,12 @@
     {
         "key": "ctrl+e l",
         "command": "workbench.action.nextPanelView",
-        "when": "panelFocus"
+        "when": "panelFocus || outputFocus"
     },
     {
         "key": "ctrl+e h",
         "command": "workbench.action.previousPanelView",
-        "when": "panelFocus"
+        "when": "panelFocus || outputFocus"
     },
     {
         "key": "ctrl+right",
@@ -542,7 +584,7 @@
     },
     // Pour pouvoir checkout un fichier sélectionné dans le source control
     {
-        "key": "ctrl+backspace",
+        "key": "alt+backspace",
         "command": "git.clean",
         "when": "activeViewlet == 'wokbench.view.scm"
     },
@@ -726,5 +768,32 @@
         "key": "ctrl+pageup",
         "command": "-workbench.action.terminal.focusPrevious",
         "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    // Continue extension (IA extension as github copilot)
+    {
+        "key": "ctrl+down",
+        "command": "continue.forceAutocomplete",
+        "when": "editorTextFocus && !editorHasSelection && !editorReadOnly && !inSnippetMode"
+    },
+    {
+        "key": "ctrl+alt+space",
+        "command": "-continue.forceAutocomplete",
+        "when": "editorTextFocus && !editorHasSelection && !editorReadOnly && !inSnippetMode"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-continue.focusContinueInput"
+    },
+    {
+        "key": "ctrl+shift+o",
+        "command": "continue.focusContinueInputWithoutClear"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "-continue.focusContinueInputWithoutClear"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "continue.focusContinueInput"
     }
 ]
