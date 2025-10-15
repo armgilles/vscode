@@ -620,7 +620,7 @@
     },
     {
         "key": "cmd+k alt+cmd+s",
-        "command": "-.stageSelectedRanges",
+        "command": "-git.stageSelectedRanges",
         "when": "editorTextFocus && !operationInProgress "
     }
 ]
