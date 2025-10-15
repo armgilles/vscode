@@ -359,7 +359,7 @@
     },
     // Pour pouvoir checkout un fichier sélectionné dans le source control
     {
-        "key": "cmd+backspace",
+        "key": "alt+backspace",
         "command": "git.clean",
         "when": "activeViewlet == 'workbench.view.scm'"
     },
@@ -467,7 +467,7 @@
     {
         "key": "ctrl+e l",
         "command": "workbench.action.focusFirstEditorGroup",
-        "when": "sideBarFocus"
+        "when": "sideBarFocus || filesExplorerFocus"
     },
     // vim afin de pouvoir sortir du termial en switchant de focus (ctrl+e mapper à la place de ctrl+w)
     {
@@ -542,11 +542,11 @@
     {
         "key": "ctrl+e l",
         "command": "workbench.action.focusRightGroup",
-        "when": "listFocus && !inputFocus"
+        "when": "listFocus && !inputFocus && !sideBarFocus"
     },
     {
         "key": "ctrl+e h",
-        "command": "workbench.action.focusLeftGroup",
+        "command": "workbench.action.focusSideBar",
         "when": "listFocus && !inputFocus"
     },
     {
@@ -620,28 +620,7 @@
     },
     {
         "key": "cmd+k alt+cmd+s",
-        "command": "-git.stageSelectedRanges",
+        "command": "-.stageSelectedRanges",
         "when": "editorTextFocus && !operationInProgress "
-    },
-    // Switch between multiple terminal
-    {
-        "key": "ctrl+alt+up",
-        "command": "workbench.action.terminal.focusNext",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-    },
-    {
-        "key": "ctrl+pagedown",
-        "command": "-workbench.action.terminal.focusNext",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-    },
-    {
-        "key": "ctrl+alt+down",
-        "command": "workbench.action.terminal.focusPrevious",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-    },
-    {
-        "key": "ctrl+pageup",
-        "command": "-workbench.action.terminal.focusPrevious",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     }
 ]
