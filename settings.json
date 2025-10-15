@@ -20,7 +20,8 @@
   "autoDocstring.docstringFormat": "numpy",
   "editor.cursorStyle": "block",
   "[python]": {
-    "editor.formatOnType": true
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "window.zoomLevel": -1,
   "editor.fontSize": 14,
@@ -511,6 +512,41 @@
         "flash-vscode.start"
       ]
     },
+    // "
+    {
+      "before": [
+        "g",
+        "i",
+        "\""
+      ],
+      "after": [
+        "g",
+        "r",
+        "i",
+        "\""
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "a",
+        "\""
+      ],
+      "after": [
+        "g",
+        "r",
+        "a",
+        "\""
+      ]
+    },
+    {
+      "before": [
+        "f"
+      ],
+      "commands": [
+        "flash-vscode.start"
+      ]
+    },
     {
       "before": [
         "F"
@@ -545,7 +581,7 @@
         "n"
       ]
     },
-    // Permet d'avoir cp / dp (change paragraph / delete paragraph) 
+    // Permet d'avoir cp / dp (change paragraph / delete paragraph)
     {
       "before": [
         "d",
@@ -888,7 +924,8 @@
   "highlightOnCopy.foregroundColor": "#fff",
   "highlightOnCopy.timeout": 200,
   "remote.SSH.remotePlatform": {
-    "ag-AI40LeakDetect-vm": "linux"
+    "ag-AI40LeakDetect-vm": "linux",
+    "geofinder": "linux"
   },
   "notebook.defaultFormatter": "charliermarsh.ruff",
   "ruff.lineLength": 120,
@@ -897,8 +934,7 @@
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.fontFamily": "MesloLGS NF", // Fixing bad encoding in terminal
   "workbench.editor.navigationScope": "editorGroup",
-  "workbench.editor.enablePreview": false, // to navigate with ctrl+o and ctrl+i
-  "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
+  "workbench.editor.enablePreview": false,
   "git.autofetch": true,
   // To desable the open testing window
   // "testing.openTesting": "neverOpen",
@@ -911,5 +947,11 @@
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "vim.replaceWithRegister": true
+  "vim.replaceWithRegister": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "http.proxyStrictSSL": false,
+  "github.copilot.advanced": {},
+  "continue.showInlineTip": false,
+  "continue.telemetryEnabled": false,
+  "continue.enableNextEdit": false
 }
