@@ -44,7 +44,7 @@
   "vim.cursorStylePerMode.insert": "line-thin",
   "vim.cursorStylePerMode.normal": "block",
   "vim.cursorStylePerMode.visual": "underline",
-  "flash-vscode.labelKeys": "jfdkslapureihgvmc,wox.tybnqz",
+  "flash-vscode.labelKeys": "aeicltnsuogdp.mvbqfzhykwj",
   //Vim color
   "vim.statusBarColorControl": true,
   "vim.statusBarColors.normal": [
@@ -97,6 +97,14 @@
     //     "workbench.action.navigateForward"
     //   ]
     // }
+    {
+      "before": [
+        "'"
+      ],
+      "after": [
+        "w"
+      ]
+    }
   ],
   "vim.insertModeKeyBindings": [
     {
@@ -123,7 +131,7 @@
     // Permets de faire un retour à la ligne sans passer par le mode insert
     {
       "before": [
-        "K"
+        "T"
       ],
       "after": [
         "$",
@@ -308,7 +316,7 @@
       "before": [
         "g",
         "i",
-        "w"
+        "é"
       ],
       "after": [
         "g",
@@ -360,7 +368,7 @@
       "before": [
         "g",
         "a",
-        "w"
+        "é"
       ],
       "after": [
         "g",
@@ -539,13 +547,13 @@
         "flash-vscode.backspace"
       ]
     },
-    // using cl instead of *cgn (replace word) then "." or "n" to replace multiple
+    // using cg instead of *cgn (replace word) then "." or "n" to replace multiple
     // using #* to stay on the curent work and still use n & N is the right way
-    // So use cl then "." or "n" to move to the next occurence and choose again "." or "n"
+    // So use cg then "." or "n" to move to the next occurence and choose again "." or "n"
     {
       "before": [
         "c",
-        "l"
+        "g"
       ],
       "after": [
         "#",
@@ -557,7 +565,7 @@
         "n"
       ]
     },
-    // Permet d'avoir cp / dp (change paragraph / delete paragraph) 
+    // Permet d'avoir cp / dp (change paragraph / delete paragraph) and yank
     {
       "before": [
         "d",
@@ -576,6 +584,75 @@
       "after": [
         "c",
         "}"
+      ]
+    },
+    {
+      "before": [
+        "y",
+        "p"
+      ],
+      "after": [
+        "y",
+        "}"
+      ]
+    },
+    // remap HJKL whit EnthiumFr layout
+    {
+      "before": [
+        "j"
+      ],
+      "after": [
+        "i"
+      ]
+    },
+    {
+      "before": [
+        "k"
+      ],
+      "after": [
+        "h"
+      ]
+    },
+    {
+      "before": [
+        "l"
+      ],
+      "after": [
+        "j"
+      ]
+    },
+    {
+      "before": [
+        "t"
+      ],
+      "after": [
+        "k"
+      ]
+    },
+    {
+      "before": [
+        "n"
+      ],
+      "after": [
+        "l"
+      ]
+    },
+    // remap n -> "," for search next (and N -> "<" for search previous)
+    // for cg custum motion
+    {
+      "before": [
+        ","
+      ],
+      "after": [
+        "n"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "after": [
+        "N"
       ]
     }
   ],
@@ -666,6 +743,47 @@
         "+",
         "d"
       ]
+    },
+    // remap HJKL whit EnthiumFr layout
+    {
+      "before": [
+        "j"
+      ],
+      "after": [
+        "i"
+      ]
+    },
+    {
+      "before": [
+        "k"
+      ],
+      "after": [
+        "h"
+      ]
+    },
+    {
+      "before": [
+        "l"
+      ],
+      "after": [
+        "j"
+      ]
+    },
+    {
+      "before": [
+        "t"
+      ],
+      "after": [
+        "k"
+      ]
+    },
+    {
+      "before": [
+        "n"
+      ],
+      "after": [
+        "l"
+      ]
     }
   ],
   "vim.visualModeKeyBindings": [
@@ -722,10 +840,41 @@
       ]
     }
   ],
+  "vim.operatorPendingModeKeyBindingsNonRecursive": [
+    // EnthiumFr layout
+    {
+      "before": [
+        "'"
+      ],
+      "after": [
+        "w"
+      ]
+    },
+    {
+      "before": [
+        "i",
+        "é"
+      ],
+      "after": [
+        "i",
+        "w"
+      ]
+    },
+    {
+      "before": [
+        "a",
+        "é"
+      ],
+      "after": [
+        "a",
+        "w"
+      ]
+    }
+  ],
   "vim.leader": "",
   "vim.handleKeys": {
     // "<C-a>": false,
-    "<C-w>": false,
+    "<C-w>": false
     // "<C-e>": false, // to have nav panel on keybindings.json
   },
   "extensions.experimental.affinity": {
@@ -771,5 +920,9 @@
   "gitlens.home.preview.enabled": false,
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  },
+  "github.copilot.chat.codeGeneration.instructions": [],
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "chat.viewSessions.orientation": "stacked"
 }
