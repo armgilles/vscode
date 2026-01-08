@@ -227,6 +227,7 @@
         "command": "workbench.action.terminal.focus",
         "when": "listFocus && !inputFocus"
     },
+    // Pour focus la sidebar
     {
         "key": "ctrl+e h",
         "command": "workbench.action.focusSideBar",
@@ -479,7 +480,7 @@
     // hjkl / gg / shift+g to naviguate
     // esc to exit focus on hover and back to code
     {
-        "key": "h",
+        "key": "k",
         "command": "editor.action.scrollLeftHover",
         "when": "editorHoverFocused"
     },
@@ -489,7 +490,7 @@
         "when": "editorHoverFocused"
     },
     {
-        "key": "j",
+        "key": "l",
         "command": "editor.action.scrollDownHover",
         "when": "editorHoverFocused"
     },
@@ -499,7 +500,7 @@
         "when": "editorHoverFocused"
     },
     {
-        "key": "l",
+        "key": "n",
         "command": "editor.action.scrollRightHover",
         "when": "editorHoverFocused"
     },
@@ -509,7 +510,7 @@
         "when": "editorHoverFocused"
     },
     {
-        "key": "k",
+        "key": "t",
         "command": "editor.action.scrollUpHover",
         "when": "editorHoverFocused"
     },
@@ -676,7 +677,7 @@
     },
     // To avoid up & down in notebook with J / K when I using flash-vscode extension
     {
-        "key": "j",
+        "key": "l",
         "command": "notebook.focusNextEditor",
         "when": "editorTextFocus && inputFocus && notebookEditorFocused && vim.mode == 'Normal' && notebookEditorCursorAtBoundary != 'none' && notebookEditorCursorAtBoundary != 'top' && !flash-vscode.active"
     },
@@ -686,7 +687,7 @@
         "when": "editorTextFocus && inputFocus && notebookEditorFocused && vim.mode == 'Normal' && notebookEditorCursorAtBoundary != 'none' && notebookEditorCursorAtBoundary != 'top'"
     },
     {
-        "key": "k",
+        "key": "t",
         "command": "notebook.focusPreviousEditor",
         "when": "editorTextFocus && inputFocus && notebookEditorFocused && vim.mode == 'Normal' && notebookEditorCursorAtBoundary != 'bottom' && notebookEditorCursorAtBoundary != 'none' && !flash-vscode.active"
     },
@@ -795,5 +796,67 @@
     {
         "key": "ctrl+shift+i",
         "command": "continue.focusContinueInput"
+    },
+    // Notebook list navigation with hjkl to kltn (EnthiumFr layout)
+    {
+        "key": "l",
+        "command": "list.focusDown",
+        "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+    },
+    {
+        "key": "j",
+        "command": "-list.focusDown",
+        "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+    },
+    {
+        "key": "t",
+        "command": "list.focusUp",
+        "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+    },
+    {
+        "key": "k",
+        "command": "-list.focusUp",
+        "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+    },
+    // Generic list navigation with hjkl to kltn (EnthiumFr layout)
+    {
+        "key": "l",
+        "command": "list.focusDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "j",
+        "command": "-list.focusDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "k",
+        "command": "list.collapse",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "h",
+        "command": "-list.collapse",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "t",
+        "command": "list.focusUp",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "k",
+        "command": "-list.focusUp",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "n",
+        "command": "list.select",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "l",
+        "command": "-list.select",
+        "when": "listFocus && !inputFocus"
     }
 ]
