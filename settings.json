@@ -130,16 +130,6 @@
         }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<leader>",
-                "d"
-            ],
-            "after": [
-                "d",
-                "d"
-            ]
-        },
         // Permets de faire un retour a la ligne sans passer par le mode insert
         {
             "before": [
@@ -327,7 +317,7 @@
             "before": [
                 "g",
                 "i",
-                "é"
+                "w"
             ],
             "after": [
                 "g",
@@ -358,12 +348,24 @@
                 "i",
                 "\""
             ],
-            // "after": [
-            //   "g",
-            //   "r",
-            //   "i",
-            //   "\""
-            // ]
+            "after": [
+                "\"",
+                "_",
+                "c",
+                "i",
+                "\"",
+                "ESC",
+                "p",
+                "ESC"
+            ]
+        },
+        // " = r
+        {
+            "before": [
+                "g",
+                "i",
+                "r"
+            ],
             "after": [
                 "\"",
                 "_",
@@ -379,7 +381,7 @@
             "before": [
                 "g",
                 "a",
-                "é"
+                "w"
             ],
             "after": [
                 "g",
@@ -428,6 +430,20 @@
                 "]"
             ]
         },
+        // [ -> s
+        {
+            "before": [
+                "g",
+                "i",
+                "s"
+            ],
+            "after": [
+                "g",
+                "r",
+                "i",
+                "["
+            ]
+        },
         {
             "before": [
                 "g",
@@ -452,6 +468,20 @@
                 "r",
                 "a",
                 "]"
+            ]
+        },
+        // [ -> s
+        {
+            "before": [
+                "g",
+                "a",
+                "s"
+            ],
+            "after": [
+                "g",
+                "r",
+                "a",
+                "["
             ]
         },
         // ()
@@ -481,6 +511,20 @@
                 ")"
             ]
         },
+        // ( -> b
+        {
+            "before": [
+                "g",
+                "i",
+                "b"
+            ],
+            "after": [
+                "g",
+                "r",
+                "i",
+                "("
+            ]
+        },
         {
             "before": [
                 "g",
@@ -505,6 +549,20 @@
                 "r",
                 "a",
                 ")"
+            ]
+        },
+        // ( -> b
+        {
+            "before": [
+                "g",
+                "a",
+                "b"
+            ],
+            "after": [
+                "g",
+                "r",
+                "a",
+                "("
             ]
         },
         {
@@ -566,9 +624,9 @@
                 "flash-vscode.backspace"
             ]
         },
-        // using cg instead of *cgn (replace word) then "." or "n" to replace multiple
-        // using #* to stay on the curent work and still use n & N is the right way
-        // So use cg then "." or "n" to move to the next occurence and choose again "." or "n"
+        // using cg instead of *cgn (replace word) then "." or "j" to replace multiple
+        // using #* to stay on the curent work and still use j & J is the right way
+        // So use cg then "." or "j" to move to the next occurence and choose again "." or "j"
         {
             "before": [
                 "c",
@@ -612,6 +670,17 @@
             ],
             "after": [
                 "y",
+                "}"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "p"
+            ],
+            "after": [
+                "g",
+                "r",
                 "}"
             ]
         },
@@ -660,7 +729,7 @@
         // for cg custum motion
         {
             "before": [
-                ","
+                "j"
             ],
             "after": [
                 "n"
@@ -668,11 +737,51 @@
         },
         {
             "before": [
-                "<"
+                "J"
             ],
             "after": [
                 "N"
             ]
+        },
+        // rg -> Replace line with copy
+        {
+        "before": [
+            "r",
+            "g"
+        ],
+        "after": [
+            "\"",
+            "_",
+            "c",
+            "c",
+            "<Esc>",
+            "p"
+        ]
+        },
+        // remap dj / dk with EnthiumFr layout
+        {
+        "before": [
+            "d",
+            "l"
+        ],
+        "after": [
+            "\"",
+            "_",
+            "d",
+            "j"
+        ]
+        },
+        {
+        "before": [
+            "d",
+            "t"
+        ],
+        "after": [
+            "\"",
+            "_",
+            "d",
+            "k"
+        ]
         }
     ],
     // to disable copy when delete
@@ -956,7 +1065,7 @@
         // Move selected lines while staying in visual mode
         {
             "before": [
-                "J"
+                "L"
             ],
             "commands": [
                 "editor.action.moveLinesDownAction"
@@ -964,7 +1073,7 @@
         },
         {
             "before": [
-                "K"
+                "T"
             ],
             "commands": [
                 "editor.action.moveLinesUpAction"
@@ -1008,30 +1117,52 @@
                 "w"
             ]
         },
+        // mapping " -> r (ci" -> cir)
         {
             "before": [
                 "i",
-                "é"
+                "r"
             ],
             "after": [
                 "i",
-                "w"
+                "\""
             ]
         },
         {
             "before": [
                 "a",
-                "é"
+                "r"
             ],
             "after": [
                 "a",
-                "w"
+                "\""
+            ]
+        },
+        // mapping [ -> s (ci[ -> cis)
+        {
+            "before": [
+                "i",
+                "s"
+            ],
+            "after": [
+                "i",
+                "["
+            ]
+        },
+        {
+            "before": [
+                "a",
+                "r"
+            ],
+            "after": [
+                "a",
+                "["
             ]
         }
     ],
     "vim.leader": "",
     "vim.handleKeys": {
-        "<C-a>": false,
+        // "<C-a>": false,
         "<C-p>": false,
         "<C-j>": false,
         // "<C-d>": false,
