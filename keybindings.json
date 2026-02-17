@@ -471,11 +471,11 @@
     },
     {
         "key": "ctrl+e j",
-        "command": "workbench.action.navigateDown",
+        "command": "workbench.action.navigateDown"
     },
     {
         "key": "ctrl+e k",
-        "command": "workbench.action.navigateUp",
+        "command": "workbench.action.navigateUp"
     },
     {
         "key": "ctrl+e l",
@@ -483,16 +483,8 @@
         "when": "!panelFocus"
     },
     {
-        "key": "ctrl+e v",
-        "command": "workbench.action.splitEditor"
-    },
-    {
         "key": "cmd+\\",
         "command": "-workbench.action.splitEditor"
-    },
-    {
-        "key": "ctrl+e s",
-        "command": "workbench.action.splitEditorDown"
     },
     {
         "key": "cmd+k cmd+\\",
@@ -661,5 +653,21 @@
     {
         "key": "cmd+k right",
         "command": "-workbench.action.moveActiveEditorGroupRight"
+    },
+    {
+        "key": "ctrl+e v",
+        "command": "workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "ctrl+cmd+right",
+        "command": "-workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "ctrl+e s",
+        "command": "workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+cmd+left",
+        "command": "-workbench.action.moveEditorToPreviousGroup"
     }
 ]
