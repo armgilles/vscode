@@ -1095,9 +1095,6 @@
   "vim.replaceWithRegister": true,
   "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
   "git.autofetch": true,
-  // To desable the open testing window
-  // "testing.openTesting": "neverOpen",
-  "testing.automaticallyOpenTestResults": "neverOpen",
   "@azure.argTenant": "",
   "notebook.cellToolbarLocation": {
     "default": "hidden"
@@ -1109,5 +1106,6 @@
   "github.copilot.chat.codeGeneration.instructions": [],
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
-  "chat.viewSessions.orientation": "stacked"
+  "chat.viewSessions.orientation": "stacked",
+  "testing.automaticallyOpenTestResults": "neverOpen"
 }
