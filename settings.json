@@ -315,6 +315,20 @@
         "w"
       ]
     },
+    // gia == giw
+    {
+      "before": [
+        "g",
+        "i",
+        "a"
+      ],
+      "after": [
+        "g",
+        "r",
+        "i",
+        "w"
+      ]
+    },
     {
       "before": [
         "g",
@@ -623,13 +637,15 @@
         "n"
       ]
     },
-    // Permet d'avoir cp / dp (change paragraph / delete paragraph) and yank
+    // Permet d'avoir cp / dp (change paragraph / delete paragraph) and yank etc ...
     {
       "before": [
         "d",
         "p"
       ],
       "after": [
+        "\"",
+        "_",
         "d",
         "}"
       ]
@@ -640,27 +656,29 @@
         "p"
       ],
       "after": [
+        "\"",
+        "_",
         "c",
         "}"
       ]
     },
     {
       "before": [
-        "v",
+        "y",
         "p"
       ],
       "after": [
-        "v",
+        "y",
         "}"
       ]
     },
     {
       "before": [
-        "y",
+        "v",
         "p"
       ],
       "after": [
-        "y",
+        "v",
         "}"
       ]
     },
@@ -670,6 +688,8 @@
         "p"
       ],
       "after": [
+        // "\"",
+        // "_",
         "g",
         "r",
         "}"
@@ -990,7 +1010,6 @@
       ]
     },
     // mapping [ -> s (ci[ -> cis)
-    // Ne marche pas avec "v" (pour le visual mode)
     {
       "before": [
         "i",
@@ -1013,28 +1032,31 @@
     }
   ],
   "vim.operatorPendingModeKeyBindingsNonRecursive": [
+    // mapping operator ia == operator iw (cia -> ciw)
     {
       "before": [
         "i",
-        "s"
+        "a"
       ],
       "after": [
         "i",
-        "["
+        "w"
       ]
     },
+    // ia is used by vim-textobj-arguments
+    // to to deal with arguments inside functions (argument excluding separators.)
+    // so ij == ia
     {
       "before": [
-        "a",
-        "s"
+        "i",
+        "j"
       ],
       "after": [
-        "a",
-        "["
+        "i",
+        "a"
       ]
     }
   ],
-  "vim.leader": "",
   "vim.handleKeys": {
     // "<C-a>": false,
     "<C-w>": false
@@ -1043,7 +1065,6 @@
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
-  "vim.surround": false,
   "editor.indentSize": "tabSize",
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "charliermarsh.ruff",
