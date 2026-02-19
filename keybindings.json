@@ -357,12 +357,20 @@
             ]
         }
     },
-    // Pour pouvoir checkout un fichier sélectionné dans le source control
-    {
-        "key": "alt+backspace",
-        "command": "git.clean",
-        "when": "activeViewlet == 'workbench.view.scm'"
-    },
+    // // Pour pouvoir checkout un fichier sélectionné dans le source control
+    // // ne marche pas. To do: Ok que lorsque l'on est sur le fichier en question
+    // {
+    //     "key": "backspace",
+    //     "command": "git.clean",
+    //     "when": "listFocus && activeViewlet == 'workbench.view.scm'"
+    // },
+    // // Pour pouvoir add un fichier sélectionné dans le source control
+    // // ne marche pas. To do: Ok que lorsque l'on est sur le fichier en question
+    // {
+    //     "key": "enter",
+    //     "command": "git.stage",
+    //     "when": "listFocus && activeViewlet == 'workbench.view.scm'"
+    // },
     // Cmd+y pour couper la ligne entière
     {
         "key": "cmd+y",
@@ -428,7 +436,7 @@
     {
         "key": "alt+cmd+down",
         "command": "workbench.action.moveEditorLeftInGroup",
-        "when": "!terminalFocus && editorTextFocus"
+        "when": "!terminalFocus"
     },
     {
         "key": "cmd+k shift+cmd+left",
@@ -437,7 +445,7 @@
     {
         "key": "alt+cmd+up",
         "command": "workbench.action.moveEditorRightInGroup",
-        "when": "!terminalFocus && editorTextFocus"
+        "when": "!terminalFocus"
     },
     {
         "key": "cmd+k shift+cmd+right",
