@@ -793,6 +793,45 @@
         "d",
         "k"
       ]
+    },
+    // via -> viw
+    {
+      "before": [
+        "v",
+        "i",
+        "a"
+      ],
+      "after": [
+        "v",
+        "i",
+        "w"
+      ]
+    },
+    // vir -> vi"
+    {
+      "before": [
+        "v",
+        "i",
+        "r"
+      ],
+      "after": [
+        "v",
+        "i",
+        "\""
+      ]
+    },
+    // var -> va"
+    {
+      "before": [
+        "v",
+        "a",
+        "r"
+      ],
+      "after": [
+        "v",
+        "a",
+        "\""
+      ]
     }
   ],
   // to disable copy when delete
@@ -1075,7 +1114,11 @@
   "highlightOnCopy.timeout": 200,
   "notebook.defaultFormatter": "charliermarsh.ruff",
   "github.copilot.enable": {
-    "markdown": true
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
+    "python": true
   },
   "files.autoSave": "onFocusChange",
   "editor.autoClosingOvertype": "never",
@@ -1093,7 +1136,7 @@
   "editor.screenReaderAnnounceInlineSuggestion": false, // fix terminal theme icone
   "editor.accessibilitySupport": "off",
   "vim.replaceWithRegister": true,
-  "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
+  "github.copilot.selectedCompletionModel": "gpt-4.1-copilot",
   "git.autofetch": true,
   "@azure.argTenant": "",
   "notebook.cellToolbarLocation": {
@@ -1106,6 +1149,7 @@
   "github.copilot.chat.codeGeneration.instructions": [],
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "testing.automaticallyOpenTestResults": "neverOpen",
   "chat.viewSessions.orientation": "stacked",
-  "testing.automaticallyOpenTestResults": "neverOpen"
+  "notebook.lineNumbers": "on"
 }
