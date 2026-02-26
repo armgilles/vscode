@@ -320,7 +320,7 @@
     },
     // FILE TREE
     {
-        "key": "n",
+        "key": "j",
         "command": "explorer.newFile",
         "when": "filesExplorerFocus && !inputFocus"
     },
