@@ -206,58 +206,24 @@
         "command": "highlightOnCopy.run",
         "when": "editorTextFocus && highlightOnCopy.init"
     },
-    // vim afin de pouvoir sortir du file explorer en switchant de focus (ctrl+e mapper à la place de ctrl+w)
-    {
-        "key": "ctrl+e l",
-        "command": "workbench.action.focusFirstEditorGroup",
-        "when": "sideBarFocus || filesExplorerFocus"
-    },
-    // vim afin de pouvoir sortir du termial en switchant de focus (ctrl+e mapper à la place de ctrl+w)
-    {
-        "key": "ctrl+e k",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "panelFocus"
-    },
-    // vim et gestion dans notebook particulière
-    // Permets d'aller d'un notebook non focus sur une cell
-    // vers le terminal ou la sidebar. Ne marche pas si 
-    // split vertical ou horizontal :(
-    {
-        "key": "ctrl+e j",
-        "command": "workbench.action.terminal.focus",
-        "when": "listFocus && !inputFocus"
-    },
-    // Pour focus la sidebar
+    // Pour naviguer dans les panels (terminal, output, debug console, test result) et pas que dans le terminal
     {
         "key": "ctrl+e h",
-        "command": "workbench.action.focusSideBar",
-        "when": "editorTextFocus"
-    },
-    // classic editor
-    {
-        "key": "ctrl+e h",
-        "command": "workbench.action.focusLeftGroup",
-        // "command": "workbench.action.navigateLeft",
-        "when": "editorTextFocus && activeEditorGroupIndex > 1"
-        // "when": "editorTextFocus || chatFocus"
+        "command": "workbench.action.navigateLeft",
+        "when": "!panelFocus"
     },
     {
         "key": "ctrl+e j",
-        // "command": "workbench.action.focusBelowGroup",
-        "command": "workbench.action.navigateDown", // permets de descendre sur le panel
-        "when": "editorTextFocus || chatFocus"
+        "command": "workbench.action.navigateDown"
     },
     {
         "key": "ctrl+e k",
-        "command": "workbench.action.focusAboveGroup",
-        // "command": "worbench.action.navigateUp",
-        "when": "editorTextFocus || chatFocus"
+        "command": "workbench.action.navigateUp"
     },
     {
         "key": "ctrl+e l",
-        "command": "workbench.action.focusRightGroup",
-        // "command": "workbench.action.navigateRight",
-        "when": "editorTextFocus || chatFocus"
+        "command": "workbench.action.navigateRight",
+        "when": "!panelFocus"
     },
     {
         "key": "ctrl+e v",
@@ -274,28 +240,6 @@
     {
         "key": "cmd+k cmd+\\",
         "command": "-workbench.action.splitEditorDown"
-    },
-    // Gestion de navigation sur les noteobook hors selection cells
-    // to navigate to left / right / up and down in editor (with split for ex)
-    {
-        "key": "ctrl+e l",
-        "command": "workbench.action.focusRightGroup",
-        "when": "listFocus && !inputFocus && !sideBarFocus"
-    },
-    {
-        "key": "ctrl+e h",
-        "command": "workbench.action.focusSideBar",
-        "when": "listFocus && !inputFocus"
-    },
-    {
-        "key": "ctrl+e j",
-        "command": "workbench.action.navigateDown",
-        "when": "listFocus && !inputFocus"
-    },
-    {
-        "key": "ctrl+e k",
-        "command": "workbench.action.navigateUp",
-        "when": "listFocus && !inputFocus"
     },
     // Copilot shortcut
     {
@@ -344,12 +288,12 @@
     {
         "key": "ctrl+e l",
         "command": "workbench.action.nextPanelView",
-        "when": "panelFocus || outputFocus"
+        "when": "panelFocus || focusedView == 'workbench.panel.testResults.view.focus'"
     },
     {
         "key": "ctrl+e h",
         "command": "workbench.action.previousPanelView",
-        "when": "panelFocus || outputFocus"
+        "when": "panelFocus || focusedView == 'workbench.panel.testResults.view.focus'"
     },
     {
         "key": "ctrl+right",
@@ -640,7 +584,8 @@
     // To move tabs position to left & right
     {
         "key": "ctrl+alt+down",
-        "command": "workbench.action.moveEditorLeftInGroup"
+        "command": "workbench.action.moveEditorLeftInGroup",
+        "when": "!terminalFocus && editorTextFocus"
     },
     {
         "key": "cmd+k shift+cmd+left",
@@ -648,7 +593,8 @@
     },
     {
         "key": "ctrl+alt+up",
-        "command": "workbench.action.moveEditorRightInGroup"
+        "command": "workbench.action.moveEditorRightInGroup",
+        "when": "!terminalFocus && editorTextFocus"
     },
     {
         "key": "cmd+k shift+cmd+right",
@@ -739,6 +685,7 @@
         "when": "editorTextFocus && !operationInProgress"
     },
     // Stage selected ranges in git
+    // To do : ne marche pas bien...
     {
         "key": "alt+enter",
         "command": "git.stageSelectedRanges",
@@ -746,29 +693,29 @@
     },
     {
         "key": "ctrl+k ctrl+alt+s",
-        "command": "-git.stageSelectedRanges",
+        "command": "-.stageSelectedRanges",
         "when": "editorTextFocus && !operationInProgress"
     },
     // Switch between multiple terminal
     {
         "key": "ctrl+alt+up",
         "command": "workbench.action.terminal.focusNext",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+        "when": "terminalFocus"
     },
     {
         "key": "ctrl+pagedown",
         "command": "-workbench.action.terminal.focusNext",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+        "when": "terminalFocus"
     },
     {
         "key": "ctrl+alt+down",
         "command": "workbench.action.terminal.focusPrevious",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+        "when": "terminalFocus"
     },
     {
         "key": "ctrl+pageup",
         "command": "-workbench.action.terminal.focusPrevious",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+        "when": "terminalFocus"
     },
     // Continue extension (IA extension as github copilot)
     {
@@ -797,7 +744,7 @@
         "key": "ctrl+shift+i",
         "command": "continue.focusContinueInput"
     },
-    // Notebook list navigation with hjkl to kltn (EnthiumFr layout)
+    // Moving in notebook with enthium layout
     {
         "key": "l",
         "command": "list.focusDown",
@@ -818,7 +765,6 @@
         "command": "-list.focusUp",
         "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
     },
-    // Generic list navigation with hjkl to kltn (EnthiumFr layout)
     {
         "key": "l",
         "command": "list.focusDown",
@@ -858,5 +804,22 @@
         "key": "l",
         "command": "-list.select",
         "when": "listFocus && !inputFocus"
+    },
+    // To move editor to a new group and focus it
+    {
+        "key": "ctrl+cmd+k",
+        "command": "workbench.action.moveActiveEditorGroupLeft"
+    },
+    {
+        "key": "cmd+k left",
+        "command": "-workbench.action.moveActiveEditorGroupLeft"
+    },
+    {
+        "key": "ctrl+cmd+n",
+        "command": "workbench.action.moveActiveEditorGroupRight"
+    },
+    {
+        "key": "cmd+k right",
+        "command": "-workbench.action.moveActiveEditorGroupRight"
     }
 ]
