@@ -326,6 +326,20 @@
                 "w"
             ]
         },
+        // gia == giw
+        {
+            "before": [
+                "g",
+                "i",
+                "a"
+            ],
+            "after": [
+                "g",
+                "r",
+                "i",
+                "w"
+            ]
+        },
         {
             "before": [
                 "g",
@@ -642,13 +656,15 @@
                 "n"
             ]
         },
-        // Permet d'avoir cp / dp (change paragraph / delete paragraph) and yank
+        // Permet d'avoir cp / dp (change paragraph / delete paragraph) and yank etc ...
         {
             "before": [
                 "d",
                 "p"
             ],
             "after": [
+                "\"",
+                "_",
                 "d",
                 "}"
             ]
@@ -659,6 +675,8 @@
                 "p"
             ],
             "after": [
+                "\"",
+                "_",
                 "c",
                 "}"
             ]
@@ -689,6 +707,8 @@
                 "p"
             ],
             "after": [
+                // "\"",
+                // "_",
                 "g",
                 "r",
                 "}"
@@ -755,43 +775,43 @@
         },
         // rg -> Replace line with copy
         {
-        "before": [
-            "r",
-            "g"
-        ],
-        "after": [
-            "\"",
-            "_",
-            "c",
-            "c",
-            "<Esc>",
-            "p"
-        ]
+            "before": [
+                "r",
+                "g"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "c",
+                "c",
+                "<Esc>",
+                "p"
+            ]
         },
         // remap dj / dk with EnthiumFr layout
         {
-        "before": [
-            "d",
-            "l"
-        ],
-        "after": [
-            "\"",
-            "_",
-            "d",
-            "j"
-        ]
+            "before": [
+                "d",
+                "l"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d",
+                "j"
+            ]
         },
         {
-        "before": [
-            "d",
-            "t"
-        ],
-        "after": [
-            "\"",
-            "_",
-            "d",
-            "k"
-        ]
+            "before": [
+                "d",
+                "t"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d",
+                "k"
+            ]
         }
     ],
     // to disable copy when delete
@@ -1170,7 +1190,32 @@
             ]
         }
     ],
-    "vim.leader": "",
+    "vim.operatorPendingModeKeyBindingsNonRecursive": [
+        // mapping operator ia == operator iw (cia -> ciw)
+        {
+            "before": [
+                "i",
+                "a"
+            ],
+            "after": [
+                "i",
+                "w"
+            ]
+        },
+        // ia is used by vim-textobj-arguments
+        // to to deal with arguments inside functions (argument excluding separators.)
+        // so ij == ia
+        {
+            "before": [
+                "i",
+                "j"
+            ],
+            "after": [
+                "i",
+                "a"
+            ]
+        }
+    ],
     "vim.handleKeys": {
         // "<C-a>": false,
         "<C-p>": false,
