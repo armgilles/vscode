@@ -812,6 +812,45 @@
                 "d",
                 "k"
             ]
+        },
+        // via -> viw
+        {
+            "before": [
+                "v",
+                "i",
+                "a"
+            ],
+            "after": [
+                "v",
+                "i",
+                "w"
+            ]
+        },
+        // vir -> vi"
+        {
+            "before": [
+                "v",
+                "i",
+                "r"
+            ],
+            "after": [
+                "v",
+                "i",
+                "\""
+            ]
+        },
+        // var -> va"
+        {
+            "before": [
+                "v",
+                "a",
+                "r"
+            ],
+            "after": [
+                "v",
+                "a",
+                "\""
+            ]
         }
     ],
     // to disable copy when delete
@@ -1281,5 +1320,5 @@
     "github.copilot.advanced": {},
     "continue.showInlineTip": false,
     "continue.telemetryEnabled": false,
-    "continue.enableNextEdit": false
+    "continue.enableNextEdit": false,
 }
