@@ -454,20 +454,27 @@
     // Using ctrl+o & ctrl+i to as vim jump list but in vanilla vscode
     {
         "key": "ctrl+i",
-        // "command": "workbench.action.navigateForward", // normal
-        "command": "workbench.action.navigateForwardInEditLocations", // edit locations only
-        // "when": "canNavigateForward" // normal
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    // As ctrl+o / i but only for edit locations (like notebook cell edit for example)
+    {
+        "key": "ctrl+alt+i",
+        "command": "workbench.action.navigateForwardInEditLocations"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "ctrl+alt+o",
+        "command": "workbench.action.navigateBackInEditLocations"
     },
     {
         "key": "ctrl+shift+-",
         "command": "-workbench.action.navigateForward",
         "when": "canNavigateForward"
-    },
-    {
-        "key": "ctrl+o",
-        // "command": "workbench.action.navigateBack", // normal
-        "command": "workbench.action.navigateBackInEditLocations", // edit locations only
-        // "when": "canNavigateBack" // normal
     },
     {
         "key": "ctrl+-",
