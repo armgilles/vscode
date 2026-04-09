@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Dark+",
     "terminal.integrated.inheritEnv": false,
     "jupyter.askForKernelRestart": false,
     // From https://stackoverflow.com/a/70758108
@@ -1290,9 +1290,7 @@
     "highlightOnCopy.foregroundColor": "#fff",
     "highlightOnCopy.timeout": 200,
     "remote.SSH.remotePlatform": {
-        "ag-AI40LeakDetect-vm": "linux",
-        "geofinder": "linux",
-        "ctac": "linux"
+        "slhdg001.maif.local": "linux"
     },
     "notebook.defaultFormatter": "charliermarsh.ruff",
     "ruff.lineLength": 120,
@@ -1317,8 +1315,16 @@
     "vim.replaceWithRegister": true,
     "github.copilot.nextEditSuggestions.enabled": true,
     "http.proxyStrictSSL": false,
-    "github.copilot.advanced": {},
     "continue.showInlineTip": false,
     "continue.telemetryEnabled": false,
     "continue.enableNextEdit": false,
+    "chat.viewSessions.orientation": "stacked",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false
+    },
+    "workbench.editor.useModal": "off",
+    "remote.SSH.localServerDownload": "always"
 }

@@ -727,11 +727,6 @@
     },
     // Continue extension (IA extension as github copilot)
     {
-        "key": "ctrl+down",
-        "command": "continue.forceAutocomplete",
-        "when": "editorTextFocus && !editorHasSelection && !editorReadOnly && !inSnippetMode"
-    },
-    {
         "key": "ctrl+alt+space",
         "command": "-continue.forceAutocomplete",
         "when": "editorTextFocus && !editorHasSelection && !editorReadOnly && !inSnippetMode"
@@ -748,11 +743,6 @@
         "key": "ctrl+shift+l",
         "command": "-continue.focusContinueInputWithoutClear"
     },
-    {
-        "key": "ctrl+shift+i",
-        "command": "continue.focusContinueInput"
-    },
-    // Moving in notebook with enthium layout
     {
         "key": "l",
         "command": "list.focusDown",
@@ -845,5 +835,10 @@
     {
         "key": "ctrl+cmd+left",
         "command": "-workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "-workbench.action.toggleDevTools",
+        "when": "isDevelopment"
     }
 ]
