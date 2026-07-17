@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Default Dark+",
+  "workbench.colorTheme": "Dark+",
   "terminal.integrated.inheritEnv": false,
   "jupyter.askForKernelRestart": false,
   // From https://stackoverflow.com/a/70758108
@@ -380,6 +380,23 @@
         "ESC"
       ]
     },
+    // gie -> cie + p
+    {
+      "before": [
+        "g",
+        "i",
+        "e"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "c",
+        "i",
+        "e",
+        "ESC",
+        "p"
+      ]
+    },
     {
       "before": [
         "g",
@@ -696,14 +713,15 @@
       ]
     },
     // remap HJKL whit EnthiumFr layout
-    {
-      "before": [
-        "j"
-      ],
-      "after": [
-        "i"
-      ]
-    },
+    // Mauvais ???????????????????
+    // {
+    //   "before": [
+    //     "j"
+    //   ],
+    //   "after": [
+    //     "i"
+    //   ]
+    // },
     {
       "before": [
         "k"
@@ -831,6 +849,29 @@
         "v",
         "a",
         "\""
+      ]
+    },
+    // Afin de pouvoir select tout ce qui se trouve dans () [] {} si il y en a sur la ligne
+    {
+      "before": [
+        "v",
+        "v"
+      ],
+      "after": [
+        "V",
+        "%"
+      ]
+    },
+    // vim-indent-object "vm" map to "vaI" to select all the line with the same indentation level
+    {
+      "before": [
+        "v",
+        "m"
+      ],
+      "after": [
+        "v",
+        "a",
+        "I"
       ]
     }
   ],
@@ -1093,6 +1134,15 @@
       "after": [
         "i",
         "a"
+      ]
+    },
+    // permet de pouvoir utiliser "ch*" / au lieu de "ct*" (idem pour d, ne fonctionne pas pour v)
+    {
+      "before": [
+        "h"
+      ],
+      "after": [
+        "t"
       ]
     }
   ],
