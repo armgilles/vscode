@@ -264,7 +264,8 @@
     },
     // FILE TREE
     {
-        "key": "j",
+        // "key": "j",
+        "key": "n",
         "command": "explorer.newFile",
         "when": "filesExplorerFocus && !inputFocus"
     },
@@ -802,11 +803,12 @@
         "command": "-list.focusUp",
         "when": "listFocus && !inputFocus"
     },
-    {
-        "key": "n",
-        "command": "list.select",
-        "when": "listFocus && !inputFocus"
-    },
+    // En concurence avec la navigation dans le notebook et dans le File Tree ??
+    // {
+    //     "key": "n",
+    //     "command": "list.select",
+    //     "when": "listFocus && !inputFocus"
+    // },
     {
         "key": "l",
         "command": "-list.select",
@@ -849,5 +851,39 @@
         "key": "ctrl+shift+i",
         "command": "-workbench.action.toggleDevTools",
         "when": "isDevelopment"
+    },
+    // Pour générer un message de commit avec copilot IA dans le panneau source control
+    {
+        "key": "ctrl+c m",
+        "command": "extension.multiCommand.execute",
+        "when": "scmProvider && !terminalFocus && !editorTextFocus",
+        "args": {
+            "sequence": [
+                "list.focusFirst",
+                "list.select",
+                "github.copilot.git.generateCommitMessage"
+            ]
+        }
+    },
+    // Pour la sélection des models / agents et contextes dans le chat copilot
+    {
+        "key": "ctrl+,",
+        "command": "workbench.action.chat.attachContext",
+        "when": "inChatInput && chatLocation == 'panel'"
+    },
+    {
+        "key": "ctrl+/",
+        "command": "-workbench.action.chat.attachContext",
+        "when": "inChatInput && chatLocation == 'panel'"
+    },
+    {
+        "key": "ctrl+shift+.",
+        "command": "workbench.action.chat.openModelPicker",
+        "when": "chatIsEnabled && inChatInput"
+    },
+    {
+        "key": "ctrl+alt+.",
+        "command": "-workbench.action.chat.openModelPicker",
+        "when": "chatIsEnabled && inChatInput"
     }
 ]

@@ -43,7 +43,7 @@
     "settingsSync.ignoredExtensions": [
         "ms-toolsai.jupyter"
     ],
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
     //VIM
@@ -391,6 +391,23 @@
                 "ESC"
             ]
         },
+        // gie -> cie + p
+        {
+            "before": [
+                "g",
+                "i",
+                "e"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "c",
+                "i",
+                "e",
+                "ESC",
+                "p",
+            ]
+        },
         {
             "before": [
                 "g",
@@ -715,14 +732,15 @@
             ]
         },
         // remap HJKL whit EnthiumFr layout
-        {
-            "before": [
-                "j"
-            ],
-            "after": [
-                "i"
-            ]
-        },
+        // Mauvais ???????????????????
+        // {
+        //     "before": [
+        //         "j"
+        //     ],
+        //     "after": [
+        //         "i"
+        //     ]
+        // },
         {
             "before": [
                 "k"
@@ -850,6 +868,29 @@
                 "v",
                 "a",
                 "\""
+            ]
+        },
+        // Afin de pouvoir select tout ce qui se trouve dans () [] {} si il y en a sur la ligne
+        {
+            "before": [
+                "v",
+                "v"
+            ],
+            "after": [
+                "V",
+                "%"
+            ]
+        },
+        // vim-indent-object "vm" map to "vaI" to select all the line with the same indentation level
+        {
+            "before": [
+                "v",
+                "m"
+            ],
+            "after": [
+                "v",
+                "a",
+                "I"
             ]
         }
     ],
@@ -1149,16 +1190,16 @@
             ]
         },
         // to pass to visual mode to insert more  easly
-        {
-            "before": [
-                "i",
-                "i"
-            ],
-            "after": [
-                "<Esc>",
-                "i"
-            ]
-        }
+        // {
+        //     "before": [
+        //         "i",
+        //         "i"
+        //     ],
+        //     "after": [
+        //         "<Esc>",
+        //         "i"
+        //     ]
+        // }
     ],
     // Configurer les touches en mode "operator-pending",  actif lorsque vous
     // avez tapé un opérateur (comme d, y, c) et que Vim attend une motion ou un
@@ -1253,7 +1294,16 @@
                 "i",
                 "a"
             ]
-        }
+        },
+        // permet de pouvoir utiliser "ch*" / au lieu de "ct*" (idem pour d, ne fonctionne pas pour v)
+        {
+            "before": [
+                "h"
+            ],
+            "after": [
+                "t"
+            ]
+        },
     ],
     "vim.handleKeys": {
         // "<C-a>": false,
@@ -1326,5 +1376,18 @@
         "scminput": false
     },
     "workbench.editor.useModal": "off",
-    "remote.SSH.localServerDownload": "always"
+    "remote.SSH.localServerDownload": "always",
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+            "file": ".agents/skills/git-commit-generation/SKILL.md",
+        }
+    ],
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+    // Test proxy maif do delete !
+    "http.useLocalProxyConfiguration": true,
+    "remote.SSH.httpProxy": "proxy.maif.local:8080",
+    "remote.SSH.httpsProxy": "proxy.maif.local:8080",
+    "github.copilot.proxy": "proxy.maif.local:8080",
+    "editor.formatOnSave": true
 }
