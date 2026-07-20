@@ -1264,7 +1264,9 @@
         "<C-w>": false,
         "<C-x>": false,
         "<C-b>": false, // use to hide / display primary side bar
-        "<C-y>": false // To use ctrl+y for cut
+        "<C-y>": false, // To use ctrl+y for cut
+        "<C-left>": false, // To use ctrl+left for switch word left
+        "<C-right>": false // To use ctrl+right for switch word right
     },
     // To improve performance
     "extensions.experimental.affinity": {
@@ -1320,5 +1322,5 @@
     "github.copilot.advanced": {},
     "continue.showInlineTip": false,
     "continue.telemetryEnabled": false,
-    "continue.enableNextEdit": false,
+    "continue.enableNextEdit": false
 }

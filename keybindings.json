@@ -1,63 +1,43 @@
 // Placer vos combinaisons de touches dans ce fichier pour remplacer les valeurs par défaut
 [
-    {
-        "key": "alt+right",
-        "command": "cursorWordEndRight",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
-    {
-        "key": "alt+left",
-        "command": "cursorWordLeft",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
+    // {
+    //     "key": "alt+right",
+    //     "command": "cursorWordEndRight",
+    //     "when": "textInputFocus && !accessibilityModeEnabled"
+    // },
+    // {
+    //     "key": "alt+left",
+    //     "command": "cursorWordLeft",
+    //     "when": "textInputFocus && !accessibilityModeEnabled"
+    // },
     {
         "key": "end",
-        "command": "-cursorEnd",
+        "command": "cursorEnd",
         "when": "textInputFocus"
     },
     {
         "key": "home",
-        "command": "-cursorHome",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "shift+up",
-        "command": "cursorUpSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+shift+up",
-        "command": "-cursorUpSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "shift+down",
-        "command": "cursorDownSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+shift+down",
-        "command": "-cursorDownSelect",
+        "command": "cursorHome",
         "when": "textInputFocus"
     },
     // {
-    //     "key": "ctrl+down",
-    //     "command": "cursorBottom",
+    //     "key": "shift+up",
+    //     "command": "cursorUpSelect",
     //     "when": "textInputFocus"
     // },
     {
-        "key": "ctrl+end",
-        "command": "-cursorBottom",
+        "key": "ctrl+shift+up",
+        "command": "cursorUpSelect",
         "when": "textInputFocus"
     },
-    {
-        "key": "ctrl+up",
-        "command": "cursorTop",
-        "when": "textInputFocus"
-    },
+    // {
+    //     "key": "shift+down",
+    //     "command": "cursorDownSelect",
+    //     "when": "textInputFocus"
+    // },
     {
         "key": "ctrl+home",
-        "command": "-cursorTop",
+        "command": "cursorTop",
         "when": "textInputFocus"
     },
     {
@@ -97,69 +77,45 @@
         "command": "-workbench.action.previousEditor"
     },
     {
-        "key": "shift+alt+right",
-        "command": "cursorWordEndRightSelect",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
-    {
-        "key": "ctrl+shift+right",
-        "command": "-cursorWordEndRightSelect",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
-    {
-        "key": "shift+alt+left",
-        "command": "cursorWordEndLeftSelect"
-    },
-    {
-        "key": "ctrl+shift+right",
+        "key": "shift+end",
         "command": "cursorEndSelect",
         "when": "textInputFocus"
     },
+    // {
+    //     "key": "ctrl+shift+left",
+    //     "command": "cursorHomeSelect",
+    //     "when": "textInputFocus"
+    // },
     {
-        "key": "shift+end",
-        "command": "-cursorEndSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+shift+left",
+        "key": "shift+home",
         "command": "cursorHomeSelect",
         "when": "textInputFocus"
     },
+    // {
+    //     "key": "ctrl+shift+up",
+    //     "command": "cursorTopSelect",
+    //     "when": "textInputFocus"
+    // },
     {
-        "key": "shift+home",
-        "command": "-cursorHomeSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+shift+up",
+        "key": "ctrl+shift+home",
         "command": "cursorTopSelect",
         "when": "textInputFocus"
     },
+    // {
+    //     "key": "ctrl+shift+down",
+    //     "command": "cursorBottomSelect",
+    //     "when": "textInputFocus"
+    // },
     {
-        "key": "ctrl+shift+home",
-        "command": "-cursorTopSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+shift+down",
+        "key": "ctrl+shift+end",
         "command": "cursorBottomSelect",
         "when": "textInputFocus"
     },
-    {
-        "key": "ctrl+shift+end",
-        "command": "-cursorBottomSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "shift+alt+left",
-        "command": "cursorWordLeftSelect",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
-    {
-        "key": "ctrl+shift+left",
-        "command": "-cursorWordLeftSelect",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
+    // {
+    //     "key": "shift+alt+left",
+    //     "command": "cursorWordLeftSelect",
+    //     "when": "textInputFocus && !accessibilityModeEnabled"
+    // },
     {
         // with Go to Next/Previous Member extension
         "key": "alt+shift+up",
@@ -845,5 +801,10 @@
     {
         "key": "ctrl+cmd+left",
         "command": "-workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "-extension.vim_ctrl+right",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
     }
 ]
