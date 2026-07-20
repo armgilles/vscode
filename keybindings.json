@@ -220,7 +220,8 @@
     },
     // FILE TREE
     {
-        "key": "j",
+        // "key": "j",
+        "key": "n",
         "command": "explorer.newFile",
         "when": "filesExplorerFocus && !inputFocus"
     },
@@ -773,11 +774,12 @@
         "command": "-list.focusUp",
         "when": "listFocus && !inputFocus"
     },
-    {
-        "key": "n",
-        "command": "list.select",
-        "when": "listFocus && !inputFocus"
-    },
+    // En concurence avec la navigation dans le notebook et dans le File Tree ??
+    // {
+    //     "key": "n",
+    //     "command": "list.select",
+    //     "when": "listFocus && !inputFocus"
+    // },
     {
         "key": "l",
         "command": "-list.select",
