@@ -575,15 +575,29 @@
         "command": "-workbench.action.navigateForward",
         "when": "canNavigateForward"
     },
+    // As ctrl+i but only for edit locations (like notebook cell edit for example)
+    {
+        "key": "ctrl+alt+i",
+        "command": "workbench.action.navigateForwardInEditLocations"
+    },
     {
         "key": "ctrl+o",
         "command": "workbench.action.navigateBack",
         "when": "canNavigateBack"
     },
+    // As ctrl+o but only for edit locations (like notebook cell edit for example)
+    {
+        "key": "ctrl+alt+o",
+        "command": "workbench.action.navigateBackInEditLocations"
+    },
     {
         "key": "ctrl+-",
         "command": "-workbench.action.navigateBack",
         "when": "canNavigateBack"
+    },
+    {
+        "key": "ctrl+alt+o",
+        "command": "workbench.action.navigateBackInEditLocations"
     },
     // To avoid up & down in notebook with J / K when I using flash-vscode extension
     {
