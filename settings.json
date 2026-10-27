@@ -405,7 +405,7 @@
         "i",
         "e",
         "ESC",
-        "p",
+        "p"
       ]
     },
     {
@@ -1223,7 +1223,7 @@
       "commands": [
         "editor.action.moveLinesUpAction"
       ]
-    },
+    }
     // to pass to visual mode to insert more  easly
     // {
     //     "before": [
@@ -1338,7 +1338,7 @@
       "after": [
         "t"
       ]
-    },
+    }
   ],
   "vim.handleKeys": {
     // "<C-a>": false,
@@ -1413,14 +1413,9 @@
   "remote.SSH.localServerDownload": "always",
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
-      "file": ".agents/skills/git-commit-generation/SKILL.md",
+      "file": ".agents/skills/git-commit-generation/SKILL.md"
     }
   ],
-  // Test proxy maif do delete !
-  "http.useLocalProxyConfiguration": true,
-  "remote.SSH.httpProxy": "proxy.maif.local:8080",
-  "remote.SSH.httpsProxy": "proxy.maif.local:8080",
-  "github.copilot.proxy": "proxy.maif.local:8080",
   "editor.formatOnSave": true,
   // empêche Quick Open / la recherche de retourner des fichiers
   "search.exclude": {
@@ -1433,10 +1428,4 @@
     "**/build/**": true
   },
   "notebook.lineNumbers": "on",
-  "sonarlint.connectedMode.connections.sonarqube": [
-    {
-      "serverUrl": "https://sonarqube.maif.io",
-      "connectionId": "https-sonarqube-maif-io"
-    }
-  ]
 }

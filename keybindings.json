@@ -885,5 +885,69 @@
         "key": "ctrl+alt+.",
         "command": "-workbench.action.chat.openModelPicker",
         "when": "chatIsEnabled && inChatInput"
+    },
+    {
+        "key": "shift+alt+c",
+        "command": "copyRelativeFilePath",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "ctrl+k ctrl+shift+c",
+        "command": "-copyRelativeFilePath",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "shift+alt+c",
+        "command": "copyRelativeFilePath",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+k ctrl+shift+c",
+        "command": "-copyRelativeFilePath",
+        "when": "editorFocus"
+    },
+    // Pour naviguer dans github copilot
+    // Depuis le Chat : ouvrir toutes les modifications -> Il faut que "file change" soint ouvert et déjà focus
+    {
+        "key": "ctrl+e k",
+        "command": "chatEditing.viewChanges",
+        "when": "inChatSession && hasUndecidedChatEditingResource"
+    },
+    // Depuis les modifications : revenir au champ du Chat -> Ne fonctionne pas
+    {
+        "key": "ctrl+e j",
+        "command": "workbench.action.chat.focusInput",
+        "when": "chatEdits.hasEditorModifications"
+    },
+    // Naviguer -> Ne fonctionne pas 
+    {
+        "key": "ctrl+e k",
+        "command": "list.focusFirst",
+        "when": "inChatInput && textInputFocus"
+    },
+    {
+        "key": "ctrl+e j",
+        "command": "workbench.action.chat.focusInput",
+        "when": "listFocus && listId == 'ChatListRenderer'"
+    },
+    // Valider/refuser tout le fichier courant -> OK
+    {
+        "key": "ctrl+enter",
+        "command": "chatEditor.action.accept",
+        "when": "editorFocus && chatEdits.hasEditorModifications && !chatEdits.isCurrentlyBeingModified"
+    },
+    {
+        "key": "backspace",
+        "command": "chatEditor.action.reject",
+        "when": "editorFocus && chatEdits.hasEditorModifications && !chatEdits.isCurrentlyBeingModified"
+    },
+    // Pour supprimer tous les onglet (sauf celui actuelle) dans le group d'onglet
+    {
+        "key": "ctrl+shift+w",
+        "command": "-workbench.action.closeWindow"
+    },
+    {
+        "key": "ctrl+shift+w",
+        "command": "workbench.action.closeOtherEditors"
     }
 ]
