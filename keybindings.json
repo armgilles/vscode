@@ -949,5 +949,10 @@
     {
         "key": "ctrl+shift+w",
         "command": "workbench.action.closeOtherEditors"
+    },
+    // Pour supprimer tous les onglets qui sont à droite
+    {
+        "key": "ctrl+shift+h",
+        "command": "workbench.action.closeEditorsToTheRight"
     }
 ]
