@@ -766,11 +766,20 @@
     },
     // Pour supprimer tous les onglet (sauf celui actuelle) dans le group d'onglet
     {
-        "key": "ctrl+shift+w",
+        "key": "shift+cmd+w",
         "command": "-workbench.action.closeWindow"
     },
     {
-        "key": "ctrl+shift+w",
+        "key": "shift+cmd+w",
         "command": "workbench.action.closeOtherEditors"
-    }
+    },
+    {
+        "key": "alt+cmd+t",
+        "command": "-workbench.action.closeOtherEditors"
+    },
+    // Pour supprimer tous les onglets qui sont à droite
+    {
+        "key": "shift+cmd+h",
+        "command": "workbench.action.closeEditorsToTheRight"
+    },
 ]
