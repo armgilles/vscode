@@ -5,9 +5,9 @@
   // From https://stackoverflow.com/a/70758108
   "workbench.colorCustomizations": {
     "terminal.ansiYellow": "#8400ffe1",
-    "statusBar.background": "#8FBCBB",
-    "statusBar.noFolderBackground": "#8FBCBB",
-    "statusBar.debuggingBackground": "#8FBCBB",
+    "statusBar.background": "#BF616A",
+    "statusBar.noFolderBackground": "#BF616A",
+    "statusBar.debuggingBackground": "#BF616A",
     "statusBar.foreground": "#434C5E",
     "statusBar.debuggingForeground": "#434C5E",
     "editor.lineHighlightBorder": "#d45ccab0"
@@ -873,6 +873,41 @@
         "a",
         "I"
       ]
+    },
+    // Pour les déplacements on interchange () (déplacement par sentence) et {} (déplacement par paragraphe)
+    {
+      "before": [
+        "("
+      ],
+      "after": [
+        "{",
+        "k"
+      ]
+    },
+    {
+      "before": [
+        ")"
+      ],
+      "after": [
+        "}",
+        "j"
+      ]
+    },
+    {
+      "before": [
+        "{"
+      ],
+      "after": [
+        "("
+      ]
+    },
+    {
+      "before": [
+        "}"
+      ],
+      "after": [
+        ")"
+      ]
     }
   ],
   // to disable copy when delete
@@ -1196,10 +1231,17 @@
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "github.copilot.chat.codeGeneration.instructions": [],
-  "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
   "testing.automaticallyOpenTestResults": "neverOpen",
   "chat.viewSessions.orientation": "stacked",
-  "notebook.lineNumbers": "on"
+  "notebook.lineNumbers": "on",
+  // empêche Quick Open / la recherche de retourner des fichiers
+  "search.exclude": {
+    "**/build": true,
+    "**/build/**": true
+  },
+  // Réduit le coût CPU/IO lors d'installations liées
+  "files.watcherExclude": {
+    "**/build": true,
+    "**/build/**": true
+  }
 }
