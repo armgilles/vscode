@@ -1223,7 +1223,7 @@
             "commands": [
                 "editor.action.moveLinesUpAction"
             ]
-        },
+        }
         // to pass to visual mode to insert more  easly
         // {
         //     "before": [
